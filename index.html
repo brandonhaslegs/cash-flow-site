@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cash Flow</title>
+  <meta name="description" content="See the future (of your bank balance). Cash Flow shows your balance on every day ahead, for iPhone, iPad and Mac.">
+  <meta name="color-scheme" content="light dark">
+  <meta property="og:title" content="Cash Flow">
+  <meta property="og:description" content="See the future (of your bank balance).">
+  <meta property="og:image" content="images/hero-light.jpg">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔮</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <header class="intro">
+      <div class="mark" aria-hidden="true">🔮</div>
+      <h1>Cash Flow</h1>
+      <p class="line">See the future (of your bank balance)</p>
+      <p class="soon">Coming soon to iPhone, iPad and Mac</p>
+    </header>
+
+    <div class="hero">
+      <img class="light" src="images/hero-light.jpg" alt="Cash Flow on iPhone: today's balance, a three-month chart, and upcoming bills">
+      <img class="dark" src="images/hero-dark.jpg" alt="Cash Flow on iPhone: today's balance, a three-month chart, and upcoming bills">
+    </div>
+
+    <section class="features" aria-label="Features">
+      <div class="feature">
+        <div class="vignette"><img class="light" src="images/v-chart.jpg" alt="Balance chart for the next three months" loading="lazy"><img class="dark" src="images/vd-chart.jpg" alt="Balance chart for the next three months" loading="lazy"></div>
+        <p><strong>The months ahead.</strong> Your balance, drawn from your bills and paydays.</p>
+      </div>
+      <div class="feature">
+        <div class="vignette"><img class="light" src="images/v-tiles.jpg" alt="Safe to Move, Lowest Point and Monthly Net figures" loading="lazy"><img class="dark" src="images/vd-tiles.jpg" alt="Safe to Move, Lowest Point and Monthly Net figures" loading="lazy"></div>
+        <p><strong>No surprises.</strong> What you can move before payday, and when you’ll hit your lowest point.</p>
+      </div>
+      <div class="feature">
+        <div class="vignette"><img class="light" src="images/v-rows.jpg" alt="Timeline of payments with the balance after each, and a salary highlighted" loading="lazy"><img class="dark" src="images/vd-rows.jpg" alt="Timeline of payments with the balance after each, and a salary highlighted" loading="lazy"></div>
+        <p><strong>Every payment in order.</strong> Each bill and paycheck, with what’s left after it.</p>
+      </div>
+      <div class="feature">
+        <div class="vignette narrow inset"><img class="light" src="images/v-sidebar.jpg" alt="Sidebar with Forecast, Bills, Income, Expenses and Trips" loading="lazy"><img class="dark" src="images/vd-sidebar.jpg" alt="Sidebar with Forecast, Bills, Income, Expenses and Trips" loading="lazy"></div>
+        <p><strong>Everywhere you are.</strong> iPhone, iPad and Mac, kept in sync through your own iCloud.</p>
+      </div>
+    </section>
+
+    <section class="afford" aria-labelledby="afford-title">
+      <h2 id="afford-title">Can I afford it?</h2>
+      <p>Type a price. Cash Flow finds the first day you can buy it without ever dipping below zero.</p>
+      <form id="afford-form" novalidate>
+        <label class="price" for="price"><span>€</span><input id="price" inputmode="decimal" autocomplete="off" value="900" aria-label="Price in euros"></label>
+        <p class="answer" id="answer" aria-live="polite"></p>
+      </form>
+      <div class="chart"><svg id="chart" viewBox="0 0 560 220" role="img" aria-label="Projected balance for the next 90 days"></svg></div>
+      <p class="note">Runs on an example plan of bills and paydays, starting today.</p>
+    </section>
+
+    <footer>Cash Flow by Brandon Oxendine. Screens show example data.</footer>
+  </main>
+</body>
+</html>
