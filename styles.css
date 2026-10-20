@@ -32,7 +32,7 @@ main {
   /* Equal plain gutters keep the column exactly centred. */
   padding-inline: 20px;
   display: grid;
-  gap: 64px;
+  gap: 56px;
 }
 h1, h2 { margin: 0; font-weight: 700; letter-spacing: -0.02em; }
 h1 { font-size: 2.25rem; }
@@ -48,9 +48,9 @@ p { margin: 0; }
 .hero img { width: min(320px, 100%); height: auto; display: block; border-radius: 40px; border: 1px solid var(--rule); }
 .hero .dark { display: none; }
 
-.features { display: grid; gap: 20px; }
-/* Each section is a light outlined card with even padding, so every image sits visibly centred. */
-.feature, .afford { border: 1px solid var(--rule); border-radius: 22px; padding: 24px; }
+.features { display: grid; gap: 56px; }
+/* Every section, the screenshot included, is the same full-width outlined card: one simple column. */
+.hero, .feature, .afford { width: 100%; border: 1px solid var(--rule); border-radius: 22px; padding: 24px; }
 .feature { display: grid; gap: 16px; text-align: center; }
 /* Slices of the app sit straight on the page; the page background matches the app's, so there are no frames.
    Each slice has a light and a dark crop and shows the one matching the page. */
@@ -72,7 +72,7 @@ p { margin: 0; }
 .feature p strong { color: var(--ink); font-weight: 600; }
 
 .afford { display: grid; gap: 14px; }
-@media (max-width: 480px) { .feature, .afford { padding: 16px; border-radius: 18px; } }
+@media (max-width: 480px) { .hero, .feature, .afford { padding: 16px; border-radius: 18px; } }
 .afford h2, .afford > p { text-align: center; }
 .answer { text-align: center; }
 .afford form { display: grid; gap: 14px; margin-top: 4px; }
