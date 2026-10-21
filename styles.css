@@ -270,7 +270,7 @@ main, .features, .feature, .afford { grid-template-columns: minmax(0, 1fr); }
 /* Opening section: the phone on the left, name and download buttons on the right. It's wider than the reading
    column below and breaks out of it; on narrow screens it stacks exactly like the rest of the page. */
 .top { display: grid; gap: 40px; justify-items: center; }
-@media (min-width: 760px) {
+@media (min-width: 860px) {
   .top {
     position: relative;
     left: 50%;
@@ -285,7 +285,7 @@ main, .features, .feature, .afford { grid-template-columns: minmax(0, 1fr); }
   }
   .top .intro { justify-items: start; text-align: left; gap: 16px; }
   .top .intro h1 { font-size: 3.4rem; line-height: 1.02; }
-  .top .intro .line { font-size: 1.45rem; max-width: 20ch; text-wrap: balance; }
+  .top .intro .line { font-size: 1.45rem; white-space: nowrap; }
   .top .downloads { align-items: flex-start; margin-top: 10px; }
   .top .phone { width: 340px; }
   /* Phone on the left, name and downloads on the right. */
