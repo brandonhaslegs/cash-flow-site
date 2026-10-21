@@ -1,6 +1,7 @@
 // Generated: website translations, keyed by language. English lives in index.html.
 window.TRANSLATIONS = {
  "ar": {
+  "studioInvoice": "فاتورة الاستوديو",
   "tagline": "شاهد المستقبل (مستقبل حسابك البنكي)",
   "downloadFor": "تنزيل لـ",
   "safeToMove": "آمن للتحويل",
@@ -69,6 +70,7 @@ window.TRANSLATIONS = {
   "inDays": "بعد {n} يوم. يبقى الرصيد فوق الصفر بعد ذلك."
  },
  "ca": {
+  "studioInvoice": "Factura de l'estudi",
   "tagline": "Mira el futur (del teu compte bancari)",
   "downloadFor": "Descarregar per a",
   "safeToMove": "Disponible per moure",
@@ -137,6 +139,7 @@ window.TRANSLATIONS = {
   "inDays": "D’aquí a {n} dies. Després, el saldo es manté per sobre de zero."
  },
  "cs": {
+  "studioInvoice": "Faktura za studio",
   "tagline": "Podívejte se do budoucnosti (svého účtu)",
   "downloadFor": "Stáhnout pro",
   "safeToMove": "Lze přesunout",
@@ -205,6 +208,7 @@ window.TRANSLATIONS = {
   "inDays": "Za {n} dní. Zůstatek pak zůstane nad nulou."
  },
  "da": {
+  "studioInvoice": "Studiofaktura",
   "tagline": "Se fremtiden (for din bankkonto)",
   "downloadFor": "Hent til",
   "safeToMove": "Kan flyttes",
@@ -273,6 +277,7 @@ window.TRANSLATIONS = {
   "inDays": "Om {n} dage. Saldoen forbliver over nul bagefter."
  },
  "de": {
+  "studioInvoice": "Studio-Rechnung",
   "tagline": "Sieh in die Zukunft (deines Kontos)",
   "downloadFor": "Laden für",
   "safeToMove": "Frei verfügbar",
@@ -341,6 +346,7 @@ window.TRANSLATIONS = {
   "inDays": "In {n} Tagen. Der Kontostand bleibt danach über null."
  },
  "el": {
+  "studioInvoice": "Τιμολόγιο στούντιο",
   "tagline": "Δείτε το μέλλον (του τραπεζικού σας λογαριασμού)",
   "downloadFor": "Λήψη για",
   "safeToMove": "Ασφαλές για μεταφορά",
@@ -409,6 +415,7 @@ window.TRANSLATIONS = {
   "inDays": "Σε {n} ημέρες. Το υπόλοιπο μένει πάνω από το μηδέν στη συνέχεια."
  },
  "es": {
+  "studioInvoice": "Factura del estudio",
   "tagline": "Mira el futuro (de tu cuenta bancaria)",
   "downloadFor": "Descargar para",
   "safeToMove": "Disponible para mover",
@@ -477,6 +484,7 @@ window.TRANSLATIONS = {
   "inDays": "Dentro de {n} días. Después, el saldo se mantiene por encima de cero."
  },
  "fi": {
+  "studioInvoice": "Studion lasku",
   "tagline": "Näe (pankkitilisi) tulevaisuus",
   "downloadFor": "Lataa:",
   "safeToMove": "Siirrettävissä",
@@ -545,6 +553,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} päivän päästä. Saldo pysyy sen jälkeen nollan yläpuolella."
  },
  "fr": {
+  "studioInvoice": "Facture du studio",
   "tagline": "Voyez l’avenir (de votre compte bancaire)",
   "downloadFor": "Télécharger pour",
   "safeToMove": "Disponible à transférer",
@@ -613,6 +622,7 @@ window.TRANSLATIONS = {
   "inDays": "Dans {n} jours. Le solde reste ensuite au-dessus de zéro."
  },
  "he": {
+  "studioInvoice": "חשבונית סטודיו",
   "tagline": "לראות את העתיד (של חשבון הבנק שלך)",
   "downloadFor": "הורדה עבור",
   "safeToMove": "בטוח להעביר",
@@ -681,6 +691,7 @@ window.TRANSLATIONS = {
   "inDays": "בעוד {n} ימים. לאחר מכן היתרה נשארת מעל אפס."
  },
  "hi": {
+  "studioInvoice": "स्टूडियो इनवॉइस",
   "tagline": "भविष्य देखें (अपने बैंक खाते का)",
   "downloadFor": "डाउनलोड करें",
   "safeToMove": "ट्रांसफ़र के लिए सुरक्षित",
@@ -749,6 +760,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} दिनों में। उसके बाद बैलेंस शून्य से ऊपर रहता है।"
  },
  "hr": {
+  "studioInvoice": "Račun za studio",
   "tagline": "Zavirite u budućnost (svog bankovnog računa)",
   "downloadFor": "Preuzmite za",
   "safeToMove": "Možete prebaciti",
@@ -817,6 +829,7 @@ window.TRANSLATIONS = {
   "inDays": "Za {n} dana. Stanje nakon toga ostaje iznad nule."
  },
  "hu": {
+  "studioInvoice": "Stúdiószámla",
   "tagline": "Lássa előre (a bankszámlája) jövőjét",
   "downloadFor": "Letöltés:",
   "safeToMove": "Átvezethető",
@@ -885,6 +898,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} nap múlva. Utána az egyenleg nulla felett marad."
  },
  "id": {
+  "studioInvoice": "Tagihan studio",
   "tagline": "Lihat masa depan (rekening bank Anda)",
   "downloadFor": "Unduh untuk",
   "safeToMove": "Aman Dipindahkan",
@@ -953,6 +967,7 @@ window.TRANSLATIONS = {
   "inDays": "Dalam {n} hari. Saldo tetap di atas nol setelahnya."
  },
  "it": {
+  "studioInvoice": "Fattura dello studio",
   "tagline": "Guarda il futuro (del tuo conto in banca)",
   "downloadFor": "Scarica per",
   "safeToMove": "Trasferibile",
@@ -1021,6 +1036,7 @@ window.TRANSLATIONS = {
   "inDays": "Tra {n} giorni. Dopo, il saldo resta sopra lo zero."
  },
  "ja": {
+  "studioInvoice": "スタジオの請求書",
   "tagline": "（銀行口座の）未来が見える",
   "downloadFor": "ダウンロード：",
   "safeToMove": "動かせる金額",
@@ -1089,6 +1105,7 @@ window.TRANSLATIONS = {
   "inDays": "{n}日後。その後も残高はプラスのままです。"
  },
  "ko": {
+  "studioInvoice": "스튜디오 청구서",
   "tagline": "미래를 미리 보세요 (내 은행 계좌의)",
   "downloadFor": "다운로드:",
   "safeToMove": "옮길 수 있는 금액",
@@ -1157,6 +1174,7 @@ window.TRANSLATIONS = {
   "inDays": "{n}일 후. 이후에도 잔액이 0 위로 유지됩니다."
  },
  "ms": {
+  "studioInvoice": "Invois studio",
   "tagline": "Lihat masa depan (akaun bank anda)",
   "downloadFor": "Muat turun untuk",
   "safeToMove": "Selamat Dipindahkan",
@@ -1225,6 +1243,7 @@ window.TRANSLATIONS = {
   "inDays": "Dalam {n} hari. Baki kekal di atas sifar selepas itu."
  },
  "nb": {
+  "studioInvoice": "Studiofaktura",
   "tagline": "Se fremtiden (for bankkontoen din)",
   "downloadFor": "Last ned for",
   "safeToMove": "Kan flyttes",
@@ -1293,6 +1312,7 @@ window.TRANSLATIONS = {
   "inDays": "Om {n} dager. Saldoen holder seg over null etterpå."
  },
  "nl": {
+  "studioInvoice": "Studiofactuur",
   "tagline": "Zie de toekomst (van je bankrekening)",
   "downloadFor": "Download voor",
   "safeToMove": "Vrij te verplaatsen",
@@ -1361,6 +1381,7 @@ window.TRANSLATIONS = {
   "inDays": "Over {n} dagen. Het saldo blijft daarna boven nul."
  },
  "pl": {
+  "studioInvoice": "Faktura za studio",
   "tagline": "Zobacz przyszłość (swojego konta)",
   "downloadFor": "Pobierz na",
   "safeToMove": "Można przenieść",
@@ -1429,6 +1450,7 @@ window.TRANSLATIONS = {
   "inDays": "Za {n} dni. Potem saldo pozostaje powyżej zera."
  },
  "pt-BR": {
+  "studioInvoice": "Fatura do estúdio",
   "tagline": "Veja o futuro (da sua conta bancária)",
   "downloadFor": "Baixar para",
   "safeToMove": "Livre para mover",
@@ -1497,6 +1519,7 @@ window.TRANSLATIONS = {
   "inDays": "Em {n} dias. Depois disso, o saldo continua acima de zero."
  },
  "pt-PT": {
+  "studioInvoice": "Fatura do estúdio",
   "tagline": "Veja o futuro (da sua conta bancária)",
   "downloadFor": "Descarregar para",
   "safeToMove": "Disponível para mover",
@@ -1565,6 +1588,7 @@ window.TRANSLATIONS = {
   "inDays": "Daqui a {n} dias. Depois disso, o saldo mantém-se acima de zero."
  },
  "ro": {
+  "studioInvoice": "Factură studio",
   "tagline": "Vedeți viitorul (contului bancar)",
   "downloadFor": "Descărcați pentru",
   "safeToMove": "Puteți muta",
@@ -1633,6 +1657,7 @@ window.TRANSLATIONS = {
   "inDays": "Peste {n} zile. Soldul rămâne apoi peste zero."
  },
  "ru": {
+  "studioInvoice": "Счёт за студию",
   "tagline": "Загляните в будущее (вашего банковского счёта)",
   "downloadFor": "Загрузить для",
   "safeToMove": "Можно перевести",
@@ -1701,6 +1726,7 @@ window.TRANSLATIONS = {
   "inDays": "Через {n} дн. После этого баланс остаётся выше нуля."
  },
  "sk": {
+  "studioInvoice": "Faktúra za štúdio",
   "tagline": "Pozrite sa do budúcnosti (svojho účtu)",
   "downloadFor": "Stiahnuť pre",
   "safeToMove": "Môžete presunúť",
@@ -1769,6 +1795,7 @@ window.TRANSLATIONS = {
   "inDays": "O {n} dní. Zostatok potom zostane nad nulou."
  },
  "sv": {
+  "studioInvoice": "Studiofaktura",
   "tagline": "Se framtiden (för ditt bankkonto)",
   "downloadFor": "Hämta för",
   "safeToMove": "Kan flyttas",
@@ -1837,6 +1864,7 @@ window.TRANSLATIONS = {
   "inDays": "Om {n} dagar. Saldot håller sig över noll efteråt."
  },
  "th": {
+  "studioInvoice": "ใบแจ้งหนี้สตูดิโอ",
   "tagline": "มองเห็นอนาคต (ของบัญชีธนาคารคุณ)",
   "downloadFor": "ดาวน์โหลดสำหรับ",
   "safeToMove": "ย้ายได้อย่างปลอดภัย",
@@ -1905,6 +1933,7 @@ window.TRANSLATIONS = {
   "inDays": "ในอีก {n} วัน หลังจากนั้นยอดเงินจะไม่ติดลบ"
  },
  "tr": {
+  "studioInvoice": "Stüdyo faturası",
   "tagline": "Geleceği görün (banka hesabınızın)",
   "downloadFor": "İndirin:",
   "safeToMove": "Aktarılabilir",
@@ -1973,6 +2002,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} gün sonra. Bakiye sonrasında sıfırın üzerinde kalır."
  },
  "uk": {
+  "studioInvoice": "Рахунок за студію",
   "tagline": "Зазирніть у майбутнє (свого банківського рахунку)",
   "downloadFor": "Завантажити для",
   "safeToMove": "Можна переказати",
@@ -2041,6 +2071,7 @@ window.TRANSLATIONS = {
   "inDays": "Через {n} дн. Після цього баланс залишається вище нуля."
  },
  "vi": {
+  "studioInvoice": "Hóa đơn studio",
   "tagline": "Nhìn thấy tương lai (của tài khoản ngân hàng)",
   "downloadFor": "Tải về cho",
   "safeToMove": "Có thể chuyển",
@@ -2109,6 +2140,7 @@ window.TRANSLATIONS = {
   "inDays": "Sau {n} ngày. Sau đó số dư luôn trên 0."
  },
  "zh-Hans": {
+  "studioInvoice": "工作室账单",
   "tagline": "预见（你银行账户的）未来",
   "downloadFor": "下载：",
   "safeToMove": "可动用金额",
@@ -2177,6 +2209,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} 天后。之后余额始终高于零。"
  },
  "zh-Hant": {
+  "studioInvoice": "工作室帳單",
   "tagline": "預見（你銀行帳戶的）未來",
   "downloadFor": "下載：",
   "safeToMove": "可動用金額",

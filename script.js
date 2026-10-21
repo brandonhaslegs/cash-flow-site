@@ -83,10 +83,32 @@
     const [x1, y1] = polar(deg, R + 16), [x2, y2] = polar(deg, R + 16 + len);
     ticks += `<line class="tick" x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}"/>`;
   }
-  dialSvg.innerHTML = `${ticks}<path class="track" d="${arc(START, START + SWEEP)}"/><path class="progress" id="dial-progress"/><circle class="knob" id="dial-knob" r="14"/>`;
+  dialSvg.innerHTML = `<defs><filter id="knob-glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="9"/></filter></defs>` +
+    `${ticks}<path class="track" d="${arc(START, START + SWEEP)}"/><path class="progress" id="dial-progress"/>` +
+    `<circle class="glow" id="dial-glow" r="26" filter="url(#knob-glow)"/><g id="dial-sparks"></g><circle class="knob" id="dial-knob" r="14"/>`;
   const progress = document.getElementById("dial-progress");
   const knob = document.getElementById("dial-knob");
+  const glow = document.getElementById("dial-glow");
+  const sparks = document.getElementById("dial-sparks");
+  const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let lastSpark = 0;
+  // Like the app: turning the knob sheds a little crystal-ball dust that drifts off and fades.
+  function sparkle(x, y) {
+    if (calm || Math.abs(fraction - lastSpark) < 0.006) return;
+    lastSpark = fraction;
+    for (let i = 0; i < 3; i++) {
+      const c = document.createElementNS(NS, "circle");
+      const a = Math.random() * Math.PI * 2, v = 12 + Math.random() * 28, r = 1.2 + Math.random() * 1.6;
+      c.setAttribute("class", i % 2 ? "spark" : "spark gold");
+      c.setAttribute("cx", x + (Math.random() * 12 - 6)); c.setAttribute("cy", y + (Math.random() * 12 - 6)); c.setAttribute("r", r);
+      sparks.appendChild(c);
+      c.animate([{ transform: "translate(0,0) scale(1)", opacity: 1 },
+                 { transform: `translate(${Math.cos(a) * v}px,${Math.sin(a) * v - 14}px) scale(.5)`, opacity: 0 }],
+                { duration: 900, easing: "cubic-bezier(.2,.7,.3,1)" }).onfinish = () => c.remove();
+    }
+  }
 
+  let dragging = false;
   let price = 250000;
   let fraction = fractionFor(price);
 
@@ -104,6 +126,8 @@
     progress.setAttribute("d", fraction > 0.001 ? arc(START, deg) : "");
     const [kx, ky] = polar(deg);
     knob.setAttribute("cx", kx); knob.setAttribute("cy", ky);
+    glow.setAttribute("cx", kx); glow.setAttribute("cy", ky);
+    if (dragging) sparkle(kx, ky);
     const i = earliest(price);
     dial.classList.toggle("no", i === null);
     dial.setAttribute("aria-valuenow", Math.round(price / 100));
@@ -121,7 +145,6 @@
   }
 
   // Drag anywhere on the ring; the middle belongs to the price field.
-  let dragging = false;
   const toSvg = (e) => {
     const r = dialSvg.getBoundingClientRect();
     return [(e.clientX - r.left) * 280 / r.width, (e.clientY - r.top) * 280 / r.height];
@@ -179,22 +202,28 @@
   const onDay = (y, m, day) => new Date(y, m, Math.min(day, new Date(y, m + 1, 0).getDate()));
   const fmtMonth = new Intl.DateTimeFormat(I18N.locale, { month: "short" });
   const euros = new Intl.NumberFormat(I18N.locale, { style: "currency", currency: "EUR" });
+  const compact = new Intl.NumberFormat(I18N.locale, { style: "currency", currency: "EUR", notation: "compact", maximumSignificantDigits: 2 });
+  const signed = (cents, plus) => (plus && cents > 0 ? "+" : "") + euros.format(cents / 100);
+  // Amounts in the vignettes, in the visitor's own number format.
+  document.querySelectorAll("[data-money]").forEach(el => { el.textContent = signed(+el.dataset.money, el.hasAttribute("data-plus")); });
+  document.querySelectorAll("[data-count]").forEach(el => { el.textContent = euros.format(+el.dataset.count / 100); });
+  document.querySelectorAll("[data-compact]").forEach(el => { el.textContent = compact.format(+el.dataset.compact / 100); });
 
   // 1. The months-ahead chart: the same example plan as the screenshots, three months from today.
   const DAYS = 92;
   const bills = [[135000, 1], [5800, 1], [4500, 2], [8200, 5], [3900, 8], [2400, 12], [1100, 15], [1400, 18], [5800, 20], [300, 22], [50000, 29]];
   const delta = new Map();
-  const paydays = new Set();
+  const paydays = new Map();
   // A trip in the example plan, marked on the chart like the app does.
   const TRIP = { name: (window.I18N && I18N.t("lisbon")) || "Lisbon", from: 3, to: 9 };
   const add = (date, amount) => { const k = date.getTime(); delta.set(k, (delta.get(k) || 0) + amount); };
   for (let m = new Date(start.getFullYear(), start.getMonth(), 1); m <= addDays(start, DAYS); m = new Date(m.getFullYear(), m.getMonth() + 1, 1)) {
     for (const [amount, day] of bills) add(onDay(m.getFullYear(), m.getMonth(), day), -amount);
     add(onDay(m.getFullYear(), m.getMonth(), 28), 410000);
-    paydays.add(onDay(m.getFullYear(), m.getMonth(), 28).getTime());
+    paydays.set(onDay(m.getFullYear(), m.getMonth(), 28).getTime(), I18N.t("salary"));
   }
   add(addDays(start, 23), 99000);
-  paydays.add(addDays(start, 23).getTime());
+  paydays.set(addDays(start, 23).getTime(), I18N.t("studioInvoice"));
   add(addDays(start, 31), -34000);
   // Points where the balance changes (end of day), like the app's chart.
   const pts = [];
@@ -224,7 +253,7 @@
     }
     let s = `<defs><linearGradient id="v-chart-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--accent)" stop-opacity=".35"/><stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></linearGradient></defs>`;
     for (let v = 0; v <= top; v += step) {
-      s += `<line class="grid" x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}"/><text class="axis" x="${W - R + 8}" y="${y(v) + 4}">${v ? `€${v / 100000}K` : "0 €"}</text>`;
+      s += `<line class="grid" x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}"/><text class="axis" x="${W - R + 8}" y="${y(v) + 4}">${compact.format(v / 100)}</text>`;
     }
     s += `<text class="axis strong" x="${L + 2}" y="${H - 22}">${I18N.t("today")}</text>`;
     for (let i = 1; i <= DAYS; i++) {
@@ -241,11 +270,45 @@
     s += `<path class="area" d="${d}L${P[n - 1][0]},${y(0)}L${P[0][0]},${y(0)}Z"/>`;
     s += `<path class="line" pathLength="1" d="${d}"/>`;
     // Payday dots where income lands.
+    const dots = [];
     pts.forEach((p, i) => {
-      if (!paydays.has(addDays(start, p.d).getTime())) return;
+      const name = paydays.get(addDays(start, p.d).getTime());
+      if (!name) return;
+      dots.push({ x: P[i][0], y: P[i][1], name, k: i / n });
       s += `<circle class="payday" style="--k:${i / n}" cx="${P[i][0]}" cy="${P[i][1]}" r="5.5"/>`;
     });
     svg.innerHTML = s;
+    placePaydayLabels(svg, dots, { left: L, top: T, right: W - R, bottom: H - B }, svg.querySelector(".trip text"));
+  }
+
+  // Name each payday beside its dot, like the app: try right, left, above, then below, and leave a name out
+  // rather than let it overlap another label, a dot or the trip's name.
+  function placePaydayLabels(svg, dots, b, tripText) {
+    const H = 15, PAD = 3, OFF = 9;
+    const placed = [];
+    if (tripText) { const t = tripText.getBBox(); placed.push({ x: t.x, y: t.y, w: t.width, h: t.height }); }
+    const hit = (a, c, pad = PAD) => a.x < c.x + c.w + pad && c.x < a.x + a.w + pad && a.y < c.y + c.h + pad && c.y < a.y + a.h + pad;
+    const dotBoxes = dots.map(d => ({ x: d.x - 6, y: d.y - 6, w: 12, h: 12, d }));
+    for (const d of [...dots].sort((a, c) => a.x - c.x)) {
+      const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+      g.setAttribute("class", "payday-label");
+      g.style.setProperty("--k", d.k);
+      g.innerHTML = `<rect rx="4"/><text>${d.name}</text>`;
+      svg.appendChild(g);
+      const w = g.querySelector("text").getComputedTextLength() + 8;
+      const options = [
+        { x: d.x + OFF, y: d.y - H / 2 }, { x: d.x - OFF - w, y: d.y - H / 2 },
+        { x: d.x - w / 2, y: d.y - OFF - H }, { x: d.x - w / 2, y: d.y + OFF },
+      ].map(o => ({ ...o, w, h: H }));
+      const spot = options.find(o => o.x >= b.left && o.x + w <= b.right && o.y >= b.top && o.y + H <= b.bottom &&
+        !placed.some(p => hit(o, p)) && !dotBoxes.some(q => q.d !== d && hit(o, q, 0)));
+      if (!spot) { g.remove(); continue; }
+      placed.push(spot);
+      const rect = g.querySelector("rect");
+      rect.setAttribute("x", spot.x); rect.setAttribute("y", spot.y); rect.setAttribute("width", w); rect.setAttribute("height", H);
+      const text = g.querySelector("text");
+      text.setAttribute("x", spot.x + 4); text.setAttribute("y", spot.y + H - 4);
+    }
   }
 
   // Count numbers up from zero, in the app's money format.
@@ -366,4 +429,57 @@
       if (details.open && !details.classList.contains("closing")) close(details); else open(details);
     });
   });
+})();
+
+// ---- A trail of crystal-ball glitter behind the mouse pointer, like the dust the app's dial knob sheds ----
+(() => {
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches || !matchMedia("(pointer: fine)").matches) return;
+  const canvas = document.createElement("canvas");
+  canvas.className = "glitter";
+  canvas.setAttribute("aria-hidden", "true");
+  document.body.appendChild(canvas);
+  const g = canvas.getContext("2d");
+  const LIFE = 900, COLORS = ["#ffc861", "#e3a8ff", "#ffffff"];
+  let sparks = [], last = null, running = false, dpr = 1;
+
+  function resize() {
+    dpr = Math.min(devicePixelRatio || 1, 2);
+    canvas.width = innerWidth * dpr; canvas.height = innerHeight * dpr;
+  }
+  resize();
+  addEventListener("resize", resize);
+
+  addEventListener("pointermove", (e) => {
+    if (e.pointerType !== "mouse") return;
+    const x = e.clientX, y = e.clientY;
+    // Shed sparkles by distance travelled, so a fast flick leaves a longer trail than a slow drift.
+    if (last && Math.hypot(x - last.x, y - last.y) < 9) return;
+    last = { x, y };
+    const now = performance.now();
+    for (let i = 0; i < 2; i++) {
+      const a = Math.random() * Math.PI * 2, v = 0.01 + Math.random() * 0.03;
+      sparks.push({ x: x + (Math.random() * 8 - 4), y: y + (Math.random() * 8 - 4), vx: Math.cos(a) * v, vy: Math.sin(a) * v - 0.012,
+                    r: 0.8 + Math.random() * 1.6, born: now, color: COLORS[(Math.random() * COLORS.length) | 0] });
+    }
+    if (sparks.length > 160) sparks.splice(0, sparks.length - 160);
+    if (!running) { running = true; requestAnimationFrame(draw); }
+  }, { passive: true });
+
+  function draw(now) {
+    g.setTransform(dpr, 0, 0, dpr, 0, 0);
+    g.clearRect(0, 0, innerWidth, innerHeight);
+    sparks = sparks.filter(s => now - s.born < LIFE);
+    for (const s of sparks) {
+      const age = now - s.born, left = 1 - age / LIFE;
+      const x = s.x + s.vx * age, y = s.y + s.vy * age, r = s.r * (0.5 + 0.5 * left);
+      // Soft indigo halo, then a bright core that twinkles as it fades.
+      g.globalAlpha = 0.18 * left; g.fillStyle = "#7c80ff";
+      g.beginPath(); g.arc(x, y, r * 3, 0, Math.PI * 2); g.fill();
+      g.globalAlpha = left * (0.75 + 0.25 * Math.sin(age / 60 + s.r * 9)); g.fillStyle = s.color;
+      g.beginPath(); g.arc(x, y, r, 0, Math.PI * 2); g.fill();
+    }
+    g.globalAlpha = 1;
+    if (sparks.length) requestAnimationFrame(draw);
+    else { running = false; g.clearRect(0, 0, innerWidth, innerHeight); }
+  }
 })();

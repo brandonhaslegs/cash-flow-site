@@ -5,6 +5,9 @@
   const TABLES = window.TRANSLATIONS || {};
   const english = {
     today: "Today",
+    salary: "Salary",
+    studioInvoice: "Studio invoice",
+    lisbon: "Lisbon",
     notInYear: "Not in the next 12 months",
     wouldGoNegative: "Buying it would push the balance below zero.",
     yesToday: "Yes, today!",

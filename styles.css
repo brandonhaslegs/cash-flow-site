@@ -158,6 +158,15 @@ main { position: relative; z-index: 1; }
 .v-chart .area { fill: url(#v-chart-fill); }
 .v-chart .line { fill: none; stroke: var(--accent); stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; }
 .v-chart .payday { fill: var(--paper); stroke: var(--accent); stroke-width: 3; }
+.v-chart .payday-label rect { fill: var(--paper); }
+.v-chart .payday-label text { font: 600 11px var(--font); fill: var(--accent); }
+/* A touch of the crystal ball's haze and dust in the chart's top-left corner, as in the app. */
+.v-chart { position: relative; isolation: isolate; }
+.v-chart::before { content: ""; position: absolute; inset: -30px auto auto -30px; width: 70%; height: 80%; z-index: -1; pointer-events: none;
+  background: radial-gradient(closest-side at 30% 35%, rgb(79 82 242 / .32), transparent),
+              radial-gradient(closest-side at 60% 55%, rgb(155 107 255 / .22), transparent 80%),
+              radial-gradient(closest-side at 70% 75%, rgb(227 168 255 / .14), transparent 70%);
+  filter: blur(18px); }
 .v-chart .trip rect { fill: color-mix(in srgb, var(--ink) 9%, transparent); }
 .v-chart .trip text { font: 600 11px var(--font); fill: var(--muted); }
 
@@ -202,12 +211,13 @@ main { position: relative; z-index: 1; }
 /* ---- Motion: armed vignettes wait offscreen; .play runs each animation when it scrolls into view ---- */
 @media (prefers-reduced-motion: no-preference) {
   .armed:not(.play) .line { stroke-dashoffset: 1; }
-  .armed:not(.play) .area, .armed:not(.play) .payday, .armed:not(.play) .trip { opacity: 0; }
+  .armed:not(.play) .area, .armed:not(.play) .payday, .armed:not(.play) .payday-label, .armed:not(.play) .trip { opacity: 0; }
   .v-chart .line { stroke-dasharray: 1; }
   .play .line { animation: draw 1.6s cubic-bezier(.45, .05, .25, 1) both; }
   .play .area { animation: fade .8s .9s both; }
   /* Each payday dot pops as the line reaches it; the trip band fades in first. */
   .play .payday { animation: pop .35s calc(.15s + var(--k) * 1.6s) both; transform-box: fill-box; transform-origin: center; }
+  .play .payday-label { animation: fade .4s calc(.3s + var(--k) * 1.6s) both; }
   .play .trip { animation: fade .6s .2s both; }
 
   .armed:not(.play) .tile { opacity: 0; transform: translateY(14px); }
@@ -245,6 +255,11 @@ main { position: relative; z-index: 1; }
 .dial .progress { fill: none; stroke: var(--accent); stroke-width: 18; stroke-linecap: round; }
 .dial .knob { fill: #fff; stroke: var(--accent); stroke-width: 3; filter: drop-shadow(0 1px 3px rgb(0 0 0 / .3)); transition: r .15s; }
 .dial-ring.dragging .knob { r: 16; }
+.dial .glow { fill: var(--accent); opacity: 0; transition: opacity .25s; pointer-events: none; }
+.dial-ring.dragging .glow { opacity: .6; }
+.dial-ring.no .glow { fill: var(--bad); }
+.dial .spark { fill: #e3a8ff; pointer-events: none; transform-box: fill-box; }
+.dial .spark.gold { fill: #ffc861; }
 .dial-ring.no .progress { stroke: var(--bad); }
 .dial-ring.no .knob { stroke: var(--bad); }
 .dial-price { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -62%); display: flex; align-items: baseline; justify-content: center; width: 62%; }
@@ -349,3 +364,6 @@ main, .features, .feature, .afford { grid-template-columns: minmax(0, 1fr); }
 .faq summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
 .faq details p { color: var(--muted); padding: 0 2px 18px; max-width: 60ch; overflow: hidden; }
 .faq details.closing summary::after { transform: rotate(0deg); }
+
+/* Cursor glitter: drawn over everything, but never in the way of clicks. */
+.glitter { position: fixed; inset: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 50; }
