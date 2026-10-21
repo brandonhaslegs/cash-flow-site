@@ -1,6 +1,6 @@
-# Cash Flow website
+# Future Cash website
 
-The one-page site for Cash Flow, the iPhone, iPad and Mac app that shows your bank balance on every day ahead.
+The one-page site for Future Cash, the iPhone, iPad and Mac app that shows your bank balance on every day ahead.
 
 Plain HTML, CSS and JavaScript with no build step.
 

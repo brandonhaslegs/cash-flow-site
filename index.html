@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cash Flow</title>
-  <meta name="description" content="See the future (of your bank balance). Cash Flow shows your balance on every day ahead, for iPhone, iPad and Mac.">
+  <title>Future Cash</title>
+  <meta name="description" content="See the future (of your bank balance). Future Cash shows your balance on every day ahead, for iPhone, iPad and Mac.">
   <meta name="color-scheme" content="light dark">
-  <meta property="og:title" content="Cash Flow">
+  <meta property="og:title" content="Future Cash">
   <meta property="og:description" content="See the future (of your bank balance).">
   <meta property="og:url" content="https://myfuture.cash/">
   <meta property="og:image" content="https://myfuture.cash/images/hero-light.jpg">
@@ -23,14 +23,24 @@
   <main>
     <header class="intro">
       <img class="mark" src="images/icon.png" width="96" height="96" alt="">
-      <h1>Cash Flow</h1>
+      <h1>Future Cash</h1>
       <p class="line">See the future (of your bank balance)</p>
-      <p class="soon">Coming soon to iPhone, iPad and Mac</p>
+      <!-- Swap in the real App Store links once the app is live. -->
+      <div class="downloads">
+        <a class="store" href="#" aria-label="Download Future Cash for iPhone and iPad on the App Store">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><line x1="10.5" y1="18.5" x2="13.5" y2="18.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <span><small>Download for</small>iPhone &amp; iPad</span>
+        </a>
+        <a class="store" href="#" aria-label="Download Future Cash for Mac on the Mac App Store">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M1 19.5h22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <span><small>Download for</small>Mac</span>
+        </a>
+      </div>
     </header>
 
     <div class="hero">
-      <img class="light" src="images/hero-light.jpg" alt="Cash Flow on iPhone: today's balance, a three-month chart, and upcoming bills">
-      <img class="dark" src="images/hero-dark.jpg" alt="Cash Flow on iPhone: today's balance, a three-month chart, and upcoming bills">
+      <img class="light" src="images/hero-light.jpg" alt="Future Cash on iPhone: today's balance, a three-month chart, and upcoming bills">
+      <img class="dark" src="images/hero-dark.jpg" alt="Future Cash on iPhone: today's balance, a three-month chart, and upcoming bills">
     </div>
 
     <section class="features" aria-label="Features">
@@ -44,7 +54,7 @@
       </div>
       <div class="feature">
         <div class="vignette"><img class="light" src="images/v-rows.jpg" alt="Timeline of payments with the balance after each, and a salary highlighted" loading="lazy"><img class="dark" src="images/vd-rows.jpg" alt="Timeline of payments with the balance after each, and a salary highlighted" loading="lazy"></div>
-        <p><strong>Every payment in order.</strong> Each bill and paycheck, with what’s left after it.</p>
+        <p><strong>Every payment in order.</strong> Each bill and paycheck with what’s left after it, and your trips marked alongside.</p>
       </div>
       <div class="feature">
         <div class="vignette narrow inset"><img class="light" src="images/v-sidebar.jpg" alt="Sidebar with Forecast, Bills, Income, Expenses and Trips" loading="lazy"><img class="dark" src="images/vd-sidebar.jpg" alt="Sidebar with Forecast, Bills, Income, Expenses and Trips" loading="lazy"></div>
@@ -54,7 +64,7 @@
 
     <section class="afford" aria-labelledby="afford-title">
       <h2 id="afford-title">Can I afford it?</h2>
-      <p>Turn the dial. Cash Flow finds the first day you can buy it without ever dipping below zero.</p>
+      <p>Turn the dial. Future Cash finds the first day you can buy it without ever dipping below zero.</p>
       <form id="afford-form" class="dial" novalidate>
         <div id="dial" class="dial-ring" role="slider" tabindex="0" aria-label="Price" aria-valuemin="10">
           <svg id="dial-svg" viewBox="0 0 280 280" aria-hidden="true"></svg>
@@ -70,7 +80,7 @@
       <p class="note">Runs on an example plan of bills and paydays, starting today.</p>
     </section>
 
-    <footer>Cash Flow by Brandon Oxendine. Screens show example data.</footer>
+    <footer>Future Cash by Brandon Oxendine. Screens show example data.</footer>
   </main>
 </body>
 </html>
