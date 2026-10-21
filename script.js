@@ -178,7 +178,7 @@
   const addDays = (d, n) => new Date(d.getFullYear(), d.getMonth(), d.getDate() + n);
   const onDay = (y, m, day) => new Date(y, m, Math.min(day, new Date(y, m + 1, 0).getDate()));
   const fmtMonth = new Intl.DateTimeFormat(I18N.locale, { month: "short" });
-  const euros = new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" });
+  const euros = new Intl.NumberFormat(I18N.locale, { style: "currency", currency: "EUR" });
 
   // 1. The months-ahead chart: the same example plan as the screenshots, three months from today.
   const DAYS = 92;

@@ -29,8 +29,16 @@
 
   window.I18N = {
     lang,
-    // Dates and numbers follow the visitor's own locale tag (keeps de-AT, fr-CA and similar details).
-    locale: lang === "en" ? (navigator.language || "en-GB") : (navigator.languages || []).find(l => match(l) === lang) || lang,
+    // Dates and numbers follow the page's language. The visitor's region is kept only where it speaks that
+    // language (en-GB, de-AT, fr-CA…), so English on a German device shows "€13.00", never "13,00 €".
+    locale: (() => {
+      const tag = (navigator.languages || [navigator.language]).find(l => l && match(l) === lang) || lang;
+      try {
+        const loc = new Intl.Locale(tag);
+        if (!loc.region) return tag;
+        return new Intl.Locale("und-" + loc.region).maximize().language === loc.language ? tag : lang;
+      } catch (e) { return lang; }
+    })(),
     t: (key) => (key in table ? table[key] : english[key]),
     fmt: (key, values) => window.I18N.t(key).replace(/\{(\w+)\}/g, (_, k) => values[k]),
   };
