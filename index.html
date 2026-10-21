@@ -45,19 +45,58 @@
 
     <section class="features" aria-label="Features">
       <div class="feature">
-        <div class="vignette"><img class="light" src="images/v-chart.jpg" alt="Balance chart for the next three months" loading="lazy"><img class="dark" src="images/vd-chart.jpg" alt="Balance chart for the next three months" loading="lazy"></div>
+        <div class="vignette v-chart" data-anim>
+          <svg id="v-chart" viewBox="0 0 520 230" role="img" aria-label="Balance chart for the next three months"></svg>
+        </div>
         <p><strong>The months ahead.</strong> Your balance, drawn from your bills and paydays.</p>
       </div>
       <div class="feature">
-        <div class="vignette"><img class="light" src="images/v-tiles.jpg" alt="Safe to Move, Lowest Point and Monthly Net figures" loading="lazy"><img class="dark" src="images/vd-tiles.jpg" alt="Safe to Move, Lowest Point and Monthly Net figures" loading="lazy"></div>
+        <div class="vignette v-tiles" data-anim aria-label="Safe to Move, Lowest Point and Monthly Net figures">
+          <div class="tile" style="--i:0"><span>Safe to Move</span><b data-count="213700">2.137,00 €</b><small>before next payday</small></div>
+          <div class="tile" style="--i:1"><span>Lowest Point</span><b data-count="213700">2.137,00 €</b><small>on 22 Oct</small></div>
+          <div class="tile" style="--i:2"><span>Monthly Net</span><b data-count="191600" data-plus>+1.916,00 €</b><small>€4,1K in · €2,2K out</small></div>
+        </div>
         <p><strong>No surprises.</strong> What you can move before payday, and when you’ll hit your lowest point.</p>
       </div>
       <div class="feature">
-        <div class="vignette"><img class="light" src="images/v-rows.jpg" alt="Timeline of payments with the balance after each, and a salary highlighted" loading="lazy"><img class="dark" src="images/vd-rows.jpg" alt="Timeline of payments with the balance after each, and a salary highlighted" loading="lazy"></div>
+        <div class="vignette v-rows" data-anim aria-label="Timeline of payments with the balance after each, and a trip to Lisbon marked alongside">
+          <div class="tl-row" style="--i:0">
+            <span class="gutter"></span>
+            <span class="day"><b>22</b><small>Thu</small></span>
+            <span class="name">Cloud storage</span>
+            <span class="amt">−3,00 €<small data-count="213700">2.137,00 €</small></span>
+          </div>
+          <div class="tl-trip">
+            <span class="bar"><span>Lisbon</span></span>
+            <div>
+              <div class="tl-row" style="--i:1">
+                <span class="day"><b>28</b><small>Wed</small></span>
+                <span class="name"><em class="chip">Income</em><strong>Salary</strong></span>
+                <span class="amt income">+4.100,00 €<small data-count="623700">6.237,00 €</small></span>
+              </div>
+              <div class="tl-row saving" style="--i:2">
+                <span class="day"><b>29</b><small>Thu</small></span>
+                <span class="name"><i class="dot"></i>Savings</span>
+                <span class="amt">−500,00 €<small data-count="573700">5.737,00 €</small></span>
+              </div>
+            </div>
+          </div>
+        </div>
         <p><strong>Every payment in order.</strong> Each bill and paycheck with what’s left after it, and your trips marked alongside.</p>
       </div>
       <div class="feature">
-        <div class="vignette narrow inset"><img class="light" src="images/v-sidebar.jpg" alt="Sidebar with Forecast, Bills, Income, Expenses and Trips" loading="lazy"><img class="dark" src="images/vd-sidebar.jpg" alt="Sidebar with Forecast, Bills, Income, Expenses and Trips" loading="lazy"></div>
+        <div class="vignette v-side" data-anim aria-label="The Mac sidebar: Forecast, Can I Afford It?, Bills, Income, Expenses and Trips">
+          <div class="side">
+            <span class="pill" aria-hidden="true"></span>
+            <div class="item" data-item><svg viewBox="0 0 24 24"><path d="M3 18l5-6 4 3 6-8M3 21h18"/></svg>Forecast</div>
+            <div class="item" data-item><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 13l4-4M12 2v2M4 6l1.5 1.5M20 6l-1.5 1.5"/></svg>Can I Afford It?</div>
+            <div class="plan-label">Plan</div>
+            <div class="item" data-item><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Bills<em>€2,2K</em></div>
+            <div class="item" data-item><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M8 13l4 4 4-4"/></svg>Income<em>€4,1K</em></div>
+            <div class="item" data-item><svg viewBox="0 0 24 24"><path d="M3 4h3l2.5 11h10L21 8H7"/><circle cx="10" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>Expenses<em>€340</em></div>
+            <div class="item" data-item><svg viewBox="0 0 24 24"><path d="M10.5 21l1.5-6.5L5 12l1-2 7 1.5L17.5 4a2 2 0 013 3l-6.5 4.5L15.5 19l-2 1-3-5"/></svg>Trips<em>1</em></div>
+          </div>
+        </div>
         <p><strong>Everywhere you are.</strong> iPhone, iPad and Mac, kept in sync through your own iCloud.</p>
       </div>
     </section>

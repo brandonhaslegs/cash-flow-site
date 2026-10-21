@@ -53,27 +53,107 @@ p { margin: 0; }
 .hero { display: flex; justify-content: center; }
 .hero img { width: min(320px, 100%); height: auto; display: block; border-radius: 40px; border: 1px solid var(--rule); }
 .hero .dark { display: none; }
+@media (prefers-color-scheme: dark) {
+  .hero .light { display: none; }
+  .hero .dark { display: block; }
+}
+
+/* A big indigo glow around the inside edge of the window, fixed while the page scrolls. */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 100;
+  box-shadow:
+    inset 0 0 120px 10px color-mix(in srgb, var(--accent) 45%, transparent),
+    inset 0 0 280px 40px color-mix(in srgb, var(--accent) 22%, transparent);
+}
 
 .features { display: grid; gap: 56px; }
 /* Every section, the screenshot included, is the same full-width outlined card: one simple column. */
 .hero, .feature, .afford { width: 100%; border: 1px solid var(--rule); border-radius: 22px; padding: 24px; }
 .feature { display: grid; gap: 16px; text-align: center; }
-/* Slices of the app sit straight on the page; the page background matches the app's, so there are no frames.
-   Each slice has a light and a dark crop and shows the one matching the page. */
-.vignette { display: flex; justify-content: center; }
-.vignette img { display: block; width: 100%; height: auto; max-width: 100%; }
-.vignette .dark { display: none; }
-.vignette.narrow img { width: 55%; }
-.vignette.fade img { -webkit-mask-image: linear-gradient(#000 65%, transparent); mask-image: linear-gradient(#000 65%, transparent); }
-.vignette.inset img { border-radius: 12px; }
-@media (prefers-color-scheme: dark) {
-  :root .vignette .light { display: none; }
-  :root .vignette .dark { display: block; }
+.feature > p { text-align: center; }
+/* Feature vignettes are small live recreations of the app's UI, so they can animate and follow light/dark mode. */
+.vignette { --tint: color-mix(in srgb, var(--accent) 12%, transparent); text-align: left; font-variant-numeric: tabular-nums; }
+
+/* 1. Chart */
+.v-chart svg { width: 100%; height: auto; display: block; overflow: visible; }
+.v-chart .axis { font: 500 11px var(--font); fill: var(--muted); }
+.v-chart .axis.strong { font-weight: 700; fill: var(--ink); }
+.v-chart .grid { stroke: var(--rule); stroke-width: 1; }
+.v-chart .vgrid { stroke: var(--rule); stroke-width: 1; stroke-dasharray: 3 3; }
+.v-chart .area { fill: url(#v-chart-fill); }
+.v-chart .line { fill: none; stroke: var(--accent); stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; }
+.v-chart .end { fill: var(--accent); stroke: var(--paper); stroke-width: 3; }
+
+/* 2. Tiles */
+.v-tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.tile { background: var(--tint); border-radius: 14px; padding: 12px; display: grid; gap: 2px; min-width: 0; color: var(--accent); }
+.tile span { font-size: 0.78rem; font-weight: 600; opacity: 0.85; }
+.tile b { font-size: 1.05rem; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: clip; }
+.tile small { font-size: 0.68rem; opacity: 0.75; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* 3. Timeline */
+.v-rows { display: grid; }
+.tl-row { display: grid; grid-template-columns: 22px 40px minmax(0, 1fr) auto; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--rule); }
+.tl-trip { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 10px; padding-top: 8px; }
+.tl-trip .tl-row { grid-template-columns: 40px minmax(0, 1fr) auto; }
+.tl-trip .tl-row:last-child { border-bottom: 0; }
+.day { display: grid; justify-items: center; line-height: 1.05; }
+.day b { font-size: 1.15rem; font-weight: 600; }
+.day small { font-size: 0.62rem; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+.name { display: flex; align-items: center; gap: 6px; min-width: 0; white-space: nowrap; overflow: hidden; }
+.name strong { font-weight: 700; }
+.chip { font-style: normal; font-size: 0.66rem; font-weight: 600; color: var(--accent); background: var(--tint); padding: 2px 7px; border-radius: 99px; }
+.dot { width: 7px; height: 7px; border-radius: 50%; background: #34c759; display: inline-block; }
+.amt { text-align: right; display: grid; white-space: nowrap; }
+.amt small { font-size: 0.72rem; color: var(--muted); }
+.amt.income { color: var(--accent); font-weight: 800; font-size: 1.1rem; }
+.amt.income small { font-weight: 400; }
+.saving { background: color-mix(in srgb, #34c759 26%, transparent); border-radius: 8px; padding-inline: 6px; }
+.bar { position: relative; background: color-mix(in srgb, var(--accent) 16%, transparent); border-radius: 11px; margin: 4px 0; transform-origin: top; }
+.bar span { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) rotate(-90deg); font-size: 0.66rem; font-weight: 700; color: var(--accent); white-space: nowrap; }
+
+/* 4. Mac sidebar */
+.v-side { display: flex; justify-content: center; }
+.side { position: relative; width: min(260px, 100%); background: var(--frame); border: 1px solid var(--rule); border-radius: 16px; padding: 10px; display: grid; gap: 2px; }
+.side .item { position: relative; z-index: 1; display: flex; align-items: center; gap: 10px; padding: 7px 10px; border-radius: 8px; font-weight: 500; font-size: 0.95rem; transition: color .35s; }
+.side .item.active { color: #fff; font-weight: 600; }
+.side svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.side .item em { margin-left: auto; font-style: normal; font-size: 0.72rem; font-weight: 600; color: var(--accent); background: var(--tint); padding: 1px 7px; border-radius: 99px; transition: color .35s, background .35s; }
+.side .item.active em { color: #fff; background: rgb(255 255 255 / .2); }
+.side .plan-label { font-size: 0.72rem; font-weight: 600; color: var(--muted); padding: 14px 10px 4px; }
+.side .pill { position: absolute; left: 10px; right: 10px; top: 0; height: 36px; border-radius: 8px; background: var(--accent); transition: transform .45s cubic-bezier(.3, .7, .2, 1); }
+
+/* ---- Motion: armed vignettes wait offscreen; .play runs each animation when it scrolls into view ---- */
+@media (prefers-reduced-motion: no-preference) {
+  .armed:not(.play) .line { stroke-dashoffset: 1; }
+  .armed:not(.play) .area, .armed:not(.play) .end { opacity: 0; }
+  .v-chart .line { stroke-dasharray: 1; }
+  .play .line { animation: draw 1.6s cubic-bezier(.45, .05, .25, 1) both; }
+  .play .area { animation: fade .8s .9s both; }
+  .play .end { animation: pop .4s 1.5s both; transform-box: fill-box; transform-origin: center; }
+
+  .armed:not(.play) .tile { opacity: 0; transform: translateY(14px); }
+  .play .tile { animation: rise .5s calc(var(--i) * 140ms) cubic-bezier(.2, .8, .2, 1) both; }
+
+  .armed:not(.play) .tl-row { opacity: 0; transform: translateX(-14px); }
+  .armed:not(.play) .bar { transform: scaleY(0); }
+  .armed:not(.play) .bar span, .armed:not(.play) .chip { opacity: 0; }
+  .play .tl-row { animation: slide .45s calc(var(--i) * 260ms + 100ms) cubic-bezier(.2, .8, .2, 1) both; }
+  .play .bar { animation: grow .7s .3s cubic-bezier(.3, .7, .2, 1) both; }
+  .play .bar span { animation: fade .4s 1s both; }
+  .play .chip { animation: pop .35s .75s both; }
 }
-@media (prefers-color-scheme: dark) {
-  :root .hero .light { display: none; }
-  :root .hero .dark { display: block; }
-}
+@keyframes draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@keyframes fade { from { opacity: 0; } }
+@keyframes pop { 0% { opacity: 0; transform: scale(.4); } 70% { transform: scale(1.15); } 100% { opacity: 1; transform: scale(1); } }
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } }
+@keyframes slide { from { opacity: 0; transform: translateX(-14px); } }
+@keyframes grow { from { transform: scaleY(0); } }
+
 .feature p, .afford > p { color: var(--muted); }
 .feature p strong { color: var(--ink); font-weight: 600; }
 

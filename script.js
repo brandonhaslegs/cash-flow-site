@@ -192,3 +192,120 @@
   input.value = money(price);
   setFraction(fraction);
 })();
+
+// ---- Feature vignettes: build the chart, then play each animation when it scrolls into view ----
+(() => {
+  const start = (() => { const d = new Date(); return new Date(d.getFullYear(), d.getMonth(), d.getDate()); })();
+  const addDays = (d, n) => new Date(d.getFullYear(), d.getMonth(), d.getDate() + n);
+  const onDay = (y, m, day) => new Date(y, m, Math.min(day, new Date(y, m + 1, 0).getDate()));
+  const fmtMonth = new Intl.DateTimeFormat("en-GB", { month: "short" });
+  const euros = new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" });
+
+  // 1. The months-ahead chart: the same example plan as the screenshots, three months from today.
+  const DAYS = 92;
+  const bills = [[135000, 1], [5800, 1], [4500, 2], [8200, 5], [3900, 8], [2400, 12], [1100, 15], [1400, 18], [5800, 20], [300, 22], [50000, 29]];
+  const delta = new Map();
+  const add = (date, amount) => { const k = date.getTime(); delta.set(k, (delta.get(k) || 0) + amount); };
+  for (let m = new Date(start.getFullYear(), start.getMonth(), 1); m <= addDays(start, DAYS); m = new Date(m.getFullYear(), m.getMonth() + 1, 1)) {
+    for (const [amount, day] of bills) add(onDay(m.getFullYear(), m.getMonth(), day), -amount);
+    add(onDay(m.getFullYear(), m.getMonth(), 28), 410000);
+  }
+  add(addDays(start, 23), 99000);
+  add(addDays(start, 31), -34000);
+  // Points where the balance changes (end of day), like the app's chart.
+  const pts = [];
+  for (let d = 0, bal = 214000; d <= DAYS; d++) {
+    const ch = delta.get(addDays(start, d).getTime());
+    if (ch) bal += ch;
+    if (d === 0 || ch || d === DAYS) pts.push({ d, bal });
+  }
+
+  const svg = document.getElementById("v-chart");
+  if (svg) {
+    const W = 520, H = 230, L = 4, R = 48, T = 12, B = 40;
+    const step = 500000;
+    const top = Math.max(step, Math.ceil(Math.max(...pts.map(p => p.bal)) / step) * step);
+    const x = (d) => L + (W - L - R) * d / DAYS;
+    const y = (v) => T + (H - T - B) * (top - v) / top;
+    // Monotone cubic (Fritsch-Carlson), so the curve never overshoots a real balance.
+    const P = pts.map(p => [x(p.d), y(p.bal)]);
+    const n = P.length, dx = [], m = [], t = [];
+    for (let i = 0; i < n - 1; i++) { dx[i] = P[i + 1][0] - P[i][0]; m[i] = (P[i + 1][1] - P[i][1]) / dx[i]; }
+    t[0] = m[0]; t[n - 1] = m[n - 2];
+    for (let i = 1; i < n - 1; i++) t[i] = m[i - 1] * m[i] <= 0 ? 0 : (3 * (dx[i - 1] + dx[i])) / ((2 * dx[i] + dx[i - 1]) / m[i - 1] + (dx[i] + 2 * dx[i - 1]) / m[i]);
+    let d = `M${P[0][0].toFixed(1)},${P[0][1].toFixed(1)}`;
+    for (let i = 0; i < n - 1; i++) {
+      const h = dx[i] / 3;
+      d += `C${(P[i][0] + h).toFixed(1)},${(P[i][1] + t[i] * h).toFixed(1)} ${(P[i + 1][0] - h).toFixed(1)},${(P[i + 1][1] - t[i + 1] * h).toFixed(1)} ${P[i + 1][0].toFixed(1)},${P[i + 1][1].toFixed(1)}`;
+    }
+    let s = `<defs><linearGradient id="v-chart-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--accent)" stop-opacity=".35"/><stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></linearGradient></defs>`;
+    for (let v = 0; v <= top; v += step) {
+      s += `<line class="grid" x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}"/><text class="axis" x="${W - R + 8}" y="${y(v) + 4}">${v ? `€${v / 100000}K` : "0 €"}</text>`;
+    }
+    s += `<text class="axis strong" x="${L + 2}" y="${H - 22}">Today</text>`;
+    for (let i = 1; i <= DAYS; i++) {
+      const day = addDays(start, i);
+      if (day.getDate() !== 1 || i < 10) continue;
+      const jan = day.getMonth() === 0;
+      s += `<line class="vgrid" x1="${x(i)}" x2="${x(i)}" y1="${T}" y2="${H - B}"/>`;
+      s += `<text class="axis${jan ? " strong" : ""}" x="${x(i) + 4}" y="${H - 22}">${fmtMonth.format(day)}</text>`;
+      if (jan) s += `<text class="axis strong" x="${x(i) + 4}" y="${H - 8}">${day.getFullYear()}</text>`;
+    }
+    s += `<path class="area" d="${d}L${P[n - 1][0]},${y(0)}L${P[0][0]},${y(0)}Z"/>`;
+    s += `<path class="line" pathLength="1" d="${d}"/>`;
+    s += `<circle class="end" cx="${P[n - 1][0]}" cy="${P[n - 1][1]}" r="6"/>`;
+    svg.innerHTML = s;
+  }
+
+  // Count numbers up from zero, in the app's money format.
+  function countUp(el) {
+    const target = +el.dataset.count, plus = el.hasAttribute("data-plus");
+    const t0 = performance.now(), dur = 900 + Math.random() * 300;
+    const tick = (now) => {
+      const k = Math.min(1, Math.max(0, (now - t0) / dur)), v = Math.round(target * (1 - Math.pow(1 - k, 3)));
+      el.textContent = (plus ? "+" : "") + euros.format(v / 100);
+      if (k < 1 && el.isConnected) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }
+
+  // 4. Sidebar: the selection pill glides from item to item while the vignette is on screen.
+  const side = document.querySelector(".side");
+  const pill = side?.querySelector(".pill");
+  const items = side ? [...side.querySelectorAll("[data-item]")] : [];
+  let sideTimer = null, sideIndex = 0;
+  function select(i) {
+    sideIndex = i;
+    items.forEach((el, j) => el.classList.toggle("active", j === i));
+    pill.style.transform = `translateY(${items[i].offsetTop}px)`;
+    pill.style.height = `${items[i].offsetHeight}px`;
+  }
+  if (side) select(0);
+
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const vignettes = document.querySelectorAll("[data-anim]");
+  if (reduce || !("IntersectionObserver" in window)) return;
+
+  vignettes.forEach(v => v.classList.add("armed"));
+  const observer = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      const v = e.target;
+      if (e.intersectionRatio >= 0.35) {
+        if (v.classList.contains("play")) continue;
+        v.classList.add("play");
+        v.querySelectorAll("[data-count]").forEach((el, i) => setTimeout(() => countUp(el), 250 + i * 160));
+        if (v.classList.contains("v-side")) {
+          clearInterval(sideTimer);
+          select(0);
+          sideTimer = setInterval(() => select((sideIndex + 1) % items.length), 1300);
+        }
+      } else if (e.intersectionRatio === 0) {
+        // Reset once fully off screen, so it plays again next time.
+        v.classList.remove("play");
+        if (v.classList.contains("v-side")) clearInterval(sideTimer);
+      }
+    }
+  }, { threshold: [0, 0.35] });
+  vignettes.forEach(v => observer.observe(v));
+  addEventListener("resize", () => side && select(sideIndex));
+})();
