@@ -102,7 +102,6 @@ p { margin: 0; }
 .phone::before { left: -5px; top: 18%; height: 56px; box-shadow: 0 70px 0 #2c2c30, 0 -40px 0 -0px #2c2c30; }
 .phone::after { right: -5px; top: 26%; height: 84px; }
 /* Simulator recordings leave out the Dynamic Island, so draw it over the status bar. */
-.phone .island { position: absolute; z-index: 1; left: 50%; top: 21px; transform: translateX(-50%); width: 31%; height: 28px; border-radius: 14px; background: #000; }
 .hero video { width: 100%; height: auto; aspect-ratio: 640 / 1392; display: block; border-radius: 46px; background: #000; }
 
 /* A big indigo glow around the inside edge of the window, fixed while the page scrolls. */
