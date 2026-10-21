@@ -116,7 +116,7 @@
       answer.innerHTML = `${I18N.t("yesToday")}<small>${I18N.t("staysAbove")}</small>`;
     } else {
       answer.className = "answer";
-      answer.innerHTML = `${I18N.t("yesOn")(fmtLong.format(daily[i].day))}<small>${I18N.t("inDays")(i)}</small>`;
+      answer.innerHTML = `${I18N.fmt("yesOn", { date: fmtLong.format(daily[i].day) })}<small>${I18N.fmt("inDays", { n: i })}</small>`;
     }
   }
 
