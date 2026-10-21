@@ -3,7 +3,7 @@ window.TRANSLATIONS = {
  "ar": {
   "flightsToLisbon": "رحلات إلى لشبونة",
   "studioInvoice": "فاتورة الاستوديو",
-  "tagline": "شاهد المستقبل (مستقبل حسابك البنكي)",
+  "tagline": "شاهد مستقبل حسابك البنكي",
   "downloadFor": "تنزيل لـ",
   "safeToMove": "آمن للتحويل",
   "beforePayday": "قبل الراتب التالي",
@@ -73,7 +73,7 @@ window.TRANSLATIONS = {
  "ca": {
   "flightsToLisbon": "Vols a Lisboa",
   "studioInvoice": "Factura de l'estudi",
-  "tagline": "Mira el futur (del teu compte bancari)",
+  "tagline": "Mira el futur del teu compte bancari",
   "downloadFor": "Descarregar per a",
   "safeToMove": "Disponible per moure",
   "beforePayday": "abans del pròxim cobrament",
@@ -143,7 +143,7 @@ window.TRANSLATIONS = {
  "cs": {
   "flightsToLisbon": "Letenky do Lisabonu",
   "studioInvoice": "Faktura za studio",
-  "tagline": "Podívejte se do budoucnosti (svého účtu)",
+  "tagline": "Podívejte se do budoucnosti svého účtu",
   "downloadFor": "Stáhnout pro",
   "safeToMove": "Lze přesunout",
   "beforePayday": "před další výplatou",
@@ -213,7 +213,7 @@ window.TRANSLATIONS = {
  "da": {
   "flightsToLisbon": "Fly til Lissabon",
   "studioInvoice": "Studiofaktura",
-  "tagline": "Se fremtiden (for din bankkonto)",
+  "tagline": "Se fremtiden for din bankkonto",
   "downloadFor": "Hent til",
   "safeToMove": "Kan flyttes",
   "beforePayday": "før næste lønningsdag",
@@ -283,7 +283,7 @@ window.TRANSLATIONS = {
  "de": {
   "flightsToLisbon": "Flüge nach Lissabon",
   "studioInvoice": "Studio-Rechnung",
-  "tagline": "Sieh in die Zukunft (deines Kontos)",
+  "tagline": "Sieh in die Zukunft deines Kontos",
   "downloadFor": "Laden für",
   "safeToMove": "Frei verfügbar",
   "beforePayday": "vor dem nächsten Zahltag",
@@ -353,7 +353,7 @@ window.TRANSLATIONS = {
  "el": {
   "flightsToLisbon": "Πτήσεις για Λισαβόνα",
   "studioInvoice": "Τιμολόγιο στούντιο",
-  "tagline": "Δείτε το μέλλον (του τραπεζικού σας λογαριασμού)",
+  "tagline": "Δείτε το μέλλον του τραπεζικού σας λογαριασμού",
   "downloadFor": "Λήψη για",
   "safeToMove": "Ασφαλές για μεταφορά",
   "beforePayday": "πριν από τον επόμενο μισθό",
@@ -423,7 +423,7 @@ window.TRANSLATIONS = {
  "es": {
   "flightsToLisbon": "Vuelos a Lisboa",
   "studioInvoice": "Factura del estudio",
-  "tagline": "Mira el futuro (de tu cuenta bancaria)",
+  "tagline": "Mira el futuro de tu cuenta bancaria",
   "downloadFor": "Descargar para",
   "safeToMove": "Disponible para mover",
   "beforePayday": "antes del próximo cobro",
@@ -493,7 +493,7 @@ window.TRANSLATIONS = {
  "fi": {
   "flightsToLisbon": "Lennot Lissaboniin",
   "studioInvoice": "Studion lasku",
-  "tagline": "Näe (pankkitilisi) tulevaisuus",
+  "tagline": "Näe pankkitilisi tulevaisuus",
   "downloadFor": "Lataa:",
   "safeToMove": "Siirrettävissä",
   "beforePayday": "ennen seuraavaa palkkapäivää",
@@ -563,7 +563,7 @@ window.TRANSLATIONS = {
  "fr": {
   "flightsToLisbon": "Vols pour Lisbonne",
   "studioInvoice": "Facture du studio",
-  "tagline": "Voyez l’avenir (de votre compte bancaire)",
+  "tagline": "Voyez l’avenir de votre compte bancaire",
   "downloadFor": "Télécharger pour",
   "safeToMove": "Disponible à transférer",
   "beforePayday": "avant la prochaine paie",
@@ -633,7 +633,7 @@ window.TRANSLATIONS = {
  "he": {
   "flightsToLisbon": "טיסות לליסבון",
   "studioInvoice": "חשבונית סטודיו",
-  "tagline": "לראות את העתיד (של חשבון הבנק שלך)",
+  "tagline": "לראות את העתיד של חשבון הבנק שלך",
   "downloadFor": "הורדה עבור",
   "safeToMove": "בטוח להעביר",
   "beforePayday": "לפני המשכורת הבאה",
@@ -703,7 +703,7 @@ window.TRANSLATIONS = {
  "hi": {
   "flightsToLisbon": "लिस्बन की उड़ानें",
   "studioInvoice": "स्टूडियो इनवॉइस",
-  "tagline": "भविष्य देखें (अपने बैंक खाते का)",
+  "tagline": "अपने बैंक खाते का भविष्य देखें",
   "downloadFor": "डाउनलोड करें",
   "safeToMove": "ट्रांसफ़र के लिए सुरक्षित",
   "beforePayday": "अगले वेतन से पहले",
@@ -773,7 +773,7 @@ window.TRANSLATIONS = {
  "hr": {
   "flightsToLisbon": "Letovi za Lisabon",
   "studioInvoice": "Račun za studio",
-  "tagline": "Zavirite u budućnost (svog bankovnog računa)",
+  "tagline": "Zavirite u budućnost svog bankovnog računa",
   "downloadFor": "Preuzmite za",
   "safeToMove": "Možete prebaciti",
   "beforePayday": "prije sljedeće plaće",
@@ -843,7 +843,7 @@ window.TRANSLATIONS = {
  "hu": {
   "flightsToLisbon": "Repülőjegy Lisszabonba",
   "studioInvoice": "Stúdiószámla",
-  "tagline": "Lássa előre (a bankszámlája) jövőjét",
+  "tagline": "Lássa előre a bankszámlája jövőjét",
   "downloadFor": "Letöltés:",
   "safeToMove": "Átvezethető",
   "beforePayday": "a következő fizetésnapig",
@@ -913,7 +913,7 @@ window.TRANSLATIONS = {
  "id": {
   "flightsToLisbon": "Tiket pesawat ke Lisbon",
   "studioInvoice": "Tagihan studio",
-  "tagline": "Lihat masa depan (rekening bank Anda)",
+  "tagline": "Lihat masa depan rekening bank Anda",
   "downloadFor": "Unduh untuk",
   "safeToMove": "Aman Dipindahkan",
   "beforePayday": "sebelum gajian berikutnya",
@@ -983,7 +983,7 @@ window.TRANSLATIONS = {
  "it": {
   "flightsToLisbon": "Voli per Lisbona",
   "studioInvoice": "Fattura dello studio",
-  "tagline": "Guarda il futuro (del tuo conto in banca)",
+  "tagline": "Guarda il futuro del tuo conto in banca",
   "downloadFor": "Scarica per",
   "safeToMove": "Trasferibile",
   "beforePayday": "prima del prossimo stipendio",
@@ -1053,7 +1053,7 @@ window.TRANSLATIONS = {
  "ja": {
   "flightsToLisbon": "リスボン行きの航空券",
   "studioInvoice": "スタジオの請求書",
-  "tagline": "（銀行口座の）未来が見える",
+  "tagline": "銀行口座の未来が見える",
   "downloadFor": "ダウンロード：",
   "safeToMove": "動かせる金額",
   "beforePayday": "次の給料日まで",
@@ -1123,7 +1123,7 @@ window.TRANSLATIONS = {
  "ko": {
   "flightsToLisbon": "리스본행 항공권",
   "studioInvoice": "스튜디오 청구서",
-  "tagline": "미래를 미리 보세요 (내 은행 계좌의)",
+  "tagline": "내 은행 계좌의 미래를 미리 보세요",
   "downloadFor": "다운로드:",
   "safeToMove": "옮길 수 있는 금액",
   "beforePayday": "다음 월급일 전까지",
@@ -1193,7 +1193,7 @@ window.TRANSLATIONS = {
  "ms": {
   "flightsToLisbon": "Penerbangan ke Lisbon",
   "studioInvoice": "Invois studio",
-  "tagline": "Lihat masa depan (akaun bank anda)",
+  "tagline": "Lihat masa depan akaun bank anda",
   "downloadFor": "Muat turun untuk",
   "safeToMove": "Selamat Dipindahkan",
   "beforePayday": "sebelum hari gaji seterusnya",
@@ -1263,7 +1263,7 @@ window.TRANSLATIONS = {
  "nb": {
   "flightsToLisbon": "Fly til Lisboa",
   "studioInvoice": "Studiofaktura",
-  "tagline": "Se fremtiden (for bankkontoen din)",
+  "tagline": "Se fremtiden for bankkontoen din",
   "downloadFor": "Last ned for",
   "safeToMove": "Kan flyttes",
   "beforePayday": "før neste lønningsdag",
@@ -1333,7 +1333,7 @@ window.TRANSLATIONS = {
  "nl": {
   "flightsToLisbon": "Vluchten naar Lissabon",
   "studioInvoice": "Studiofactuur",
-  "tagline": "Zie de toekomst (van je bankrekening)",
+  "tagline": "Zie de toekomst van je bankrekening",
   "downloadFor": "Download voor",
   "safeToMove": "Vrij te verplaatsen",
   "beforePayday": "vóór de volgende betaaldag",
@@ -1403,7 +1403,7 @@ window.TRANSLATIONS = {
  "pl": {
   "flightsToLisbon": "Loty do Lizbony",
   "studioInvoice": "Faktura za studio",
-  "tagline": "Zobacz przyszłość (swojego konta)",
+  "tagline": "Zobacz przyszłość swojego konta",
   "downloadFor": "Pobierz na",
   "safeToMove": "Można przenieść",
   "beforePayday": "przed następną wypłatą",
@@ -1473,7 +1473,7 @@ window.TRANSLATIONS = {
  "pt-BR": {
   "flightsToLisbon": "Voos para Lisboa",
   "studioInvoice": "Fatura do estúdio",
-  "tagline": "Veja o futuro (da sua conta bancária)",
+  "tagline": "Veja o futuro da sua conta bancária",
   "downloadFor": "Baixar para",
   "safeToMove": "Livre para mover",
   "beforePayday": "antes do próximo pagamento",
@@ -1543,7 +1543,7 @@ window.TRANSLATIONS = {
  "pt-PT": {
   "flightsToLisbon": "Voos para Lisboa",
   "studioInvoice": "Fatura do estúdio",
-  "tagline": "Veja o futuro (da sua conta bancária)",
+  "tagline": "Veja o futuro da sua conta bancária",
   "downloadFor": "Descarregar para",
   "safeToMove": "Disponível para mover",
   "beforePayday": "antes do próximo ordenado",
@@ -1613,7 +1613,7 @@ window.TRANSLATIONS = {
  "ro": {
   "flightsToLisbon": "Zboruri spre Lisabona",
   "studioInvoice": "Factură studio",
-  "tagline": "Vedeți viitorul (contului bancar)",
+  "tagline": "Vedeți viitorul contului bancar",
   "downloadFor": "Descărcați pentru",
   "safeToMove": "Puteți muta",
   "beforePayday": "înainte de următorul salariu",
@@ -1683,7 +1683,7 @@ window.TRANSLATIONS = {
  "ru": {
   "flightsToLisbon": "Билеты в Лиссабон",
   "studioInvoice": "Счёт за студию",
-  "tagline": "Загляните в будущее (вашего банковского счёта)",
+  "tagline": "Загляните в будущее вашего банковского счёта",
   "downloadFor": "Загрузить для",
   "safeToMove": "Можно перевести",
   "beforePayday": "до следующей зарплаты",
@@ -1753,7 +1753,7 @@ window.TRANSLATIONS = {
  "sk": {
   "flightsToLisbon": "Letenky do Lisabonu",
   "studioInvoice": "Faktúra za štúdio",
-  "tagline": "Pozrite sa do budúcnosti (svojho účtu)",
+  "tagline": "Pozrite sa do budúcnosti svojho účtu",
   "downloadFor": "Stiahnuť pre",
   "safeToMove": "Môžete presunúť",
   "beforePayday": "pred ďalšou výplatou",
@@ -1823,7 +1823,7 @@ window.TRANSLATIONS = {
  "sv": {
   "flightsToLisbon": "Flyg till Lissabon",
   "studioInvoice": "Studiofaktura",
-  "tagline": "Se framtiden (för ditt bankkonto)",
+  "tagline": "Se framtiden för ditt bankkonto",
   "downloadFor": "Hämta för",
   "safeToMove": "Kan flyttas",
   "beforePayday": "före nästa lönedag",
@@ -1893,7 +1893,7 @@ window.TRANSLATIONS = {
  "th": {
   "flightsToLisbon": "เที่ยวบินไปลิสบอน",
   "studioInvoice": "ใบแจ้งหนี้สตูดิโอ",
-  "tagline": "มองเห็นอนาคต (ของบัญชีธนาคารคุณ)",
+  "tagline": "มองเห็นอนาคตของบัญชีธนาคารคุณ",
   "downloadFor": "ดาวน์โหลดสำหรับ",
   "safeToMove": "ย้ายได้อย่างปลอดภัย",
   "beforePayday": "ก่อนเงินเดือนออกครั้งถัดไป",
@@ -1963,7 +1963,7 @@ window.TRANSLATIONS = {
  "tr": {
   "flightsToLisbon": "Lizbon uçak biletleri",
   "studioInvoice": "Stüdyo faturası",
-  "tagline": "Geleceği görün (banka hesabınızın)",
+  "tagline": "Banka hesabınızın geleceğini görün",
   "downloadFor": "İndirin:",
   "safeToMove": "Aktarılabilir",
   "beforePayday": "sonraki maaş gününden önce",
@@ -2033,7 +2033,7 @@ window.TRANSLATIONS = {
  "uk": {
   "flightsToLisbon": "Квитки до Лісабона",
   "studioInvoice": "Рахунок за студію",
-  "tagline": "Зазирніть у майбутнє (свого банківського рахунку)",
+  "tagline": "Зазирніть у майбутнє свого банківського рахунку",
   "downloadFor": "Завантажити для",
   "safeToMove": "Можна переказати",
   "beforePayday": "до наступної зарплати",
@@ -2103,7 +2103,7 @@ window.TRANSLATIONS = {
  "vi": {
   "flightsToLisbon": "Vé máy bay đi Lisbon",
   "studioInvoice": "Hóa đơn studio",
-  "tagline": "Nhìn thấy tương lai (của tài khoản ngân hàng)",
+  "tagline": "Nhìn thấy tương lai của tài khoản ngân hàng",
   "downloadFor": "Tải về cho",
   "safeToMove": "Có thể chuyển",
   "beforePayday": "trước kỳ lương tới",
@@ -2173,7 +2173,7 @@ window.TRANSLATIONS = {
  "zh-Hans": {
   "flightsToLisbon": "飞往里斯本的机票",
   "studioInvoice": "工作室账单",
-  "tagline": "预见（你银行账户的）未来",
+  "tagline": "预见你银行账户的未来",
   "downloadFor": "下载：",
   "safeToMove": "可动用金额",
   "beforePayday": "下次发薪前",
@@ -2243,7 +2243,7 @@ window.TRANSLATIONS = {
  "zh-Hant": {
   "flightsToLisbon": "飛往里斯本的機票",
   "studioInvoice": "工作室帳單",
-  "tagline": "預見（你銀行帳戶的）未來",
+  "tagline": "預見你銀行帳戶的未來",
   "downloadFor": "下載：",
   "safeToMove": "可動用金額",
   "beforePayday": "下次發薪前",
