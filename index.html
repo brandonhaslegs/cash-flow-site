@@ -20,6 +20,11 @@
   <script src="script.js" defer></script>
 </head>
 <body>
+  <!-- Crystal-ball mist and dust around the window edges; the motes are added by script.js -->
+  <div class="sky" aria-hidden="true">
+    <span class="cloud c1"></span><span class="cloud c2"></span><span class="cloud c3"></span>
+    <span class="cloud c4"></span><span class="cloud c5"></span><span class="cloud c6"></span>
+  </div>
   <main>
     <header class="intro">
       <img class="mark" src="images/icon.png" width="96" height="96" alt="">
@@ -48,19 +53,28 @@
         <div class="vignette v-chart" data-anim>
           <svg id="v-chart" viewBox="0 0 520 230" role="img" aria-label="Balance chart for the next three months"></svg>
         </div>
-        <p><strong>The months ahead.</strong> Your balance, drawn from your bills and paydays.</p>
-      </div>
-      <div class="feature">
         <div class="vignette v-tiles" data-anim aria-label="Safe to Move, Lowest Point and Monthly Net figures">
           <div class="tile" style="--i:0"><span>Safe to Move</span><b data-count="213700">2.137,00 €</b><small>before next payday</small></div>
           <div class="tile" style="--i:1"><span>Lowest Point</span><b data-count="213700">2.137,00 €</b><small>on 22 Oct</small></div>
           <div class="tile" style="--i:2"><span>Monthly Net</span><b data-count="191600" data-plus>+1.916,00 €</b><small>€4,1K in · €2,2K out</small></div>
         </div>
-        <p><strong>No surprises.</strong> What you can move before payday, and when you’ll hit your lowest point.</p>
+        <p><strong>The months ahead, with no surprises.</strong> Your balance drawn from your bills and paydays, what you can move before payday, and when you’ll hit your lowest point.</p>
       </div>
       <div class="feature">
         <div class="vignette v-rows" data-anim aria-label="Timeline of payments with the balance after each, and a trip to Lisbon marked alongside">
           <div class="tl-row" style="--i:0">
+            <span class="gutter"></span>
+            <span class="day"><b>18</b><small>Sun</small></span>
+            <span class="name">Streaming</span>
+            <span class="amt">−14,00 €<small data-count="219800">2.198,00 €</small></span>
+          </div>
+          <div class="tl-row" style="--i:1">
+            <span class="gutter"></span>
+            <span class="day"><b>20</b><small>Tue</small></span>
+            <span class="name">Insurance</span>
+            <span class="amt">−58,00 €<small data-count="214000">2.140,00 €</small></span>
+          </div>
+          <div class="tl-row" style="--i:2">
             <span class="gutter"></span>
             <span class="day"><b>22</b><small>Thu</small></span>
             <span class="name">Cloud storage</span>
@@ -69,17 +83,35 @@
           <div class="tl-trip">
             <span class="bar"><span>Lisbon</span></span>
             <div>
-              <div class="tl-row" style="--i:1">
+              <div class="tl-row" style="--i:3">
                 <span class="day"><b>28</b><small>Wed</small></span>
                 <span class="name"><em class="chip">Income</em><strong>Salary</strong></span>
                 <span class="amt income">+4.100,00 €<small data-count="623700">6.237,00 €</small></span>
               </div>
-              <div class="tl-row saving" style="--i:2">
+              <div class="tl-row" style="--i:4">
                 <span class="day"><b>29</b><small>Thu</small></span>
                 <span class="name"><i class="dot"></i>Savings</span>
                 <span class="amt">−500,00 €<small data-count="573700">5.737,00 €</small></span>
               </div>
             </div>
+          </div>
+          <div class="tl-row" style="--i:5">
+            <span class="gutter"></span>
+            <span class="day"><b>1</b><small>Sun</small></span>
+            <span class="name">Rent</span>
+            <span class="amt">−1.350,00 €<small data-count="438700">4.387,00 €</small></span>
+          </div>
+          <div class="tl-row" style="--i:6">
+            <span class="gutter"></span>
+            <span class="day"><b>1</b><small>Sun</small></span>
+            <span class="name">Phone</span>
+            <span class="amt">−58,00 €<small data-count="432900">4.329,00 €</small></span>
+          </div>
+          <div class="tl-row" style="--i:7">
+            <span class="gutter"></span>
+            <span class="day"><b>2</b><small>Mon</small></span>
+            <span class="name">Internet</span>
+            <span class="amt">−45,00 €<small data-count="428400">4.284,00 €</small></span>
           </div>
         </div>
         <p><strong>Every payment in order.</strong> Each bill and paycheck with what’s left after it, and your trips marked alongside.</p>

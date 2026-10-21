@@ -309,3 +309,22 @@
   vignettes.forEach(v => observer.observe(v));
   addEventListener("resize", () => side && select(sideIndex));
 })();
+
+// ---- Dust motes around the edges of the window (fewer on phones, where the column fills the screen) ----
+(() => {
+  const sky = document.querySelector(".sky");
+  if (!sky) return;
+  const count = innerWidth < 700 ? 24 : 70;
+  const frag = document.createDocumentFragment();
+  for (let made = 0; made < count; ) {
+    const x = Math.random() * 100, y = Math.random() * 100;
+    // Keep to the outer band: the side margins, or a thin strip at the top and bottom
+    if (x > 18 && x < 82 && y > 8 && y < 92) continue;
+    const m = document.createElement("span");
+    m.className = "mote";
+    m.style.cssText = `left:${x}%;top:${y}%;--s:${(1.5 + Math.random() * 2.5).toFixed(1)}px;--d:${(2.5 + Math.random() * 4).toFixed(1)}s;--delay:-${(Math.random() * 6).toFixed(1)}s`;
+    frag.appendChild(m);
+    made++;
+  }
+  sky.appendChild(frag);
+})();
