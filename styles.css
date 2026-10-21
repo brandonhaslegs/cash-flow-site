@@ -51,8 +51,32 @@ p { margin: 0; }
 .store small { display: block; font-weight: 500; font-size: 0.72rem; opacity: 0.8; }
 
 .hero { display: flex; justify-content: center; }
-/* The tour video sits straight on the page: no card or border, just the phone screen's rounded corners. */
-.hero video { width: min(320px, 100%); height: auto; aspect-ratio: 640 / 1392; display: block; border-radius: 44px; background: #000; }
+/* The tour video inside a drawn iPhone outline: a slim black bezel, a thin metallic edge and side buttons. */
+.phone {
+  position: relative;
+  width: min(330px, 100%);
+  padding: 11px;
+  border-radius: 56px;
+  background: #050505;
+  box-shadow:
+    0 0 0 1.5px #3a3a3f,
+    0 0 0 3px #1b1b1e,
+    inset 0 0 0 1px #2a2a2e,
+    0 30px 80px -20px color-mix(in srgb, var(--accent) 55%, transparent);
+}
+.phone::before, .phone::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  border-radius: 2px;
+  background: #2c2c30;
+}
+/* Action and volume buttons on the left, the side button on the right. */
+.phone::before { left: -5px; top: 18%; height: 56px; box-shadow: 0 70px 0 #2c2c30, 0 -40px 0 -0px #2c2c30; }
+.phone::after { right: -5px; top: 26%; height: 84px; }
+/* Simulator recordings leave out the Dynamic Island, so draw it over the status bar. */
+.phone .island { position: absolute; z-index: 1; left: 50%; top: 21px; transform: translateX(-50%); width: 31%; height: 28px; border-radius: 14px; background: #000; }
+.hero video { width: 100%; height: auto; aspect-ratio: 640 / 1392; display: block; border-radius: 46px; background: #000; }
 
 /* A big indigo glow around the inside edge of the window, fixed while the page scrolls. */
 body::after {
