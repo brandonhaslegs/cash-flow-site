@@ -54,12 +54,19 @@
 
     <section class="afford" aria-labelledby="afford-title">
       <h2 id="afford-title">Can I afford it?</h2>
-      <p>Type a price. Cash Flow finds the first day you can buy it without ever dipping below zero.</p>
-      <form id="afford-form" novalidate>
-        <label class="price" for="price"><span>€</span><input id="price" inputmode="decimal" autocomplete="off" value="900" aria-label="Price in euros"></label>
+      <p>Turn the dial. Cash Flow finds the first day you can buy it without ever dipping below zero.</p>
+      <form id="afford-form" class="dial" novalidate>
+        <div id="dial" class="dial-ring" role="slider" tabindex="0" aria-label="Price" aria-valuemin="10">
+          <svg id="dial-svg" viewBox="0 0 280 280" aria-hidden="true"></svg>
+          <label class="dial-price" for="price"><input id="price" inputmode="decimal" autocomplete="off" aria-label="Price in euros"></label>
+          <span class="dial-hint">Drag the knob or type</span>
+        </div>
         <p class="answer" id="answer" aria-live="polite"></p>
       </form>
-      <div class="chart"><svg id="chart" viewBox="0 0 560 220" role="img" aria-label="Projected balance for the next 90 days"></svg></div>
+      <div class="chart">
+        <p class="chart-title">What you could spend each day</p>
+        <svg id="chart" viewBox="0 0 560 220" role="img" aria-label="The most you could spend on each day over the next year"></svg>
+      </div>
       <p class="note">Runs on an example plan of bills and paydays, starting today.</p>
     </section>
 

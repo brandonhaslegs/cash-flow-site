@@ -75,24 +75,37 @@ p { margin: 0; }
 @media (max-width: 480px) { .hero, .feature, .afford { padding: 16px; border-radius: 18px; } }
 .afford h2, .afford > p { text-align: center; }
 .answer { text-align: center; }
-.afford form { display: grid; gap: 14px; margin-top: 4px; }
-.price { display: flex; align-items: center; gap: 6px; background: var(--frame); border: 1px solid var(--rule); border-radius: 14px; padding: 0 16px; }
-.price span { color: var(--muted); font-size: 1.3rem; }
-.price input { flex: 1; min-width: 0; border: 0; background: transparent; color: var(--ink); font: 600 1.6rem var(--font); font-variant-numeric: tabular-nums; padding: 12px 0; }
-.price input:focus { outline: none; }
-.price:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent); }
-.answer { font-weight: 600; }
+.afford form { display: grid; gap: 18px; margin-top: 4px; justify-items: center; }
+.dial-ring { position: relative; width: min(280px, 100%); aspect-ratio: 1; max-width: 100%; border-radius: 50%; touch-action: none; }
+.dial-ring:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.dial-ring svg { width: 100%; height: 100%; display: block; cursor: grab; }
+.dial-ring.dragging svg { cursor: grabbing; }
+.dial .tick { stroke: color-mix(in srgb, var(--muted) 45%, transparent); stroke-width: 2; stroke-linecap: round; }
+.dial .track { fill: none; stroke: color-mix(in srgb, var(--muted) 18%, transparent); stroke-width: 18; stroke-linecap: round; }
+.dial .progress { fill: none; stroke: var(--accent); stroke-width: 18; stroke-linecap: round; }
+.dial .knob { fill: #fff; stroke: var(--accent); stroke-width: 3; filter: drop-shadow(0 1px 3px rgb(0 0 0 / .3)); transition: r .15s; }
+.dial-ring.dragging .knob { r: 16; }
+.dial-ring.no .progress { stroke: var(--bad); }
+.dial-ring.no .knob { stroke: var(--bad); }
+.dial-price { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -62%); display: flex; align-items: baseline; justify-content: center; width: 62%; }
+.dial-price input { width: 100%; min-width: 0; border: 0; background: transparent; color: var(--ink); text-align: center; font: 700 2.4rem var(--font); font-variant-numeric: tabular-nums; padding: 0; border-bottom: 2px solid transparent; }
+.dial-price input:focus { outline: none; border-bottom-color: var(--accent); }
+.dial-hint { position: absolute; left: 0; right: 0; top: 58%; text-align: center; font-size: 0.8rem; color: var(--muted); pointer-events: none; }
+.answer { font-weight: 700; font-size: 1.3rem; text-align: center; }
 .answer.no { color: var(--bad); }
-.answer small { display: block; font-weight: 400; color: var(--muted); font-size: 0.95rem; }
+.answer small { display: block; font-weight: 400; color: var(--muted); font-size: 0.95rem; margin-top: 2px; }
 .chart { background: var(--frame); border: 1px solid var(--rule); border-radius: 18px; padding: 14px 12px 6px; }
+.chart-title { margin: 0 4px 6px; font-weight: 600; font-size: 0.95rem; }
 .chart svg { width: 100%; height: auto; display: block; }
 .chart .axis { font: 500 11px var(--font); fill: var(--muted); }
 .chart .grid { stroke: var(--rule); stroke-width: 1; }
-.chart .area { fill: color-mix(in srgb, var(--accent) 14%, transparent); }
-.chart .line { fill: none; stroke: var(--accent); stroke-width: 2.5; stroke-linejoin: round; }
-.chart .after { fill: none; stroke: var(--muted); stroke-width: 1.5; stroke-dasharray: 5 4; }
-.chart .zero { stroke: var(--bad); stroke-width: 1; stroke-dasharray: 3 3; }
-.chart .buy { fill: var(--warn); stroke: var(--frame); stroke-width: 2; }
+.chart .area { fill: color-mix(in srgb, var(--accent) 16%, transparent); }
+.chart .line { fill: none; stroke: var(--accent); stroke-width: 2; stroke-linejoin: round; }
+.chart .price-line { stroke: var(--muted); stroke-width: 1.5; stroke-dasharray: 5 4; }
+.chart .price-line.no { stroke: var(--bad); }
+.chart .marker { fill: var(--accent); stroke: var(--frame); stroke-width: 2; }
+.chart .tag { fill: var(--accent); }
+.chart .tag-text { font: 700 11px var(--font); fill: #fff; text-anchor: middle; }
 .note { font-size: 0.85rem; color: var(--muted); }
 
 footer { color: var(--muted); font-size: 0.85rem; text-align: center; }
