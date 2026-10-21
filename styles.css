@@ -274,11 +274,13 @@ main, .features, .feature, .afford { grid-template-columns: minmax(0, 1fr); }
   .top {
     position: relative;
     left: 50%;
-    width: min(880px, calc(100vw - 40px));
+    width: max-content;
+    max-width: calc(100vw - 40px);
     transform: translateX(-50%);
-    grid-template-columns: auto minmax(0, 1fr);
+    /* Phone and text sit together as one centred group, close to each other. */
+    grid-template-columns: auto auto;
     align-items: center;
-    gap: 56px;
+    gap: 40px;
     padding-top: 12px;
   }
   .top .intro { justify-items: start; text-align: left; gap: 16px; }
