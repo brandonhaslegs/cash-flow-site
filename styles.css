@@ -2,17 +2,16 @@
 :root {
   /* SF Rounded comes from the visitor's Apple device (it can't be hosted); Inter stands in everywhere else. */
   --font: ui-rounded, "SF Pro Rounded", "Inter", system-ui, sans-serif;
-  --paper: #ffffff;
-  --ink: #1d1d1f;
-  --muted: #6e6e73;
-  --rule: #e3e3e8;
-  --frame: #f5f5f7;
-  --accent: #4f52f2;
-  --warn: #ff9500;
-  --bad: #ff3b30;
-}
-@media (prefers-color-scheme: dark) {
-  :root { --paper: #000000; --ink: #f5f5f7; --muted: #98989d; --rule: #2c2c2e; --frame: #1c1c1e; --accent: #7c80ff; --warn: #ff9f0a; --bad: #ff453a; color-scheme: dark; }
+  /* The site always uses the dark look: starry night behind the crystal ball. */
+  --paper: #000000;
+  --ink: #f5f5f7;
+  --muted: #98989d;
+  --rule: #2c2c2e;
+  --frame: #1c1c1e;
+  --accent: #7c80ff;
+  --warn: #ff9f0a;
+  --bad: #ff453a;
+  color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
@@ -52,12 +51,8 @@ p { margin: 0; }
 .store small { display: block; font-weight: 500; font-size: 0.72rem; opacity: 0.8; }
 
 .hero { display: flex; justify-content: center; }
-.hero img { width: min(320px, 100%); height: auto; display: block; border-radius: 40px; border: 1px solid var(--rule); }
-.hero .dark { display: none; }
-@media (prefers-color-scheme: dark) {
-  .hero .light { display: none; }
-  .hero .dark { display: block; }
-}
+/* The tour video sits straight on the page: no card or border, just the phone screen's rounded corners. */
+.hero video { width: min(320px, 100%); height: auto; aspect-ratio: 640 / 1392; display: block; border-radius: 44px; background: #000; }
 
 /* A big indigo glow around the inside edge of the window, fixed while the page scrolls. */
 body::after {
@@ -72,8 +67,7 @@ body::after {
 }
 
 /* Mist and dust from the crystal ball, drifting around the edges of the window behind the content. */
-.sky { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; --mist: #b4a6ff; --mist-2: #e2c4ff; --mote: #9a90ff; }
-@media (prefers-color-scheme: dark) { .sky { --mist: #5b4fd6; --mist-2: #9a62d8; --mote: #ffffff; } }
+.sky { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; --mist: #5b4fd6; --mist-2: #9a62d8; --mote: #ffffff; }
 main { position: relative; z-index: 1; }
 .cloud { position: absolute; border-radius: 50%; filter: blur(48px); opacity: .55; background: radial-gradient(closest-side, var(--mist), transparent); }
 .cloud:nth-child(even) { background: radial-gradient(closest-side, var(--mist-2), transparent); }
@@ -97,7 +91,7 @@ main { position: relative; z-index: 1; }
 
 .features { display: grid; gap: 56px; }
 /* Every section, the screenshot included, is the same full-width outlined card: one simple column. */
-.hero, .feature, .afford { width: 100%; border: 1px solid var(--rule); border-radius: 22px; padding: 24px; }
+.feature, .afford { width: 100%; border: 1px solid var(--rule); border-radius: 22px; padding: 24px; }
 .feature { display: grid; gap: 16px; text-align: center; }
 .v-chart + .v-tiles { margin-top: 4px; }
 .feature > p { text-align: center; }
@@ -146,7 +140,7 @@ main { position: relative; z-index: 1; }
 .side { position: relative; width: min(260px, 100%); background: var(--frame); border: 1px solid var(--rule); border-radius: 16px; padding: 10px; display: grid; gap: 2px; }
 .side .item { position: relative; z-index: 1; display: flex; align-items: center; gap: 10px; padding: 7px 10px; border-radius: 8px; font-weight: 500; font-size: 0.95rem; transition: color .35s; }
 .side .item.active { color: #fff; font-weight: 600; }
-.side svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.side .ico { width: 18px; height: 18px; flex: none; background: currentColor; -webkit-mask: var(--icon) center / contain no-repeat; mask: var(--icon) center / contain no-repeat; }
 .side .item em { margin-left: auto; font-style: normal; font-size: 0.72rem; font-weight: 600; color: var(--accent); background: var(--tint); padding: 1px 7px; border-radius: 99px; transition: color .35s, background .35s; }
 .side .item.active em { color: #fff; background: rgb(255 255 255 / .2); }
 .side .plan-label { font-size: 0.72rem; font-weight: 600; color: var(--muted); padding: 14px 10px 4px; }
@@ -183,7 +177,7 @@ main { position: relative; z-index: 1; }
 .feature p strong { color: var(--ink); font-weight: 600; }
 
 .afford { display: grid; gap: 14px; }
-@media (max-width: 480px) { .hero, .feature, .afford { padding: 16px; border-radius: 18px; } }
+@media (max-width: 480px) { .feature, .afford { padding: 16px; border-radius: 18px; } }
 .afford h2, .afford > p { text-align: center; }
 .answer { text-align: center; }
 .afford form { display: grid; gap: 18px; margin-top: 4px; justify-items: center; }

@@ -9,7 +9,7 @@
   <meta property="og:title" content="Future Cash">
   <meta property="og:description" content="See the future (of your bank balance).">
   <meta property="og:url" content="https://myfuture.cash/">
-  <meta property="og:image" content="https://myfuture.cash/images/hero-light.jpg">
+  <meta property="og:image" content="https://myfuture.cash/images/tour-poster.jpg">
   <link rel="canonical" href="https://myfuture.cash/">
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -44,8 +44,8 @@
     </header>
 
     <div class="hero">
-      <img class="light" src="images/hero-light.jpg" alt="Future Cash on iPhone: today's balance, a three-month chart, and upcoming bills">
-      <img class="dark" src="images/hero-dark.jpg" alt="Future Cash on iPhone: today's balance, a three-month chart, and upcoming bills">
+      <video src="images/tour.mp4" poster="images/tour-poster.jpg" autoplay muted loop playsinline preload="auto"
+             aria-label="A tour of Future Cash on iPhone: the forecast chart and timeline, the Can I Afford It? dial, then bills, income, expenses and trips"></video>
     </div>
 
     <section class="features" aria-label="Features">
@@ -114,13 +114,12 @@
         <div class="vignette v-side" data-anim aria-label="The Mac sidebar: Forecast, Can I Afford It?, Bills, Income, Expenses and Trips">
           <div class="side">
             <span class="pill" aria-hidden="true"></span>
-            <div class="item" data-item><svg viewBox="0 0 24 24"><path d="M3 18l5-6 4 3 6-8M3 21h18"/></svg>Forecast</div>
-            <div class="item" data-item><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 13l4-4M12 2v2M4 6l1.5 1.5M20 6l-1.5 1.5"/></svg>Can I Afford It?</div>
-            <div class="plan-label">Plan</div>
-            <div class="item" data-item><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Bills<em>€2,2K</em></div>
-            <div class="item" data-item><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M8 13l4 4 4-4"/></svg>Income<em>€4,1K</em></div>
-            <div class="item" data-item><svg viewBox="0 0 24 24"><path d="M3 4h3l2.5 11h10L21 8H7"/><circle cx="10" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>Expenses<em>€340</em></div>
-            <div class="item" data-item><svg viewBox="0 0 24 24"><path d="M10.5 21l1.5-6.5L5 12l1-2 7 1.5L17.5 4a2 2 0 013 3l-6.5 4.5L15.5 19l-2 1-3-5"/></svg>Trips<em>1</em></div>
+            <div class="item" data-item><span class="ico" style="--icon:url(images/icons/forecast.png)"></span>Forecast</div>
+            <div class="item" data-item><span class="ico" style="--icon:url(images/icons/afford.png)"></span>Can I Afford It?</div>
+            <div class="item" data-item><span class="ico" style="--icon:url(images/icons/bills.png)"></span>Bills<em>€2,2K</em></div>
+            <div class="item" data-item><span class="ico" style="--icon:url(images/icons/income.png)"></span>Income<em>€4,1K</em></div>
+            <div class="item" data-item><span class="ico" style="--icon:url(images/icons/expenses.png)"></span>Expenses<em>€340</em></div>
+            <div class="item" data-item><span class="ico" style="--icon:url(images/icons/trips.png)"></span>Trips<em>1</em></div>
           </div>
         </div>
         <p><strong>Everywhere you are.</strong> iPhone, iPad and Mac, kept in sync through your own iCloud.</p>
