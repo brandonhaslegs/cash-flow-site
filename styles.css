@@ -260,3 +260,24 @@ footer { color: var(--muted); font-size: 0.85rem; text-align: center; }
 /* Grid columns may shrink below their content's natural width, so nothing pushes past a phone screen. */
 main, .features, .feature, .afford { grid-template-columns: minmax(0, 1fr); }
 .afford form { grid-template-columns: minmax(0, 1fr); }
+
+/* Opening section: name and download buttons on the left, the phone on the right. It's wider than the reading
+   column below and breaks out of it; on narrow screens it stacks exactly like the rest of the page. */
+.top { display: grid; gap: 40px; justify-items: center; }
+@media (min-width: 760px) {
+  .top {
+    position: relative;
+    left: 50%;
+    width: min(880px, calc(100vw - 40px));
+    transform: translateX(-50%);
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 56px;
+    padding-top: 12px;
+  }
+  .top .intro { justify-items: start; text-align: left; gap: 16px; }
+  .top .intro h1 { font-size: 3.4rem; line-height: 1.02; }
+  .top .intro .line { font-size: 1.45rem; max-width: 20ch; text-wrap: balance; }
+  .top .downloads { justify-content: flex-start; margin-top: 10px; }
+  .top .phone { width: 340px; }
+}
