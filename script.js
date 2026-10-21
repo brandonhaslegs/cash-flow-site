@@ -309,7 +309,7 @@
   // Name paydays and purchases beside their dots, like the app: the biggest amounts first, three at most, each name
   // once. Each tries right, left, above, below, then the corners, and is left out rather than overlap anything.
   function placePaydayLabels(svg, dots, b, tripText) {
-    const H = 15, PAD = 3, OFF = 9;
+    const H = 15, PAD = 3, OFF = 7;
     const placed = [];
     if (tripText) { const t = tripText.getBBox(); placed.push({ x: t.x, y: t.y, w: t.width, h: t.height }); }
     const hit = (a, c, pad = PAD) => a.x < c.x + c.w + pad && c.x < a.x + a.w + pad && a.y < c.y + c.h + pad && c.y < a.y + a.h + pad;
