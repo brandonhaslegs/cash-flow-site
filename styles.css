@@ -157,7 +157,9 @@ main { position: relative; z-index: 1; }
 .v-chart .vgrid { stroke: var(--rule); stroke-width: 1; stroke-dasharray: 3 3; }
 .v-chart .area { fill: url(#v-chart-fill); }
 .v-chart .line { fill: none; stroke: var(--accent); stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; }
-.v-chart .end { fill: var(--accent); stroke: var(--paper); stroke-width: 3; }
+.v-chart .payday { fill: var(--paper); stroke: var(--accent); stroke-width: 3; }
+.v-chart .trip rect { fill: color-mix(in srgb, var(--ink) 9%, transparent); }
+.v-chart .trip text { font: 600 11px var(--font); fill: var(--muted); }
 
 /* 2. Tiles */
 .v-tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
@@ -200,11 +202,13 @@ main { position: relative; z-index: 1; }
 /* ---- Motion: armed vignettes wait offscreen; .play runs each animation when it scrolls into view ---- */
 @media (prefers-reduced-motion: no-preference) {
   .armed:not(.play) .line { stroke-dashoffset: 1; }
-  .armed:not(.play) .area, .armed:not(.play) .end { opacity: 0; }
+  .armed:not(.play) .area, .armed:not(.play) .payday, .armed:not(.play) .trip { opacity: 0; }
   .v-chart .line { stroke-dasharray: 1; }
   .play .line { animation: draw 1.6s cubic-bezier(.45, .05, .25, 1) both; }
   .play .area { animation: fade .8s .9s both; }
-  .play .end { animation: pop .4s 1.5s both; transform-box: fill-box; transform-origin: center; }
+  /* Each payday dot pops as the line reaches it; the trip band fades in first. */
+  .play .payday { animation: pop .35s calc(.15s + var(--k) * 1.6s) both; transform-box: fill-box; transform-origin: center; }
+  .play .trip { animation: fade .6s .2s both; }
 
   .armed:not(.play) .tile { opacity: 0; transform: translateY(14px); }
   .play .tile { animation: rise .5s calc(var(--i) * 140ms) cubic-bezier(.2, .8, .2, 1) both; }

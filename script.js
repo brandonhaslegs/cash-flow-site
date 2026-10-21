@@ -184,12 +184,17 @@
   const DAYS = 92;
   const bills = [[135000, 1], [5800, 1], [4500, 2], [8200, 5], [3900, 8], [2400, 12], [1100, 15], [1400, 18], [5800, 20], [300, 22], [50000, 29]];
   const delta = new Map();
+  const paydays = new Set();
+  // A trip in the example plan, marked on the chart like the app does.
+  const TRIP = { name: (window.I18N && I18N.t("lisbon")) || "Lisbon", from: 3, to: 9 };
   const add = (date, amount) => { const k = date.getTime(); delta.set(k, (delta.get(k) || 0) + amount); };
   for (let m = new Date(start.getFullYear(), start.getMonth(), 1); m <= addDays(start, DAYS); m = new Date(m.getFullYear(), m.getMonth() + 1, 1)) {
     for (const [amount, day] of bills) add(onDay(m.getFullYear(), m.getMonth(), day), -amount);
     add(onDay(m.getFullYear(), m.getMonth(), 28), 410000);
+    paydays.add(onDay(m.getFullYear(), m.getMonth(), 28).getTime());
   }
   add(addDays(start, 23), 99000);
+  paydays.add(addDays(start, 23).getTime());
   add(addDays(start, 31), -34000);
   // Points where the balance changes (end of day), like the app's chart.
   const pts = [];
@@ -230,9 +235,16 @@
       s += `<text class="axis${jan ? " strong" : ""}" x="${x(i) + 4}" y="${H - 22}">${fmtMonth.format(day)}</text>`;
       if (jan) s += `<text class="axis strong" x="${x(i) + 4}" y="${H - 8}">${day.getFullYear()}</text>`;
     }
+    // Trip band behind the line, named at the top.
+    s += `<g class="trip"><rect x="${x(TRIP.from)}" y="${T}" width="${x(TRIP.to) - x(TRIP.from)}" height="${H - B - T}"/>` +
+         `<text x="${x(TRIP.from) + 5}" y="${T + 14}">✈ ${TRIP.name}</text></g>`;
     s += `<path class="area" d="${d}L${P[n - 1][0]},${y(0)}L${P[0][0]},${y(0)}Z"/>`;
     s += `<path class="line" pathLength="1" d="${d}"/>`;
-    s += `<circle class="end" cx="${P[n - 1][0]}" cy="${P[n - 1][1]}" r="6"/>`;
+    // Payday dots where income lands.
+    pts.forEach((p, i) => {
+      if (!paydays.has(addDays(start, p.d).getTime())) return;
+      s += `<circle class="payday" style="--k:${i / n}" cx="${P[i][0]}" cy="${P[i][1]}" r="5.5"/>`;
+    });
     svg.innerHTML = s;
   }
 
