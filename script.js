@@ -308,32 +308,50 @@
   sky.appendChild(frag);
 })();
 
-// FAQ: answers slide open and closed instead of snapping (details/summary still works without script).
+// FAQ: one answer open at a time, sliding open and closed instead of snapping
+// (the shared name="faq" on each <details> keeps it to one open even without script).
 (() => {
   if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   const ease = "cubic-bezier(.3, .7, .2, 1)";
-  document.querySelectorAll(".faq details").forEach(details => {
-    const summary = details.querySelector("summary");
+  const items = [...document.querySelectorAll(".faq details")];
+  // The script keeps one open at a time itself, so the browser's version doesn't snap answers shut mid-animation.
+  items.forEach(d => d.removeAttribute("name"));
+  const running = new Map();
+
+  function close(details) {
     const body = details.querySelector("p");
-    let animation = null;
-    summary.addEventListener("click", (e) => {
+    running.get(details)?.cancel();
+    const from = body.offsetHeight;
+    details.classList.add("closing");
+    const a = body.animate(
+      [{ height: `${from}px`, opacity: 1 }, { height: "0px", opacity: 0, paddingBottom: "0px" }],
+      { duration: 260, easing: ease });
+    const finish = () => {
+      if (running.get(details) !== a) return;
+      details.open = false; details.classList.remove("closing"); running.delete(details);
+    };
+    a.onfinish = finish;
+    setTimeout(finish, 300); // also settle if the animation never reports finishing
+    running.set(details, a);
+  }
+
+  function open(details) {
+    const body = details.querySelector("p");
+    running.get(details)?.cancel();
+    items.forEach(d => { if (d !== details && d.open && !d.classList.contains("closing")) close(d); });
+    details.open = true;
+    const to = body.offsetHeight;
+    const a = body.animate(
+      [{ height: "0px", opacity: 0, paddingBottom: "0px" }, { height: `${to}px`, opacity: 1 }],
+      { duration: 320, easing: ease });
+    a.onfinish = () => running.delete(details);
+    running.set(details, a);
+  }
+
+  items.forEach(details => {
+    details.querySelector("summary").addEventListener("click", (e) => {
       e.preventDefault();
-      animation?.cancel();
-      if (details.open) {
-        const from = body.offsetHeight;
-        details.classList.add("closing");
-        animation = body.animate(
-          [{ height: `${from}px`, opacity: 1 }, { height: "0px", opacity: 0, paddingBottom: "0px" }],
-          { duration: 260, easing: ease });
-        animation.onfinish = () => { details.open = false; details.classList.remove("closing"); animation = null; };
-      } else {
-        details.open = true;
-        const to = body.offsetHeight;
-        animation = body.animate(
-          [{ height: "0px", opacity: 0, paddingBottom: "0px" }, { height: `${to}px`, opacity: 1 }],
-          { duration: 320, easing: ease });
-        animation.onfinish = () => { animation = null; };
-      }
+      if (details.open && !details.classList.contains("closing")) close(details); else open(details);
     });
   });
 })();
