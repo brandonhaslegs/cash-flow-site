@@ -291,3 +291,16 @@ main, .features, .feature, .afford { grid-template-columns: minmax(0, 1fr); }
   /* Phone on the left, name and downloads on the right. */
   .top .hero { order: -1; }
 }
+
+/* Legal pages (Impressum, Privacy Policy) and the footer links to them. */
+.legal { max-width: 640px; gap: 14px; text-align: left; }
+.legal h1 { font-size: 2rem; }
+.legal h2 { font-size: 1.1rem; margin-top: 18px; }
+.legal p { color: var(--muted); }
+.legal p strong { color: var(--ink); }
+.legal a { color: var(--accent); }
+.legal .back { color: var(--muted); text-decoration: none; font-size: 0.9rem; }
+.legal .sub { font-size: 0.9rem; }
+.site-footer { display: flex; justify-content: center; gap: 18px; font-size: 0.85rem; }
+.site-footer a { color: var(--muted); text-decoration: none; }
+.site-footer a:hover { color: var(--ink); }
