@@ -220,13 +220,13 @@
   for (let m = new Date(start.getFullYear(), start.getMonth(), 1); m <= addDays(start, DAYS); m = new Date(m.getFullYear(), m.getMonth() + 1, 1)) {
     for (const [amount, day] of bills) add(onDay(m.getFullYear(), m.getMonth(), day), -amount);
     add(onDay(m.getFullYear(), m.getMonth(), 28), 410000);
-    paydays.set(onDay(m.getFullYear(), m.getMonth(), 28).getTime(), I18N.t("salary"));
+    paydays.set(onDay(m.getFullYear(), m.getMonth(), 28).getTime(), { name: I18N.t("salary"), cents: 410000 });
   }
   add(addDays(start, 23), 99000);
-  paydays.set(addDays(start, 23).getTime(), I18N.t("studioInvoice"));
+  paydays.set(addDays(start, 23).getTime(), { name: I18N.t("studioInvoice"), cents: 99000 });
   add(addDays(start, 31), -34000);
   // Purchases are marked too, in red.
-  const purchases = new Map([[addDays(start, 31).getTime(), I18N.t("flightsToLisbon")]]);
+  const purchases = new Map([[addDays(start, 31).getTime(), { name: I18N.t("flightsToLisbon"), cents: 34000 }]]);
   // Points where the balance changes (end of day), like the app's chart.
   const pts = [];
   for (let d = 0, bal = 214000; d <= DAYS; d++) {
@@ -276,9 +276,9 @@
     pts.forEach((p, i) => {
       const day = addDays(start, p.d).getTime();
       for (const [kind, names] of [["income", paydays], ["purchase", purchases]]) {
-        const name = names.get(day);
-        if (!name) continue;
-        dots.push({ x: P[i][0], y: P[i][1], from: P[Math.max(0, i - 1)][0], name, kind, k: i / n });
+        const mark = names.get(day);
+        if (!mark) continue;
+        dots.push({ x: P[i][0], y: P[i][1], from: P[Math.max(0, i - 1)][0], name: mark.name, cents: mark.cents, kind, k: i / n });
         dotMarks += `<circle class="payday" style="--k:${i / n}" cx="${P[i][0]}" cy="${P[i][1]}" r="5.5"/>`;
       }
     });
@@ -306,15 +306,17 @@
     placePaydayLabels(svg, dots, { left: L, top: T, right: W - R, bottom: H - B }, svg.querySelector(".trip text"));
   }
 
-  // Name each payday beside its dot, like the app: try right, left, above, then below, and leave a name out
-  // rather than let it overlap another label, a dot or the trip's name.
+  // Name paydays and purchases beside their dots, like the app: the biggest amounts first, three at most, each name
+  // once. Each tries right, left, above, below, then the corners, and is left out rather than overlap anything.
   function placePaydayLabels(svg, dots, b, tripText) {
     const H = 15, PAD = 3, OFF = 9;
     const placed = [];
     if (tripText) { const t = tripText.getBBox(); placed.push({ x: t.x, y: t.y, w: t.width, h: t.height }); }
     const hit = (a, c, pad = PAD) => a.x < c.x + c.w + pad && c.x < a.x + a.w + pad && a.y < c.y + c.h + pad && c.y < a.y + a.h + pad;
     const dotBoxes = dots.map(d => ({ x: d.x - 6, y: d.y - 6, w: 12, h: 12, d }));
-    for (const d of [...dots].sort((a, c) => a.x - c.x)) {
+    const named = new Set();
+    for (const d of [...dots].sort((a, c) => c.cents - a.cents || a.x - c.x)) {
+      if (named.size >= 3 || named.has(d.name)) continue;
       const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
       g.setAttribute("class", `payday-label ${d.kind}`);
       g.style.setProperty("--k", d.k);
@@ -332,6 +334,7 @@
         !placed.some(p => hit(o, p)) && !dotBoxes.some(q => q.d !== d && hit(o, q, 0)));
       if (!spot) { g.remove(); continue; }
       placed.push(spot);
+      named.add(d.name);
       const rect = g.querySelector("rect");
       rect.setAttribute("x", spot.x); rect.setAttribute("y", spot.y); rect.setAttribute("width", w); rect.setAttribute("height", H);
       const text = g.querySelector("text");
