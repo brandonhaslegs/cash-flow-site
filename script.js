@@ -270,18 +270,38 @@
     s += `<g class="trip"><rect x="${x(TRIP.from)}" y="${T}" width="${x(TRIP.to) - x(TRIP.from)}" height="${H - B - T}"/>` +
          `<text x="${x(TRIP.from) + 5}" y="${T + 14}">✈ ${TRIP.name}</text></g>`;
     s += `<path class="area" d="${d}L${P[n - 1][0]},${y(0)}L${P[0][0]},${y(0)}Z"/>`;
-    s += `<path class="line" pathLength="1" d="${d}"/>`;
-    // A green dot where income lands, a red one for each purchase.
+    // A dot where income lands or a purchase is made.
     const dots = [];
+    let dotMarks = "";
     pts.forEach((p, i) => {
       const day = addDays(start, p.d).getTime();
       for (const [kind, names] of [["income", paydays], ["purchase", purchases]]) {
         const name = names.get(day);
         if (!name) continue;
-        dots.push({ x: P[i][0], y: P[i][1], name, kind, k: i / n });
-        s += `<circle class="payday ${kind}" style="--k:${i / n}" cx="${P[i][0]}" cy="${P[i][1]}" r="5.5"/>`;
+        dots.push({ x: P[i][0], y: P[i][1], from: P[Math.max(0, i - 1)][0], name, kind, k: i / n });
+        dotMarks += `<circle class="payday" style="--k:${i / n}" cx="${P[i][0]}" cy="${P[i][1]}" r="5.5"/>`;
       }
     });
+    // Like the app, the line turns green along each rise into a payday and red along each drop into a purchase.
+    const hex = (h) => [1, 3, 5].map(j => parseInt(h.slice(j, j + 2), 16));
+    const base = hex("#7c80ff"), tints = { income: hex("#30d158"), purchase: hex("#ff453a") };
+    let stops = "";
+    for (let j = 0; j <= 200; j++) {
+      const px = L + (W - L - R) * j / 200;
+      let best = { w: 0 };
+      for (const dot of dots) {
+        const from = Math.min(dot.from, dot.x - 1), after = 10;
+        let w = px <= dot.x ? 2 * (px - from) / (dot.x - from) : 1 - (px - dot.x) / after;
+        w = Math.min(1, Math.max(0, w));
+        if (w > best.w) best = { w, tint: tints[dot.kind] };
+      }
+      const e = best.w * best.w * (3 - 2 * best.w);
+      const c = best.w ? base.map((v, k) => Math.round(v + (best.tint[k] - v) * e)) : base;
+      stops += `<stop offset="${(j / 200).toFixed(3)}" stop-color="rgb(${c})"/>`;
+    }
+    s = s.replace("</defs>", `<linearGradient id="v-line-fill" gradientUnits="userSpaceOnUse" x1="${L}" x2="${W - R}" y1="0" y2="0">${stops}</linearGradient></defs>`);
+    s += `<path class="line" pathLength="1" d="${d}"/>`;
+    s += dotMarks;
     svg.innerHTML = s;
     placePaydayLabels(svg, dots, { left: L, top: T, right: W - R, bottom: H - B }, svg.querySelector(".trip text"));
   }

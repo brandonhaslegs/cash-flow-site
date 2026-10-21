@@ -156,12 +156,10 @@ main { position: relative; z-index: 1; }
 .v-chart .grid { stroke: var(--rule); stroke-width: 1; }
 .v-chart .vgrid { stroke: var(--rule); stroke-width: 1; stroke-dasharray: 3 3; }
 .v-chart .area { fill: url(#v-chart-fill); }
-.v-chart .line { fill: none; stroke: var(--accent); stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; }
-.v-chart .payday { fill: var(--paper); stroke: var(--good); stroke-width: 3; }
-.v-chart .payday.purchase { stroke: var(--bad); }
+.v-chart .line { fill: none; stroke: url(#v-line-fill); stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; }
+.v-chart .payday { fill: var(--paper); stroke: var(--accent); stroke-width: 3; }
 .v-chart .payday-label rect { fill: var(--paper); }
-.v-chart .payday-label text { font: 600 11px var(--font); fill: var(--good); }
-.v-chart .payday-label.purchase text { fill: var(--bad); }
+.v-chart .payday-label text { font: 600 11px var(--font); fill: var(--accent); }
 /* A touch of the crystal ball's haze and dust in the chart's top-left corner, as in the app. */
 .v-chart { position: relative; isolation: isolate; }
 .v-chart::before { content: ""; position: absolute; inset: -30px auto auto -30px; width: 70%; height: 80%; z-index: -1; pointer-events: none;
