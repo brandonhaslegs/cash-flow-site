@@ -324,3 +324,11 @@ main, .features, .feature, .afford { grid-template-columns: minmax(0, 1fr); }
   .tile small { grid-area: note; }
   .tile b { grid-area: value; font-size: 1.15rem; }
 }
+
+/* Hero spacing: the name and tagline sit tight together, with equal space above (from the icon)
+   and below (to the buttons). */
+.top .intro { gap: 0; }
+.top .intro .mark { margin-bottom: 28px; }
+.top .intro h1 { line-height: 1.05; }
+.top .intro .line { margin-top: 6px; }
+.top .intro .downloads { margin-top: 28px; }
