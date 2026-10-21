@@ -60,6 +60,12 @@ p { margin: 0; }
 .intro .mark { width: 96px; height: 96px; border-radius: 22.37%; box-shadow: 0 2px 8px rgb(0 0 0 / .18); }
 .intro .line { font-size: 1.25rem; color: var(--muted); }
 .downloads { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 6px; }
+/* Only the visitor's platform gets the big button; the other platform is a quiet text link underneath. */
+.downloads { flex-direction: column; align-items: center; gap: 12px; }
+.downloads[data-platform="ios"] .store.mac, .downloads[data-platform="ios"] .other.ios,
+.downloads[data-platform="mac"] .store.ios, .downloads[data-platform="mac"] .other.mac { display: none; }
+.other { color: var(--muted); font-size: 0.9rem; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: color-mix(in srgb, var(--muted) 50%, transparent); }
+.other:hover { color: var(--ink); }
 .store { display: inline-flex; align-items: center; gap: 10px; padding: 9px 18px 9px 14px; border-radius: 14px; background: var(--ink); color: var(--paper); text-decoration: none; line-height: 1.1; transition: transform .15s; }
 .store:hover { transform: scale(1.03); }
 .store:active { transform: scale(0.97); }
@@ -278,7 +284,7 @@ main, .features, .feature, .afford { grid-template-columns: minmax(0, 1fr); }
   .top .intro { justify-items: start; text-align: left; gap: 16px; }
   .top .intro h1 { font-size: 3.4rem; line-height: 1.02; }
   .top .intro .line { font-size: 1.45rem; max-width: 20ch; text-wrap: balance; }
-  .top .downloads { justify-content: flex-start; margin-top: 10px; }
+  .top .downloads { align-items: flex-start; margin-top: 10px; }
   .top .phone { width: 340px; }
   /* Phone on the left, name and downloads on the right. */
   .top .hero { order: -1; }

@@ -1,3 +1,11 @@
+// Show the download button for the visitor's platform. Macs get the Mac App Store; everyone else (iPhone, iPad,
+// and other devices) gets the iPhone & iPad button. iPads report themselves as Macs, but have touch.
+(() => {
+  const ua = navigator.userAgent;
+  const isMac = /Macintosh/.test(ua) && navigator.maxTouchPoints < 2;
+  document.querySelectorAll(".downloads").forEach(d => d.dataset.platform = isMac ? "mac" : "ios");
+})();
+
 (() => {
   const start = (() => { const d = new Date(); return new Date(d.getFullYear(), d.getMonth(), d.getDate()); })();
   const addDays = (d, n) => new Date(d.getFullYear(), d.getMonth(), d.getDate() + n);
