@@ -45,7 +45,8 @@ body {
 main {
   max-width: 600px;
   margin: 0 auto;
-  padding-block: 72px 56px;
+  /* The page draws under the status bar and toolbar (viewport-fit=cover), so keep content clear of them. */
+  padding-block: calc(72px + env(safe-area-inset-top, 0px)) calc(56px + env(safe-area-inset-bottom, 0px));
   /* Equal plain gutters keep the column exactly centred. */
   padding-inline: 20px;
   display: grid;
