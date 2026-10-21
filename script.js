@@ -307,3 +307,33 @@
   }
   sky.appendChild(frag);
 })();
+
+// FAQ: answers slide open and closed instead of snapping (details/summary still works without script).
+(() => {
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const ease = "cubic-bezier(.3, .7, .2, 1)";
+  document.querySelectorAll(".faq details").forEach(details => {
+    const summary = details.querySelector("summary");
+    const body = details.querySelector("p");
+    let animation = null;
+    summary.addEventListener("click", (e) => {
+      e.preventDefault();
+      animation?.cancel();
+      if (details.open) {
+        const from = body.offsetHeight;
+        details.classList.add("closing");
+        animation = body.animate(
+          [{ height: `${from}px`, opacity: 1 }, { height: "0px", opacity: 0, paddingBottom: "0px" }],
+          { duration: 260, easing: ease });
+        animation.onfinish = () => { details.open = false; details.classList.remove("closing"); animation = null; };
+      } else {
+        details.open = true;
+        const to = body.offsetHeight;
+        animation = body.animate(
+          [{ height: "0px", opacity: 0, paddingBottom: "0px" }, { height: `${to}px`, opacity: 1 }],
+          { duration: 320, easing: ease });
+        animation.onfinish = () => { animation = null; };
+      }
+    });
+  });
+})();
