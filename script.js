@@ -10,12 +10,12 @@
   const start = (() => { const d = new Date(); return new Date(d.getFullYear(), d.getMonth(), d.getDate()); })();
   const addDays = (d, n) => new Date(d.getFullYear(), d.getMonth(), d.getDate() + n);
   const onDay = (y, m, day) => new Date(y, m, Math.min(day, new Date(y, m + 1, 0).getDate()));
-  const fmtMoney = new Intl.NumberFormat("en-IE", { style: "currency", currency: "EUR", maximumFractionDigits: 0 });
+  const fmtMoney = new Intl.NumberFormat(I18N.locale, { style: "currency", currency: "EUR", maximumFractionDigits: 0 });
   const money = (c) => fmtMoney.format(c / 100);
   const compact = (c) => "€" + (c >= 100000 ? `${Math.round(c / 100000)}K` : Math.round(c / 100));
-  const fmtLong = new Intl.DateTimeFormat("en-GB", { weekday: "long", day: "numeric", month: "long" });
-  const fmtShort = new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "short" });
-  const fmtMonth = new Intl.DateTimeFormat("en-GB", { month: "short" });
+  const fmtLong = new Intl.DateTimeFormat(I18N.locale, { weekday: "long", day: "numeric", month: "long" });
+  const fmtShort = new Intl.DateTimeFormat(I18N.locale, { day: "numeric", month: "short" });
+  const fmtMonth = new Intl.DateTimeFormat(I18N.locale, { month: "short" });
 
   // The example plan from the screenshots: monthly bills by due day, a salary on the 28th,
   // one freelance invoice and a trip. Projected a year ahead, plus two hidden months so the
@@ -110,13 +110,13 @@
     dial.setAttribute("aria-valuetext", money(price));
     if (i === null) {
       answer.className = "answer no";
-      answer.innerHTML = `Not in the next 12 months<small>Buying it would push the balance below zero.</small>`;
+      answer.innerHTML = `${I18N.t("notInYear")}<small>${I18N.t("wouldGoNegative")}</small>`;
     } else if (i === 0) {
       answer.className = "answer";
-      answer.innerHTML = `Yes, today!<small>The balance stays above zero afterwards.</small>`;
+      answer.innerHTML = `${I18N.t("yesToday")}<small>${I18N.t("staysAbove")}</small>`;
     } else {
       answer.className = "answer";
-      answer.innerHTML = `Yes, on ${fmtLong.format(daily[i].day)}<small>In ${i} days. The balance stays above zero afterwards.</small>`;
+      answer.innerHTML = `${I18N.t("yesOn")(fmtLong.format(daily[i].day))}<small>${I18N.t("inDays")(i)}</small>`;
     }
   }
 
@@ -157,7 +157,12 @@
     if (e.key === "End") { setFraction(1); e.preventDefault(); }
   });
   input.addEventListener("input", () => {
-    const c = Math.round(parseFloat(input.value.replace(/[^\d.]/g, "")) * 100);
+    // Read the price in the visitor's number format (2.500 in German is two thousand five hundred).
+    const parts = new Intl.NumberFormat(I18N.locale).formatToParts(1234.5);
+    const group = parts.find(p => p.type === "group")?.value ?? ",";
+    const decimal = parts.find(p => p.type === "decimal")?.value ?? ".";
+    const plain = input.value.split(group).join("").replace(/\s/g, "").split(decimal).join(".").replace(/[^\d.]/g, "");
+    const c = Math.round(parseFloat(plain) * 100);
     if (c > 0) { price = c; setFraction(fractionFor(c), true); }
   });
   input.addEventListener("blur", () => { input.value = money(price); });
@@ -172,7 +177,7 @@
   const start = (() => { const d = new Date(); return new Date(d.getFullYear(), d.getMonth(), d.getDate()); })();
   const addDays = (d, n) => new Date(d.getFullYear(), d.getMonth(), d.getDate() + n);
   const onDay = (y, m, day) => new Date(y, m, Math.min(day, new Date(y, m + 1, 0).getDate()));
-  const fmtMonth = new Intl.DateTimeFormat("en-GB", { month: "short" });
+  const fmtMonth = new Intl.DateTimeFormat(I18N.locale, { month: "short" });
   const euros = new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" });
 
   // 1. The months-ahead chart: the same example plan as the screenshots, three months from today.
@@ -216,7 +221,7 @@
     for (let v = 0; v <= top; v += step) {
       s += `<line class="grid" x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}"/><text class="axis" x="${W - R + 8}" y="${y(v) + 4}">${v ? `€${v / 100000}K` : "0 €"}</text>`;
     }
-    s += `<text class="axis strong" x="${L + 2}" y="${H - 22}">Today</text>`;
+    s += `<text class="axis strong" x="${L + 2}" y="${H - 22}">${I18N.t("today")}</text>`;
     for (let i = 1; i <= DAYS; i++) {
       const day = addDays(start, i);
       if (day.getDate() !== 1 || i < 10) continue;

@@ -14,6 +14,7 @@
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
   <link rel="stylesheet" href="styles.css">
+  <script src="i18n.js"></script>
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -27,16 +28,16 @@
     <header class="intro">
       <img class="mark" src="images/icon.png" width="96" height="96" alt="">
       <h1>Future Cash</h1>
-      <p class="line">See the future (of your bank account)</p>
+      <p class="line" data-i18n="tagline">See the future (of your bank account)</p>
       <!-- Swap in the real App Store links once the app is live. -->
       <div class="downloads" data-platform="ios">
-        <a class="store ios" href="#" aria-label="Download Future Cash for iPhone and iPad on the App Store">
+        <a class="store ios" href="#" aria-label="Download Future Cash for iPhone and iPad on the App Store" data-i18n-aria="ariaDownloadIos">
           <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><line x1="10.5" y1="18.5" x2="13.5" y2="18.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          <span><small>Download for</small>iOS</span>
+          <span><small data-i18n="downloadFor">Download for</small>iOS</span>
         </a>
-        <a class="store mac" href="#" aria-label="Download Future Cash for Mac on the Mac App Store">
+        <a class="store mac" href="#" aria-label="Download Future Cash for Mac on the Mac App Store" data-i18n-aria="ariaDownloadMac">
           <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M1 19.5h22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          <span><small>Download for</small>macOS</span>
+          <span><small data-i18n="downloadFor">Download for</small>macOS</span>
         </a>
       
       </div>
@@ -46,104 +47,104 @@
       <div class="phone">
       <span class="island" aria-hidden="true"></span>
       <video src="images/tour.mp4" poster="images/tour-poster.jpg" autoplay muted loop playsinline preload="auto"
-             aria-label="A tour of Future Cash on iPhone: the forecast chart and timeline, the Can I Afford It? dial, then bills, income, expenses and trips"></video>
+             data-i18n-aria="ariaTour" aria-label="A tour of Future Cash on iPhone: the forecast chart and timeline, the Can I Afford It? dial, then bills, income, expenses and trips"></video>
       </div>
     </div>
     </section>
 
-    <section class="features" aria-label="Features">
+    <section class="features" aria-label="Features" data-i18n-aria="ariaFeatures">
       <div class="feature">
         <div class="vignette v-chart" data-anim>
           <svg id="v-chart" viewBox="0 0 520 230" role="img" aria-label="Balance chart for the next three months"></svg>
         </div>
-        <div class="vignette v-tiles" data-anim aria-label="Safe to Move, Lowest Point and Monthly Net figures">
-          <div class="tile" style="--i:0"><span>Safe to Move</span><b data-count="213700">2.137,00 €</b><small>before next payday</small></div>
-          <div class="tile" style="--i:1"><span>Lowest Point</span><b data-count="213700">2.137,00 €</b><small>on 22 Oct</small></div>
-          <div class="tile" style="--i:2"><span>Monthly Net</span><b data-count="191600" data-plus>+1.916,00 €</b><small>€4,1K in · €2,2K out</small></div>
+        <div class="vignette v-tiles" data-anim aria-label="Safe to Move, Lowest Point and Monthly Net figures" data-i18n-aria="ariaTiles">
+          <div class="tile" style="--i:0"><span data-i18n="safeToMove">Safe to Move</span><b data-count="213700">2.137,00 €</b><small data-i18n="beforePayday">before next payday</small></div>
+          <div class="tile" style="--i:1"><span data-i18n="lowestPoint">Lowest Point</span><b data-count="213700">2.137,00 €</b><small data-i18n="on22Oct">on 22 Oct</small></div>
+          <div class="tile" style="--i:2"><span data-i18n="monthlyNet">Monthly Net</span><b data-count="191600" data-plus>+1.916,00 €</b><small data-i18n="inOut">€4,1K in · €2,2K out</small></div>
         </div>
-        <p><strong>The months ahead, with no surprises.</strong> Your balance drawn from your bills and paydays, what you can move before payday, and when you’ll hit your lowest point.</p>
+        <p data-i18n="feature1"><strong>The months ahead, with no surprises.</strong> Your balance drawn from your bills and paydays, what you can move before payday, and when you’ll hit your lowest point.</p>
       </div>
       <div class="feature">
-        <div class="vignette v-rows" data-anim aria-label="Timeline of payments with the balance after each, and a trip to Lisbon marked alongside">
+        <div class="vignette v-rows" data-anim data-i18n-aria="ariaTimeline" aria-label="Timeline of payments with the balance after each, and a trip to Lisbon marked alongside">
           <div class="tl-row" style="--i:0">
-            <span class="day"><b>18</b><small>Sun</small></span>
-            <span class="name">Streaming</span>
+            <span class="day"><b>18</b><small data-i18n="sun">Sun</small></span>
+            <span class="name" data-i18n="streaming">Streaming</span>
             <span class="amt">−14,00 €<small data-count="219800">2.198,00 €</small></span>
           </div>
           <div class="tl-row" style="--i:1">
-            <span class="day"><b>20</b><small>Tue</small></span>
-            <span class="name">Insurance</span>
+            <span class="day"><b>20</b><small data-i18n="tue">Tue</small></span>
+            <span class="name" data-i18n="insurance">Insurance</span>
             <span class="amt">−58,00 €<small data-count="214000">2.140,00 €</small></span>
           </div>
           <div class="tl-row" style="--i:2">
-            <span class="day"><b>22</b><small>Thu</small></span>
-            <span class="name">Cloud storage</span>
+            <span class="day"><b>22</b><small data-i18n="thu">Thu</small></span>
+            <span class="name" data-i18n="cloudStorage">Cloud storage</span>
             <span class="amt">−3,00 €<small data-count="213700">2.137,00 €</small></span>
           </div>
           <div class="tl-trip">
-            <span class="bar"><span>Lisbon</span></span>
+            <span class="bar"><span data-i18n="lisbon">Lisbon</span></span>
             <div>
               <div class="tl-row" style="--i:3">
-                <span class="day"><b>28</b><small>Wed</small></span>
-                <span class="name"><em class="chip">Income</em><strong>Salary</strong></span>
+                <span class="day"><b>28</b><small data-i18n="wed">Wed</small></span>
+                <span class="name"><em class="chip" data-i18n="income">Income</em><strong data-i18n="salary">Salary</strong></span>
                 <span class="amt income">+4.100,00 €<small data-count="623700">6.237,00 €</small></span>
               </div>
               <div class="tl-row" style="--i:4">
-                <span class="day"><b>29</b><small>Thu</small></span>
-                <span class="name"><i class="dot"></i>Savings</span>
+                <span class="day"><b>29</b><small data-i18n="thu">Thu</small></span>
+                <span class="name"><i class="dot"></i><span data-i18n="savings">Savings</span></span>
                 <span class="amt">−500,00 €<small data-count="573700">5.737,00 €</small></span>
               </div>
             </div>
           </div>
           <div class="tl-row" style="--i:5">
-            <span class="day"><b>1</b><small>Sun</small></span>
-            <span class="name">Rent</span>
+            <span class="day"><b>1</b><small data-i18n="sun">Sun</small></span>
+            <span class="name" data-i18n="rent">Rent</span>
             <span class="amt">−1.350,00 €<small data-count="438700">4.387,00 €</small></span>
           </div>
           <div class="tl-row" style="--i:6">
-            <span class="day"><b>1</b><small>Sun</small></span>
-            <span class="name">Phone</span>
+            <span class="day"><b>1</b><small data-i18n="sun">Sun</small></span>
+            <span class="name" data-i18n="phone">Phone</span>
             <span class="amt">−58,00 €<small data-count="432900">4.329,00 €</small></span>
           </div>
           <div class="tl-row" style="--i:7">
-            <span class="day"><b>2</b><small>Mon</small></span>
-            <span class="name">Internet</span>
+            <span class="day"><b>2</b><small data-i18n="mon">Mon</small></span>
+            <span class="name" data-i18n="internet">Internet</span>
             <span class="amt">−45,00 €<small data-count="428400">4.284,00 €</small></span>
           </div>
         </div>
-        <p><strong>Every payment in order.</strong> Each bill and paycheck with what’s left after it, and your trips marked alongside.</p>
+        <p data-i18n="feature2"><strong>Every payment in order.</strong> Each bill and paycheck with what’s left after it, and your trips marked alongside.</p>
       </div>
       <div class="feature">
-        <div class="vignette v-side" data-anim aria-label="The Mac sidebar: Forecast, Can I Afford It?, Bills, Income, Expenses and Trips">
+        <div class="vignette v-side" data-anim data-i18n-aria="ariaSidebar" aria-label="The Mac sidebar: Forecast, Can I Afford It?, Bills, Income, Expenses and Trips">
           <div class="side">
             <span class="pill" aria-hidden="true"></span>
-            <div class="item" data-item><span class="ico" style="--icon:url(images/icons/forecast.png)"></span>Forecast</div>
-            <div class="item" data-item><span class="ico" style="--icon:url(images/icons/afford.png)"></span>Can I Afford It?</div>
-            <div class="item" data-item><span class="ico" style="--icon:url(images/icons/bills.png)"></span>Bills<em>€2,2K</em></div>
-            <div class="item" data-item><span class="ico" style="--icon:url(images/icons/income.png)"></span>Income<em>€4,1K</em></div>
-            <div class="item" data-item><span class="ico" style="--icon:url(images/icons/expenses.png)"></span>Expenses<em>€340</em></div>
-            <div class="item" data-item><span class="ico" style="--icon:url(images/icons/trips.png)"></span>Trips<em>1</em></div>
+            <div class="item" data-item><span class="ico" style="--icon:url(images/icons/forecast.png)"></span><span data-i18n="forecast">Forecast</span></div>
+            <div class="item" data-item><span class="ico" style="--icon:url(images/icons/afford.png)"></span><span data-i18n="canIAfford">Can I Afford It?</span></div>
+            <div class="item" data-item><span class="ico" style="--icon:url(images/icons/bills.png)"></span><span data-i18n="bills">Bills</span><em>€2,2K</em></div>
+            <div class="item" data-item><span class="ico" style="--icon:url(images/icons/income.png)"></span><span data-i18n="incomeNav">Income</span><em>€4,1K</em></div>
+            <div class="item" data-item><span class="ico" style="--icon:url(images/icons/expenses.png)"></span><span data-i18n="expenses">Expenses</span><em>€340</em></div>
+            <div class="item" data-item><span class="ico" style="--icon:url(images/icons/trips.png)"></span><span data-i18n="trips">Trips</span><em>1</em></div>
           </div>
         </div>
-        <p><strong>Everywhere you are.</strong> iPhone, iPad and Mac, kept in sync through your own iCloud.</p>
+        <p data-i18n="feature3"><strong>Everywhere you are.</strong> iPhone, iPad and Mac, kept in sync through your own iCloud.</p>
       </div>
     </section>
 
     <section class="afford" aria-labelledby="afford-title">
-      <h2 id="afford-title">Can I afford it?</h2>
-      <p>Turn the dial. Future Cash finds the first day you can buy it without ever dipping below zero.</p>
+      <h2 id="afford-title" data-i18n="affordTitle">Can I afford it?</h2>
+      <p data-i18n="affordIntro">Turn the dial. Future Cash finds the first day you can buy it without ever dipping below zero.</p>
       <form id="afford-form" class="dial" novalidate>
-        <div id="dial" class="dial-ring" role="slider" tabindex="0" aria-label="Price" aria-valuemin="10">
+        <div id="dial" class="dial-ring" role="slider" tabindex="0" aria-label="Price" data-i18n-aria="ariaPrice" aria-valuemin="10">
           <svg id="dial-svg" viewBox="0 0 280 280" aria-hidden="true"></svg>
-          <label class="dial-price" for="price"><input id="price" inputmode="decimal" autocomplete="off" aria-label="Price in euros"></label>
-          <span class="dial-hint">Drag the knob or type</span>
+          <label class="dial-price" for="price"><input id="price" inputmode="decimal" autocomplete="off" aria-label="Price in euros" data-i18n-aria="ariaPriceEuros"></label>
+          <span class="dial-hint" data-i18n="dialHint">Drag the knob or type</span>
         </div>
         <p class="answer" id="answer" aria-live="polite"></p>
       </form>
-      <p class="note">Runs on an example plan of bills and paydays, starting today.</p>
+      <p class="note" data-i18n="note">Runs on an example plan of bills and paydays, starting today.</p>
     </section>
 
-    <footer class="site-footer"><a href="impressum.html">Impressum</a><a href="privacy.html">Privacy</a></footer>
+    <footer class="site-footer"><a href="impressum.html" data-i18n="impressum">Impressum</a><a href="privacy.html" data-i18n="privacy">Privacy</a></footer>
   </main>
 </body>
 </html>
