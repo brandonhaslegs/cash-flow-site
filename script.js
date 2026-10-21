@@ -118,7 +118,6 @@
       answer.className = "answer";
       answer.innerHTML = `Yes, on ${fmtLong.format(daily[i].day)}<small>In ${i} days. The balance stays above zero afterwards.</small>`;
     }
-    draw(i);
   }
 
   // Drag anywhere on the ring; the middle belongs to the price field.
@@ -163,39 +162,6 @@
   });
   input.addEventListener("blur", () => { input.value = money(price); });
   document.getElementById("afford-form").addEventListener("submit", (e) => { e.preventDefault(); input.blur(); });
-
-  // ---- "What you could spend each day" chart ----
-  const svg = document.getElementById("chart");
-  const W = 560, H = 220, L = 6, RM = 52, T = 22, B = 24;
-  function draw(i) {
-    const top0 = Math.max(Math.max(...shown), price) * 1.08;
-    const step = Math.max(50000, Math.ceil(top0 / 4 / 50000) * 50000);
-    const top = step * 4;
-    const x = (d) => L + (W - L - RM) * d / DAYS;
-    const y = (v) => T + (H - T - B) * (top - Math.min(v, top)) / top;
-    let s = "";
-    for (let v = 0; v <= top; v += step) {
-      s += `<line class="grid" x1="${L}" x2="${W - RM}" y1="${y(v)}" y2="${y(v)}"/><text class="axis" x="${W - RM + 8}" y="${y(v) + 4}">${compact(v)}</text>`;
-    }
-    s += `<text class="axis" x="${L}" y="${H - 6}">Today</text>`;
-    daily.slice(0, DAYS + 1).forEach((p, d) => {
-      if (p.day.getDate() === 1 && d > 20 && p.day.getMonth() % 2 === 0) s += `<text class="axis" x="${x(d)}" y="${H - 6}">${fmtMonth.format(p.day)}</text>`;
-    });
-    let path = `M${x(0)},${y(shown[0])}`;
-    for (let d = 1; d <= DAYS; d++) {
-      if (shown[d] !== shown[d - 1]) path += `L${x(d)},${y(shown[d - 1])}L${x(d)},${y(shown[d])}`;
-    }
-    path += `L${x(DAYS)},${y(shown[DAYS])}`;
-    s += `<path class="area" d="${path}L${x(DAYS)},${y(0)}L${x(0)},${y(0)}Z"/><path class="line" d="${path}"/>`;
-    s += `<line class="price-line${i === null ? " no" : ""}" x1="${L}" x2="${W - RM}" y1="${y(price)}" y2="${y(price)}"/>`;
-    if (i !== null) {
-      const label = i === 0 ? "Today" : fmtShort.format(daily[i].day);
-      const lw = label.length * 6.6 + 14, lx = Math.min(Math.max(x(i) - lw / 2, L), W - RM - lw);
-      s += `<circle class="marker" cx="${x(i)}" cy="${y(price)}" r="6"/>`;
-      s += `<rect class="tag" x="${lx}" y="${y(price) - 26}" width="${lw}" height="18" rx="9"/><text class="tag-text" x="${lx + lw / 2}" y="${y(price) - 13}">${label}</text>`;
-    }
-    svg.innerHTML = s;
-  }
 
   input.value = money(price);
   setFraction(fraction);

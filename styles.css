@@ -248,18 +248,6 @@ main { position: relative; z-index: 1; }
 .answer { font-weight: 700; font-size: 1.3rem; text-align: center; }
 .answer.no { color: var(--bad); }
 .answer small { display: block; font-weight: 400; color: var(--muted); font-size: 0.95rem; margin-top: 2px; }
-.chart { background: var(--frame); border: 1px solid var(--rule); border-radius: 18px; padding: 14px 12px 6px; }
-.chart-title { margin: 0 4px 6px; font-weight: 600; font-size: 0.95rem; }
-.chart svg { width: 100%; height: auto; display: block; }
-.chart .axis { font: 500 11px var(--font); fill: var(--muted); }
-.chart .grid { stroke: var(--rule); stroke-width: 1; }
-.chart .area { fill: color-mix(in srgb, var(--accent) 16%, transparent); }
-.chart .line { fill: none; stroke: var(--accent); stroke-width: 2; stroke-linejoin: round; }
-.chart .price-line { stroke: var(--muted); stroke-width: 1.5; stroke-dasharray: 5 4; }
-.chart .price-line.no { stroke: var(--bad); }
-.chart .marker { fill: var(--accent); stroke: var(--frame); stroke-width: 2; }
-.chart .tag { fill: var(--accent); }
-.chart .tag-text { font: 700 11px var(--font); fill: #fff; text-anchor: middle; }
 .note { font-size: 0.85rem; color: var(--muted); }
 
 footer { color: var(--muted); font-size: 0.85rem; text-align: center; }
