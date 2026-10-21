@@ -1,6 +1,7 @@
 // Generated: website translations, keyed by language. English lives in index.html.
 window.TRANSLATIONS = {
  "ar": {
+  "flightsToLisbon": "رحلات إلى لشبونة",
   "studioInvoice": "فاتورة الاستوديو",
   "tagline": "شاهد المستقبل (مستقبل حسابك البنكي)",
   "downloadFor": "تنزيل لـ",
@@ -70,6 +71,7 @@ window.TRANSLATIONS = {
   "inDays": "بعد {n} يوم. يبقى الرصيد فوق الصفر بعد ذلك."
  },
  "ca": {
+  "flightsToLisbon": "Vols a Lisboa",
   "studioInvoice": "Factura de l'estudi",
   "tagline": "Mira el futur (del teu compte bancari)",
   "downloadFor": "Descarregar per a",
@@ -139,6 +141,7 @@ window.TRANSLATIONS = {
   "inDays": "D’aquí a {n} dies. Després, el saldo es manté per sobre de zero."
  },
  "cs": {
+  "flightsToLisbon": "Letenky do Lisabonu",
   "studioInvoice": "Faktura za studio",
   "tagline": "Podívejte se do budoucnosti (svého účtu)",
   "downloadFor": "Stáhnout pro",
@@ -208,6 +211,7 @@ window.TRANSLATIONS = {
   "inDays": "Za {n} dní. Zůstatek pak zůstane nad nulou."
  },
  "da": {
+  "flightsToLisbon": "Fly til Lissabon",
   "studioInvoice": "Studiofaktura",
   "tagline": "Se fremtiden (for din bankkonto)",
   "downloadFor": "Hent til",
@@ -277,6 +281,7 @@ window.TRANSLATIONS = {
   "inDays": "Om {n} dage. Saldoen forbliver over nul bagefter."
  },
  "de": {
+  "flightsToLisbon": "Flüge nach Lissabon",
   "studioInvoice": "Studio-Rechnung",
   "tagline": "Sieh in die Zukunft (deines Kontos)",
   "downloadFor": "Laden für",
@@ -346,6 +351,7 @@ window.TRANSLATIONS = {
   "inDays": "In {n} Tagen. Der Kontostand bleibt danach über null."
  },
  "el": {
+  "flightsToLisbon": "Πτήσεις για Λισαβόνα",
   "studioInvoice": "Τιμολόγιο στούντιο",
   "tagline": "Δείτε το μέλλον (του τραπεζικού σας λογαριασμού)",
   "downloadFor": "Λήψη για",
@@ -415,6 +421,7 @@ window.TRANSLATIONS = {
   "inDays": "Σε {n} ημέρες. Το υπόλοιπο μένει πάνω από το μηδέν στη συνέχεια."
  },
  "es": {
+  "flightsToLisbon": "Vuelos a Lisboa",
   "studioInvoice": "Factura del estudio",
   "tagline": "Mira el futuro (de tu cuenta bancaria)",
   "downloadFor": "Descargar para",
@@ -484,6 +491,7 @@ window.TRANSLATIONS = {
   "inDays": "Dentro de {n} días. Después, el saldo se mantiene por encima de cero."
  },
  "fi": {
+  "flightsToLisbon": "Lennot Lissaboniin",
   "studioInvoice": "Studion lasku",
   "tagline": "Näe (pankkitilisi) tulevaisuus",
   "downloadFor": "Lataa:",
@@ -553,6 +561,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} päivän päästä. Saldo pysyy sen jälkeen nollan yläpuolella."
  },
  "fr": {
+  "flightsToLisbon": "Vols pour Lisbonne",
   "studioInvoice": "Facture du studio",
   "tagline": "Voyez l’avenir (de votre compte bancaire)",
   "downloadFor": "Télécharger pour",
@@ -622,6 +631,7 @@ window.TRANSLATIONS = {
   "inDays": "Dans {n} jours. Le solde reste ensuite au-dessus de zéro."
  },
  "he": {
+  "flightsToLisbon": "טיסות לליסבון",
   "studioInvoice": "חשבונית סטודיו",
   "tagline": "לראות את העתיד (של חשבון הבנק שלך)",
   "downloadFor": "הורדה עבור",
@@ -691,6 +701,7 @@ window.TRANSLATIONS = {
   "inDays": "בעוד {n} ימים. לאחר מכן היתרה נשארת מעל אפס."
  },
  "hi": {
+  "flightsToLisbon": "लिस्बन की उड़ानें",
   "studioInvoice": "स्टूडियो इनवॉइस",
   "tagline": "भविष्य देखें (अपने बैंक खाते का)",
   "downloadFor": "डाउनलोड करें",
@@ -760,6 +771,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} दिनों में। उसके बाद बैलेंस शून्य से ऊपर रहता है।"
  },
  "hr": {
+  "flightsToLisbon": "Letovi za Lisabon",
   "studioInvoice": "Račun za studio",
   "tagline": "Zavirite u budućnost (svog bankovnog računa)",
   "downloadFor": "Preuzmite za",
@@ -829,6 +841,7 @@ window.TRANSLATIONS = {
   "inDays": "Za {n} dana. Stanje nakon toga ostaje iznad nule."
  },
  "hu": {
+  "flightsToLisbon": "Repülőjegy Lisszabonba",
   "studioInvoice": "Stúdiószámla",
   "tagline": "Lássa előre (a bankszámlája) jövőjét",
   "downloadFor": "Letöltés:",
@@ -898,6 +911,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} nap múlva. Utána az egyenleg nulla felett marad."
  },
  "id": {
+  "flightsToLisbon": "Tiket pesawat ke Lisbon",
   "studioInvoice": "Tagihan studio",
   "tagline": "Lihat masa depan (rekening bank Anda)",
   "downloadFor": "Unduh untuk",
@@ -967,6 +981,7 @@ window.TRANSLATIONS = {
   "inDays": "Dalam {n} hari. Saldo tetap di atas nol setelahnya."
  },
  "it": {
+  "flightsToLisbon": "Voli per Lisbona",
   "studioInvoice": "Fattura dello studio",
   "tagline": "Guarda il futuro (del tuo conto in banca)",
   "downloadFor": "Scarica per",
@@ -1036,6 +1051,7 @@ window.TRANSLATIONS = {
   "inDays": "Tra {n} giorni. Dopo, il saldo resta sopra lo zero."
  },
  "ja": {
+  "flightsToLisbon": "リスボン行きの航空券",
   "studioInvoice": "スタジオの請求書",
   "tagline": "（銀行口座の）未来が見える",
   "downloadFor": "ダウンロード：",
@@ -1105,6 +1121,7 @@ window.TRANSLATIONS = {
   "inDays": "{n}日後。その後も残高はプラスのままです。"
  },
  "ko": {
+  "flightsToLisbon": "리스본행 항공권",
   "studioInvoice": "스튜디오 청구서",
   "tagline": "미래를 미리 보세요 (내 은행 계좌의)",
   "downloadFor": "다운로드:",
@@ -1174,6 +1191,7 @@ window.TRANSLATIONS = {
   "inDays": "{n}일 후. 이후에도 잔액이 0 위로 유지됩니다."
  },
  "ms": {
+  "flightsToLisbon": "Penerbangan ke Lisbon",
   "studioInvoice": "Invois studio",
   "tagline": "Lihat masa depan (akaun bank anda)",
   "downloadFor": "Muat turun untuk",
@@ -1243,6 +1261,7 @@ window.TRANSLATIONS = {
   "inDays": "Dalam {n} hari. Baki kekal di atas sifar selepas itu."
  },
  "nb": {
+  "flightsToLisbon": "Fly til Lisboa",
   "studioInvoice": "Studiofaktura",
   "tagline": "Se fremtiden (for bankkontoen din)",
   "downloadFor": "Last ned for",
@@ -1312,6 +1331,7 @@ window.TRANSLATIONS = {
   "inDays": "Om {n} dager. Saldoen holder seg over null etterpå."
  },
  "nl": {
+  "flightsToLisbon": "Vluchten naar Lissabon",
   "studioInvoice": "Studiofactuur",
   "tagline": "Zie de toekomst (van je bankrekening)",
   "downloadFor": "Download voor",
@@ -1381,6 +1401,7 @@ window.TRANSLATIONS = {
   "inDays": "Over {n} dagen. Het saldo blijft daarna boven nul."
  },
  "pl": {
+  "flightsToLisbon": "Loty do Lizbony",
   "studioInvoice": "Faktura za studio",
   "tagline": "Zobacz przyszłość (swojego konta)",
   "downloadFor": "Pobierz na",
@@ -1450,6 +1471,7 @@ window.TRANSLATIONS = {
   "inDays": "Za {n} dni. Potem saldo pozostaje powyżej zera."
  },
  "pt-BR": {
+  "flightsToLisbon": "Voos para Lisboa",
   "studioInvoice": "Fatura do estúdio",
   "tagline": "Veja o futuro (da sua conta bancária)",
   "downloadFor": "Baixar para",
@@ -1519,6 +1541,7 @@ window.TRANSLATIONS = {
   "inDays": "Em {n} dias. Depois disso, o saldo continua acima de zero."
  },
  "pt-PT": {
+  "flightsToLisbon": "Voos para Lisboa",
   "studioInvoice": "Fatura do estúdio",
   "tagline": "Veja o futuro (da sua conta bancária)",
   "downloadFor": "Descarregar para",
@@ -1588,6 +1611,7 @@ window.TRANSLATIONS = {
   "inDays": "Daqui a {n} dias. Depois disso, o saldo mantém-se acima de zero."
  },
  "ro": {
+  "flightsToLisbon": "Zboruri spre Lisabona",
   "studioInvoice": "Factură studio",
   "tagline": "Vedeți viitorul (contului bancar)",
   "downloadFor": "Descărcați pentru",
@@ -1657,6 +1681,7 @@ window.TRANSLATIONS = {
   "inDays": "Peste {n} zile. Soldul rămâne apoi peste zero."
  },
  "ru": {
+  "flightsToLisbon": "Билеты в Лиссабон",
   "studioInvoice": "Счёт за студию",
   "tagline": "Загляните в будущее (вашего банковского счёта)",
   "downloadFor": "Загрузить для",
@@ -1726,6 +1751,7 @@ window.TRANSLATIONS = {
   "inDays": "Через {n} дн. После этого баланс остаётся выше нуля."
  },
  "sk": {
+  "flightsToLisbon": "Letenky do Lisabonu",
   "studioInvoice": "Faktúra za štúdio",
   "tagline": "Pozrite sa do budúcnosti (svojho účtu)",
   "downloadFor": "Stiahnuť pre",
@@ -1795,6 +1821,7 @@ window.TRANSLATIONS = {
   "inDays": "O {n} dní. Zostatok potom zostane nad nulou."
  },
  "sv": {
+  "flightsToLisbon": "Flyg till Lissabon",
   "studioInvoice": "Studiofaktura",
   "tagline": "Se framtiden (för ditt bankkonto)",
   "downloadFor": "Hämta för",
@@ -1864,6 +1891,7 @@ window.TRANSLATIONS = {
   "inDays": "Om {n} dagar. Saldot håller sig över noll efteråt."
  },
  "th": {
+  "flightsToLisbon": "เที่ยวบินไปลิสบอน",
   "studioInvoice": "ใบแจ้งหนี้สตูดิโอ",
   "tagline": "มองเห็นอนาคต (ของบัญชีธนาคารคุณ)",
   "downloadFor": "ดาวน์โหลดสำหรับ",
@@ -1933,6 +1961,7 @@ window.TRANSLATIONS = {
   "inDays": "ในอีก {n} วัน หลังจากนั้นยอดเงินจะไม่ติดลบ"
  },
  "tr": {
+  "flightsToLisbon": "Lizbon uçak biletleri",
   "studioInvoice": "Stüdyo faturası",
   "tagline": "Geleceği görün (banka hesabınızın)",
   "downloadFor": "İndirin:",
@@ -2002,6 +2031,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} gün sonra. Bakiye sonrasında sıfırın üzerinde kalır."
  },
  "uk": {
+  "flightsToLisbon": "Квитки до Лісабона",
   "studioInvoice": "Рахунок за студію",
   "tagline": "Зазирніть у майбутнє (свого банківського рахунку)",
   "downloadFor": "Завантажити для",
@@ -2071,6 +2101,7 @@ window.TRANSLATIONS = {
   "inDays": "Через {n} дн. Після цього баланс залишається вище нуля."
  },
  "vi": {
+  "flightsToLisbon": "Vé máy bay đi Lisbon",
   "studioInvoice": "Hóa đơn studio",
   "tagline": "Nhìn thấy tương lai (của tài khoản ngân hàng)",
   "downloadFor": "Tải về cho",
@@ -2140,6 +2171,7 @@ window.TRANSLATIONS = {
   "inDays": "Sau {n} ngày. Sau đó số dư luôn trên 0."
  },
  "zh-Hans": {
+  "flightsToLisbon": "飞往里斯本的机票",
   "studioInvoice": "工作室账单",
   "tagline": "预见（你银行账户的）未来",
   "downloadFor": "下载：",
@@ -2209,6 +2241,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} 天后。之后余额始终高于零。"
  },
  "zh-Hant": {
+  "flightsToLisbon": "飛往里斯本的機票",
   "studioInvoice": "工作室帳單",
   "tagline": "預見（你銀行帳戶的）未來",
   "downloadFor": "下載：",

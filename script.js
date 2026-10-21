@@ -225,6 +225,8 @@
   add(addDays(start, 23), 99000);
   paydays.set(addDays(start, 23).getTime(), I18N.t("studioInvoice"));
   add(addDays(start, 31), -34000);
+  // Purchases are marked too, in red.
+  const purchases = new Map([[addDays(start, 31).getTime(), I18N.t("flightsToLisbon")]]);
   // Points where the balance changes (end of day), like the app's chart.
   const pts = [];
   for (let d = 0, bal = 214000; d <= DAYS; d++) {
@@ -269,13 +271,16 @@
          `<text x="${x(TRIP.from) + 5}" y="${T + 14}">✈ ${TRIP.name}</text></g>`;
     s += `<path class="area" d="${d}L${P[n - 1][0]},${y(0)}L${P[0][0]},${y(0)}Z"/>`;
     s += `<path class="line" pathLength="1" d="${d}"/>`;
-    // Payday dots where income lands.
+    // A green dot where income lands, a red one for each purchase.
     const dots = [];
     pts.forEach((p, i) => {
-      const name = paydays.get(addDays(start, p.d).getTime());
-      if (!name) return;
-      dots.push({ x: P[i][0], y: P[i][1], name, k: i / n });
-      s += `<circle class="payday" style="--k:${i / n}" cx="${P[i][0]}" cy="${P[i][1]}" r="5.5"/>`;
+      const day = addDays(start, p.d).getTime();
+      for (const [kind, names] of [["income", paydays], ["purchase", purchases]]) {
+        const name = names.get(day);
+        if (!name) continue;
+        dots.push({ x: P[i][0], y: P[i][1], name, kind, k: i / n });
+        s += `<circle class="payday ${kind}" style="--k:${i / n}" cx="${P[i][0]}" cy="${P[i][1]}" r="5.5"/>`;
+      }
     });
     svg.innerHTML = s;
     placePaydayLabels(svg, dots, { left: L, top: T, right: W - R, bottom: H - B }, svg.querySelector(".trip text"));
@@ -291,7 +296,7 @@
     const dotBoxes = dots.map(d => ({ x: d.x - 6, y: d.y - 6, w: 12, h: 12, d }));
     for (const d of [...dots].sort((a, c) => a.x - c.x)) {
       const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
-      g.setAttribute("class", "payday-label");
+      g.setAttribute("class", `payday-label ${d.kind}`);
       g.style.setProperty("--k", d.k);
       g.innerHTML = `<rect rx="4"/><text>${d.name}</text>`;
       svg.appendChild(g);
@@ -299,6 +304,9 @@
       const options = [
         { x: d.x + OFF, y: d.y - H / 2 }, { x: d.x - OFF - w, y: d.y - H / 2 },
         { x: d.x - w / 2, y: d.y - OFF - H }, { x: d.x - w / 2, y: d.y + OFF },
+        // Crowded spots: hanging off the dot's corners.
+        { x: d.x + 4, y: d.y - OFF - H }, { x: d.x + 4, y: d.y + OFF },
+        { x: d.x - 4 - w, y: d.y - OFF - H }, { x: d.x - 4 - w, y: d.y + OFF },
       ].map(o => ({ ...o, w, h: H }));
       const spot = options.find(o => o.x >= b.left && o.x + w <= b.right && o.y >= b.top && o.y + H <= b.bottom &&
         !placed.some(p => hit(o, p)) && !dotBoxes.some(q => q.d !== d && hit(o, q, 0)));
