@@ -19,4 +19,4 @@ Then open http://localhost:8000.
 - `script.js` – the “Can I afford it?” demo, which runs the app's forecast rule on an example plan starting today
 - `images/` – app screenshots (example data), light and dark versions
 
-SF Rounded comes from the visitor's Apple device (it can't be hosted); Inter from Google Fonts stands in everywhere else.
+The typeface is Sunghyun Sans (SIL Open Font License), served from `fonts/` and trimmed to the scripts the site needs. Scripts it doesn't cover fall back to the system font.
