@@ -203,6 +203,8 @@ main { position: relative; z-index: 1; }
 .side .item { position: relative; z-index: 1; display: flex; align-items: center; gap: 10px; padding: 7px 10px; border-radius: 8px; font-weight: 500; font-size: 0.95rem; transition: color .35s; }
 .side .item.active { color: #fff; font-weight: 600; }
 .side .ico { width: 18px; height: 18px; flex: none; background: currentColor; -webkit-mask: var(--icon) center / contain no-repeat; mask: var(--icon) center / contain no-repeat; }
+/* The page you're on shows its icon filled, as in the app. */
+.side .item.active .ico { -webkit-mask-image: var(--icon-fill); mask-image: var(--icon-fill); }
 .side .item em { margin-left: auto; font-style: normal; font-size: 0.72rem; font-weight: 600; color: var(--accent); background: var(--tint); padding: 1px 7px; border-radius: 99px; transition: color .35s, background .35s; }
 .side .item.active em { color: #fff; background: rgb(255 255 255 / .2); }
 .side .plan-label { font-size: 0.72rem; font-weight: 600; color: var(--muted); padding: 14px 10px 4px; }
