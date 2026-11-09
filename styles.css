@@ -150,7 +150,9 @@ body::before { content: ""; position: fixed; inset: 0; z-index: 2; pointer-event
 
 .features { display: grid; gap: 56px; }
 /* Every section, the screenshot included, is the same full-width outlined card: one simple column. */
-.feature, .afford { width: 100%; border: 1px solid var(--rule); border-radius: 22px; padding: 24px; }
+.feature, .afford { width: 100%; border: 1px solid var(--rule); border-radius: 22px; padding: 24px;
+  /* Slightly translucent, so the sky shows through softly behind each card. */
+  background: rgb(16 14 36 / .5); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); }
 .feature { display: grid; gap: 16px; text-align: center; }
 .v-chart + .v-tiles { margin-top: 4px; }
 .feature > p { text-align: center; }
@@ -298,10 +300,10 @@ main, .features, .feature, .afford { grid-template-columns: minmax(0, 1fr); }
     width: max-content;
     max-width: calc(100vw - 40px);
     transform: translateX(-50%);
-    /* Phone and text sit together as one centred group, close to each other. */
+    /* Phone and text sit together as one centred group, with breathing room between them. */
     grid-template-columns: auto auto;
     align-items: center;
-    gap: 40px;
+    gap: 40px 88px;
     /* The opening fills the first screen with its content centred vertically, stopping short so the top of the
        first card always peeks up from below the fold (main's top padding + the gap + the peek = 72 + 56 + 90). */
     min-height: calc(100svh - 218px);
