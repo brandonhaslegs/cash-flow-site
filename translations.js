@@ -497,7 +497,6 @@ window.TRANSLATIONS = {
   "inDays": "Dentro de {n} días. Después, el saldo se mantiene por encima de cero."
  },
  "fi": {
-  "appName": "Tulevaisuuden rahat",
   "tripChip": "Matka",
   "flightsToLisbon": "Lennot Lissaboniin",
   "studioInvoice": "Studion lasku",
@@ -568,7 +567,6 @@ window.TRANSLATIONS = {
   "inDays": "{n} päivän päästä. Saldo pysyy sen jälkeen nollan yläpuolella."
  },
  "fr": {
-  "appName": "Futur Money",
   "tripChip": "Voyage",
   "flightsToLisbon": "Vols pour Lisbonne",
   "studioInvoice": "Facture du studio",
