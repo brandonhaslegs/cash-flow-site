@@ -1,6 +1,7 @@
 // Generated: website translations, keyed by language. English lives in index.html.
 window.TRANSLATIONS = {
  "ar": {
+  "appName": "مال المستقبل",
   "tripChip": "رحلة",
   "flightsToLisbon": "رحلات إلى لشبونة",
   "studioInvoice": "فاتورة الاستوديو",
@@ -631,6 +632,7 @@ window.TRANSLATIONS = {
   "inDays": "Dans {n} jours. Le solde reste ensuite au-dessus de zéro."
  },
  "he": {
+  "appName": "הכסף של העתיד",
   "tripChip": "נסיעה",
   "flightsToLisbon": "טיסות לליסבון",
   "studioInvoice": "חשבונית סטודיו",
@@ -701,6 +703,7 @@ window.TRANSLATIONS = {
   "inDays": "בעוד {n} ימים. לאחר מכן היתרה נשארת מעל אפס."
  },
  "hi": {
+  "appName": "भविष्य का पैसा",
   "tripChip": "यात्रा",
   "flightsToLisbon": "लिस्बन की उड़ानें",
   "studioInvoice": "स्टूडियो इनवॉइस",
@@ -1051,6 +1054,7 @@ window.TRANSLATIONS = {
   "inDays": "Tra {n} giorni. Dopo, il saldo resta sopra lo zero."
  },
  "ja": {
+  "appName": "未来のお金",
   "tripChip": "旅行",
   "flightsToLisbon": "リスボン行きの航空券",
   "studioInvoice": "スタジオの請求書",
@@ -1121,6 +1125,7 @@ window.TRANSLATIONS = {
   "inDays": "{n}日後。その後も残高はプラスのままです。"
  },
  "ko": {
+  "appName": "미래의 돈",
   "tripChip": "여행",
   "flightsToLisbon": "리스본행 항공권",
   "studioInvoice": "스튜디오 청구서",
@@ -1891,6 +1896,7 @@ window.TRANSLATIONS = {
   "inDays": "Om {n} dagar. Saldot håller sig över noll efteråt."
  },
  "th": {
+  "appName": "เงินในอนาคต",
   "tripChip": "ทริป",
   "flightsToLisbon": "เที่ยวบินไปลิสบอน",
   "studioInvoice": "ใบแจ้งหนี้สตูดิโอ",
@@ -2171,6 +2177,7 @@ window.TRANSLATIONS = {
   "inDays": "Sau {n} ngày. Sau đó số dư luôn trên 0."
  },
  "zh-Hans": {
+  "appName": "未来的钱",
   "tripChip": "旅行",
   "flightsToLisbon": "飞往里斯本的机票",
   "studioInvoice": "工作室账单",
@@ -2241,6 +2248,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} 天后。之后余额始终高于零。"
  },
  "zh-Hant": {
+  "appName": "未來的錢",
   "tripChip": "旅行",
   "flightsToLisbon": "飛往里斯本的機票",
   "studioInvoice": "工作室帳單",
@@ -2311,6 +2319,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} 天後。之後餘額始終高於零。"
  },
  "bn": {
+  "appName": "ভবিষ্যতের টাকা",
   "tripChip": "ভ্রমণ",
   "flightsToLisbon": "লিসবনের বিমান টিকিট",
   "studioInvoice": "স্টুডিওর ইনভয়েস",
@@ -2381,6 +2390,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} দিন পর। এরপরও ব্যালেন্স শূন্যের ওপরে থাকবে।"
  },
  "gu": {
+  "appName": "ભવિષ્યના પૈસા",
   "tripChip": "પ્રવાસ",
   "flightsToLisbon": "લિસ્બનની ફ્લાઇટ",
   "studioInvoice": "સ્ટુડિયો ઇન્વૉઇસ",
@@ -2451,6 +2461,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} દિવસમાં. એ પછી બૅલેન્સ શૂન્યથી ઉપર રહે છે."
  },
  "kn": {
+  "appName": "ಭವಿಷ್ಯದ ಹಣ",
   "tripChip": "ಪ್ರವಾಸ",
   "flightsToLisbon": "ಲಿಸ್ಬನ್‌ಗೆ ವಿಮಾನ",
   "studioInvoice": "ಸ್ಟುಡಿಯೋ ಇನ್‌ವಾಯ್ಸ್",
@@ -2521,6 +2532,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} ದಿನಗಳಲ್ಲಿ. ಅದರ ನಂತರವೂ ಬ್ಯಾಲೆನ್ಸ್ ಸೊನ್ನೆಗಿಂತ ಮೇಲಿರುತ್ತದೆ."
  },
  "ml": {
+  "appName": "ഭാവിയിലെ പണം",
   "tripChip": "യാത്ര",
   "flightsToLisbon": "ലിസ്ബണിലേക്കുള്ള ഫ്ലൈറ്റുകൾ",
   "studioInvoice": "സ്റ്റുഡിയോ ഇൻവോയ്സ്",
@@ -2591,6 +2603,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} ദിവസത്തിനുള്ളിൽ. അതിനുശേഷവും ബാലൻസ് പൂജ്യത്തിന് മുകളിൽ തുടരും."
  },
  "mr": {
+  "appName": "भविष्यातला पैसा",
   "tripChip": "सहल",
   "flightsToLisbon": "लिस्बनची विमान तिकिटे",
   "studioInvoice": "स्टुडिओ इनव्हॉइस",
@@ -2661,6 +2674,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} दिवसांत. त्यानंतरही शिल्लक शून्याच्या वर राहते."
  },
  "or": {
+  "appName": "ଭବିଷ୍ୟତର ଟଙ୍କା",
   "tripChip": "ଯାତ୍ରା",
   "flightsToLisbon": "ଲିସବନ୍ ଫ୍ଲାଇଟ୍",
   "studioInvoice": "ଷ୍ଟୁଡିଓ ଇନଭଏସ୍",
@@ -2731,6 +2745,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} ଦିନରେ। ତା’ପରେ ବାଲାନ୍ସ ଶୂନ୍ୟରୁ ଉପରେ ରହିବ।"
  },
  "pa": {
+  "appName": "ਭਵਿੱਖ ਦਾ ਪੈਸਾ",
   "tripChip": "ਯਾਤਰਾ",
   "flightsToLisbon": "ਲਿਸਬਨ ਦੀਆਂ ਫ਼ਲਾਈਟਾਂ",
   "studioInvoice": "ਸਟੂਡੀਓ ਇਨਵੌਇਸ",
@@ -2801,6 +2816,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} ਦਿਨਾਂ ਵਿੱਚ। ਉਸ ਤੋਂ ਬਾਅਦ ਬੈਲੇਂਸ ਜ਼ੀਰੋ ਤੋਂ ਉੱਪਰ ਰਹੇਗਾ।"
  },
  "ta": {
+  "appName": "எதிர்கால காசு",
   "tripChip": "பயணம்",
   "flightsToLisbon": "லிஸ்பனுக்கு விமானம்",
   "studioInvoice": "ஸ்டுடியோ இன்வாய்ஸ்",
@@ -2871,6 +2887,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} நாட்களில். அதன் பிறகும் இருப்பு பூஜ்ஜியத்துக்கு மேல் இருக்கும்."
  },
  "te": {
+  "appName": "భవిష్యత్ డబ్బు",
   "tripChip": "ట్రిప్",
   "flightsToLisbon": "లిస్బన్‌కు విమాన టికెట్లు",
   "studioInvoice": "స్టూడియో ఇన్‌వాయిస్",
@@ -2941,6 +2958,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} రోజుల్లో. ఆ తర్వాత బ్యాలెన్స్ సున్నా కంటే ఎక్కువగా ఉంటుంది."
  },
  "ur": {
+  "appName": "مستقبل کا پیسہ",
   "tripChip": "سفر",
   "flightsToLisbon": "لزبن کی فلائٹس",
   "studioInvoice": "اسٹوڈیو انوائس",

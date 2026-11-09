@@ -55,6 +55,7 @@
     document.querySelectorAll("[data-i18n-aria]").forEach(el => { const v = table[el.dataset.i18nAria]; if (v) el.setAttribute("aria-label", v); });
     const meta = document.querySelector('meta[name="description"]');
     if (meta && table.metaDescription) meta.content = table.metaDescription;
+    if (table.appName) document.title = table.appName;
   };
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", apply); else apply();
 })();
