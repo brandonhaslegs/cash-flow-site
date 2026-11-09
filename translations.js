@@ -1,6 +1,12 @@
 // Generated: website translations, keyed by language. English lives in index.html.
 window.TRANSLATIONS = {
  "ar": {
+  "fri": "جمعة",
+  "sat": "سبت",
+  "purchaseChip": "مشتريات",
+  "hotel": "فندق",
+  "fadoNight": "أمسية فادو",
+  "sintraTrain": "قطار إلى سينترا",
   "appName": "فلوس المستقبل",
   "tripChip": "رحلة",
   "flightsToLisbon": "رحلات إلى لشبونة",
@@ -72,6 +78,12 @@ window.TRANSLATIONS = {
   "inDays": "بعد {n} يوم. يبقى الرصيد فوق الصفر بعد ذلك."
  },
  "ca": {
+  "fri": "Dv.",
+  "sat": "Ds.",
+  "purchaseChip": "Compra",
+  "hotel": "Hotel",
+  "fadoNight": "Nit de fado",
+  "sintraTrain": "Tren a Sintra",
   "appName": "Diners del futur",
   "tripChip": "Viatge",
   "flightsToLisbon": "Vols a Lisboa",
@@ -143,6 +155,12 @@ window.TRANSLATIONS = {
   "inDays": "D’aquí a {n} dies. Després, el saldo es manté per sobre de zero."
  },
  "cs": {
+  "fri": "Pá",
+  "sat": "So",
+  "purchaseChip": "Nákup",
+  "hotel": "Hotel",
+  "fadoNight": "Večer fada",
+  "sintraTrain": "Vlak do Sintry",
   "appName": "Peníze budoucnosti",
   "tripChip": "Cesta",
   "flightsToLisbon": "Letenky do Lisabonu",
@@ -214,6 +232,12 @@ window.TRANSLATIONS = {
   "inDays": "Za {n} dní. Zůstatek pak zůstane nad nulou."
  },
  "da": {
+  "fri": "fre",
+  "sat": "lør",
+  "purchaseChip": "Køb",
+  "hotel": "Hotel",
+  "fadoNight": "Fadoaften",
+  "sintraTrain": "Tog til Sintra",
   "tripChip": "Rejse",
   "flightsToLisbon": "Fly til Lissabon",
   "studioInvoice": "Studiofaktura",
@@ -284,6 +308,12 @@ window.TRANSLATIONS = {
   "inDays": "Om {n} dage. Saldoen forbliver over nul bagefter."
  },
  "de": {
+  "fri": "Fr",
+  "sat": "Sa",
+  "purchaseChip": "Kauf",
+  "hotel": "Hotel",
+  "fadoNight": "Fado-Abend",
+  "sintraTrain": "Zug nach Sintra",
   "appName": "Zukunftskohle",
   "tripChip": "Reise",
   "flightsToLisbon": "Flüge nach Lissabon",
@@ -355,6 +385,12 @@ window.TRANSLATIONS = {
   "inDays": "In {n} Tagen. Der Kontostand bleibt danach über null."
  },
  "el": {
+  "fri": "Παρ",
+  "sat": "Σάβ",
+  "purchaseChip": "Αγορά",
+  "hotel": "Ξενοδοχείο",
+  "fadoNight": "Βραδιά φάντο",
+  "sintraTrain": "Τρένο για Σίντρα",
   "appName": "Λεφτά του μέλλοντος",
   "tripChip": "Ταξίδι",
   "flightsToLisbon": "Πτήσεις για Λισαβόνα",
@@ -426,6 +462,12 @@ window.TRANSLATIONS = {
   "inDays": "Σε {n} ημέρες. Το υπόλοιπο μένει πάνω από το μηδέν στη συνέχεια."
  },
  "es": {
+  "fri": "Vie",
+  "sat": "Sáb",
+  "purchaseChip": "Compra",
+  "hotel": "Hotel",
+  "fadoNight": "Noche de fado",
+  "sintraTrain": "Tren a Sintra",
   "appName": "Pasta del futuro",
   "tripChip": "Viaje",
   "flightsToLisbon": "Vuelos a Lisboa",
@@ -497,6 +539,12 @@ window.TRANSLATIONS = {
   "inDays": "Dentro de {n} días. Después, el saldo se mantiene por encima de cero."
  },
  "fi": {
+  "fri": "pe",
+  "sat": "la",
+  "purchaseChip": "Ostos",
+  "hotel": "Hotelli",
+  "fadoNight": "Fado-ilta",
+  "sintraTrain": "Juna Sintraan",
   "tripChip": "Matka",
   "flightsToLisbon": "Lennot Lissaboniin",
   "studioInvoice": "Studion lasku",
@@ -567,6 +615,12 @@ window.TRANSLATIONS = {
   "inDays": "{n} päivän päästä. Saldo pysyy sen jälkeen nollan yläpuolella."
  },
  "fr": {
+  "fri": "Ven.",
+  "sat": "Sam.",
+  "purchaseChip": "Achat",
+  "hotel": "Hôtel",
+  "fadoNight": "Soirée fado",
+  "sintraTrain": "Train pour Sintra",
   "tripChip": "Voyage",
   "flightsToLisbon": "Vols pour Lisbonne",
   "studioInvoice": "Facture du studio",
@@ -637,6 +691,12 @@ window.TRANSLATIONS = {
   "inDays": "Dans {n} jours. Le solde reste ensuite au-dessus de zéro."
  },
  "he": {
+  "fri": "ו׳",
+  "sat": "ש׳",
+  "purchaseChip": "רכישה",
+  "hotel": "מלון",
+  "fadoNight": "ערב פאדו",
+  "sintraTrain": "רכבת לסינטרה",
   "appName": "כסף העתיד",
   "tripChip": "נסיעה",
   "flightsToLisbon": "טיסות לליסבון",
@@ -708,6 +768,12 @@ window.TRANSLATIONS = {
   "inDays": "בעוד {n} ימים. לאחר מכן היתרה נשארת מעל אפס."
  },
  "hi": {
+  "fri": "शुक्र",
+  "sat": "शनि",
+  "purchaseChip": "ख़रीदारी",
+  "hotel": "होटल",
+  "fadoNight": "फ़ाडो की शाम",
+  "sintraTrain": "सिंट्रा की ट्रेन",
   "appName": "भविष्य का पैसा",
   "tripChip": "यात्रा",
   "flightsToLisbon": "लिस्बन की उड़ानें",
@@ -779,6 +845,12 @@ window.TRANSLATIONS = {
   "inDays": "{n} दिनों में। उसके बाद बैलेंस शून्य से ऊपर रहता है।"
  },
  "hr": {
+  "fri": "Pet",
+  "sat": "Sub",
+  "purchaseChip": "Kupnja",
+  "hotel": "Hotel",
+  "fadoNight": "Večer fada",
+  "sintraTrain": "Vlak za Sintru",
   "appName": "Novac budućnosti",
   "tripChip": "Putovanje",
   "flightsToLisbon": "Letovi za Lisabon",
@@ -850,6 +922,12 @@ window.TRANSLATIONS = {
   "inDays": "Za {n} dana. Stanje nakon toga ostaje iznad nule."
  },
  "hu": {
+  "fri": "P",
+  "sat": "Szo",
+  "purchaseChip": "Vásárlás",
+  "hotel": "Szálloda",
+  "fadoNight": "Fadoest",
+  "sintraTrain": "Vonat Sintrába",
   "appName": "Jövőpénz",
   "tripChip": "Utazás",
   "flightsToLisbon": "Repülőjegy Lisszabonba",
@@ -921,6 +999,12 @@ window.TRANSLATIONS = {
   "inDays": "{n} nap múlva. Utána az egyenleg nulla felett marad."
  },
  "id": {
+  "fri": "Jum",
+  "sat": "Sab",
+  "purchaseChip": "Pembelian",
+  "hotel": "Hotel",
+  "fadoNight": "Malam fado",
+  "sintraTrain": "Kereta ke Sintra",
   "appName": "Uang masa depan",
   "tripChip": "Perjalanan",
   "flightsToLisbon": "Tiket pesawat ke Lisbon",
@@ -992,6 +1076,12 @@ window.TRANSLATIONS = {
   "inDays": "Dalam {n} hari. Saldo tetap di atas nol setelahnya."
  },
  "it": {
+  "fri": "Ven",
+  "sat": "Sab",
+  "purchaseChip": "Acquisto",
+  "hotel": "Hotel",
+  "fadoNight": "Serata di fado",
+  "sintraTrain": "Treno per Sintra",
   "appName": "Soldi del futuro",
   "tripChip": "Viaggio",
   "flightsToLisbon": "Voli per Lisbona",
@@ -1063,6 +1153,12 @@ window.TRANSLATIONS = {
   "inDays": "Tra {n} giorni. Dopo, il saldo resta sopra lo zero."
  },
  "ja": {
+  "fri": "金",
+  "sat": "土",
+  "purchaseChip": "購入予定",
+  "hotel": "ホテル",
+  "fadoNight": "ファドの夜",
+  "sintraTrain": "シントラ行きの電車",
   "appName": "ミライマネー",
   "tripChip": "旅行",
   "flightsToLisbon": "リスボン行きの航空券",
@@ -1134,6 +1230,12 @@ window.TRANSLATIONS = {
   "inDays": "{n}日後。その後も残高はプラスのままです。"
  },
  "ko": {
+  "fri": "금",
+  "sat": "토",
+  "purchaseChip": "구매",
+  "hotel": "호텔",
+  "fadoNight": "파두 공연",
+  "sintraTrain": "신트라행 기차",
   "appName": "미래머니",
   "tripChip": "여행",
   "flightsToLisbon": "리스본행 항공권",
@@ -1205,6 +1307,12 @@ window.TRANSLATIONS = {
   "inDays": "{n}일 후. 이후에도 잔액이 0 위로 유지됩니다."
  },
  "ms": {
+  "fri": "Jum",
+  "sat": "Sab",
+  "purchaseChip": "Pembelian",
+  "hotel": "Hotel",
+  "fadoNight": "Malam fado",
+  "sintraTrain": "Kereta api ke Sintra",
   "appName": "Duit masa depan",
   "tripChip": "Perjalanan",
   "flightsToLisbon": "Penerbangan ke Lisbon",
@@ -1276,6 +1384,12 @@ window.TRANSLATIONS = {
   "inDays": "Dalam {n} hari. Baki kekal di atas sifar selepas itu."
  },
  "nb": {
+  "fri": "fre.",
+  "sat": "lør.",
+  "purchaseChip": "Kjøp",
+  "hotel": "Hotell",
+  "fadoNight": "Fadokveld",
+  "sintraTrain": "Tog til Sintra",
   "tripChip": "Reise",
   "flightsToLisbon": "Fly til Lisboa",
   "studioInvoice": "Studiofaktura",
@@ -1346,6 +1460,12 @@ window.TRANSLATIONS = {
   "inDays": "Om {n} dager. Saldoen holder seg over null etterpå."
  },
  "nl": {
+  "fri": "vr",
+  "sat": "za",
+  "purchaseChip": "Aankoop",
+  "hotel": "Hotel",
+  "fadoNight": "Fado-avond",
+  "sintraTrain": "Trein naar Sintra",
   "tripChip": "Reis",
   "flightsToLisbon": "Vluchten naar Lissabon",
   "studioInvoice": "Studiofactuur",
@@ -1416,6 +1536,12 @@ window.TRANSLATIONS = {
   "inDays": "Over {n} dagen. Het saldo blijft daarna boven nul."
  },
  "pl": {
+  "fri": "Pt",
+  "sat": "So",
+  "purchaseChip": "Zakup",
+  "hotel": "Hotel",
+  "fadoNight": "Wieczór fado",
+  "sintraTrain": "Pociąg do Sintry",
   "appName": "Kasa przyszłości",
   "tripChip": "Podróż",
   "flightsToLisbon": "Loty do Lizbony",
@@ -1487,6 +1613,12 @@ window.TRANSLATIONS = {
   "inDays": "Za {n} dni. Potem saldo pozostaje powyżej zera."
  },
  "pt-BR": {
+  "fri": "Sex",
+  "sat": "Sáb",
+  "purchaseChip": "Compra",
+  "hotel": "Hotel",
+  "fadoNight": "Noite de fado",
+  "sintraTrain": "Trem para Sintra",
   "appName": "Grana do futuro",
   "tripChip": "Viagem",
   "flightsToLisbon": "Voos para Lisboa",
@@ -1558,6 +1690,12 @@ window.TRANSLATIONS = {
   "inDays": "Em {n} dias. Depois disso, o saldo continua acima de zero."
  },
  "pt-PT": {
+  "fri": "Sex",
+  "sat": "Sáb",
+  "purchaseChip": "Compra",
+  "hotel": "Hotel",
+  "fadoNight": "Noite de fado",
+  "sintraTrain": "Comboio para Sintra",
   "appName": "Dinheiro do futuro",
   "tripChip": "Viagem",
   "flightsToLisbon": "Voos para Lisboa",
@@ -1629,6 +1767,12 @@ window.TRANSLATIONS = {
   "inDays": "Daqui a {n} dias. Depois disso, o saldo mantém-se acima de zero."
  },
  "ro": {
+  "fri": "Vin",
+  "sat": "Sâm",
+  "purchaseChip": "Achiziție",
+  "hotel": "Hotel",
+  "fadoNight": "Seară de fado",
+  "sintraTrain": "Tren spre Sintra",
   "appName": "Banii viitorului",
   "tripChip": "Călătorie",
   "flightsToLisbon": "Zboruri spre Lisabona",
@@ -1700,6 +1844,12 @@ window.TRANSLATIONS = {
   "inDays": "Peste {n} zile. Soldul rămâne apoi peste zero."
  },
  "ru": {
+  "fri": "Пт",
+  "sat": "Сб",
+  "purchaseChip": "Покупка",
+  "hotel": "Отель",
+  "fadoNight": "Вечер фаду",
+  "sintraTrain": "Поезд в Синтру",
   "appName": "Кэш будущего",
   "tripChip": "Поездка",
   "flightsToLisbon": "Билеты в Лиссабон",
@@ -1771,6 +1921,12 @@ window.TRANSLATIONS = {
   "inDays": "Через {n} дн. После этого баланс остаётся выше нуля."
  },
  "sk": {
+  "fri": "Pi",
+  "sat": "So",
+  "purchaseChip": "Nákup",
+  "hotel": "Hotel",
+  "fadoNight": "Večer fada",
+  "sintraTrain": "Vlak do Sintry",
   "appName": "Peniaze budúcnosti",
   "tripChip": "Cesta",
   "flightsToLisbon": "Letenky do Lisabonu",
@@ -1842,6 +1998,12 @@ window.TRANSLATIONS = {
   "inDays": "O {n} dní. Zostatok potom zostane nad nulou."
  },
  "sv": {
+  "fri": "fre",
+  "sat": "lör",
+  "purchaseChip": "Köp",
+  "hotel": "Hotell",
+  "fadoNight": "Fadokväll",
+  "sintraTrain": "Tåg till Sintra",
   "tripChip": "Resa",
   "flightsToLisbon": "Flyg till Lissabon",
   "studioInvoice": "Studiofaktura",
@@ -1912,6 +2074,12 @@ window.TRANSLATIONS = {
   "inDays": "Om {n} dagar. Saldot håller sig över noll efteråt."
  },
  "th": {
+  "fri": "ศ.",
+  "sat": "ส.",
+  "purchaseChip": "การซื้อ",
+  "hotel": "โรงแรม",
+  "fadoNight": "คืนฟังฟาดู",
+  "sintraTrain": "รถไฟไปซินทรา",
   "appName": "เงินอนาคต",
   "tripChip": "ทริป",
   "flightsToLisbon": "เที่ยวบินไปลิสบอน",
@@ -1983,6 +2151,12 @@ window.TRANSLATIONS = {
   "inDays": "ในอีก {n} วัน หลังจากนั้นยอดเงินจะไม่ติดลบ"
  },
  "tr": {
+  "fri": "Cum",
+  "sat": "Cmt",
+  "purchaseChip": "Satın Alma",
+  "hotel": "Otel",
+  "fadoNight": "Fado gecesi",
+  "sintraTrain": "Sintra treni",
   "appName": "Geleceğin parası",
   "tripChip": "Seyahat",
   "flightsToLisbon": "Lizbon uçak biletleri",
@@ -2054,6 +2228,12 @@ window.TRANSLATIONS = {
   "inDays": "{n} gün sonra. Bakiye sonrasında sıfırın üzerinde kalır."
  },
  "uk": {
+  "fri": "Пт",
+  "sat": "Сб",
+  "purchaseChip": "Покупка",
+  "hotel": "Готель",
+  "fadoNight": "Вечір фаду",
+  "sintraTrain": "Потяг до Сінтри",
   "appName": "Гроші майбутнього",
   "tripChip": "Подорож",
   "flightsToLisbon": "Квитки до Лісабона",
@@ -2125,6 +2305,12 @@ window.TRANSLATIONS = {
   "inDays": "Через {n} дн. Після цього баланс залишається вище нуля."
  },
  "vi": {
+  "fri": "T6",
+  "sat": "T7",
+  "purchaseChip": "Khoản mua",
+  "hotel": "Khách sạn",
+  "fadoNight": "Đêm nhạc fado",
+  "sintraTrain": "Tàu đi Sintra",
   "appName": "Tiền tương lai",
   "tripChip": "Chuyến đi",
   "flightsToLisbon": "Vé máy bay đi Lisbon",
@@ -2196,6 +2382,12 @@ window.TRANSLATIONS = {
   "inDays": "Sau {n} ngày. Sau đó số dư luôn trên 0."
  },
  "zh-Hans": {
+  "fri": "周五",
+  "sat": "周六",
+  "purchaseChip": "购买",
+  "hotel": "酒店",
+  "fadoNight": "法朵之夜",
+  "sintraTrain": "去辛特拉的火车",
   "appName": "未来钱",
   "tripChip": "旅行",
   "flightsToLisbon": "飞往里斯本的机票",
@@ -2267,6 +2459,12 @@ window.TRANSLATIONS = {
   "inDays": "{n} 天后。之后余额始终高于零。"
  },
  "zh-Hant": {
+  "fri": "週五",
+  "sat": "週六",
+  "purchaseChip": "購買",
+  "hotel": "飯店",
+  "fadoNight": "法朵之夜",
+  "sintraTrain": "往辛特拉的火車",
   "appName": "未來錢",
   "tripChip": "旅行",
   "flightsToLisbon": "飛往里斯本的機票",
@@ -2338,6 +2536,12 @@ window.TRANSLATIONS = {
   "inDays": "{n} 天後。之後餘額始終高於零。"
  },
  "bn": {
+  "fri": "শুক্র",
+  "sat": "শনি",
+  "purchaseChip": "কেনাকাটা",
+  "hotel": "হোটেল",
+  "fadoNight": "ফাডো সন্ধ্যা",
+  "sintraTrain": "সিন্ত্রার ট্রেন",
   "appName": "ভবিষ্যতের টাকা",
   "tripChip": "ভ্রমণ",
   "flightsToLisbon": "লিসবনের বিমান টিকিট",
@@ -2409,6 +2613,12 @@ window.TRANSLATIONS = {
   "inDays": "{n} দিন পর। এরপরও ব্যালেন্স শূন্যের ওপরে থাকবে।"
  },
  "gu": {
+  "fri": "શુક્ર",
+  "sat": "શનિ",
+  "purchaseChip": "ખરીદી",
+  "hotel": "હોટેલ",
+  "fadoNight": "ફાડો સાંજ",
+  "sintraTrain": "સિન્ત્રાની ટ્રેન",
   "appName": "ભવિષ્યના પૈસા",
   "tripChip": "પ્રવાસ",
   "flightsToLisbon": "લિસ્બનની ફ્લાઇટ",
@@ -2480,6 +2690,12 @@ window.TRANSLATIONS = {
   "inDays": "{n} દિવસમાં. એ પછી બૅલેન્સ શૂન્યથી ઉપર રહે છે."
  },
  "kn": {
+  "fri": "ಶುಕ್ರ",
+  "sat": "ಶನಿ",
+  "purchaseChip": "ಖರೀದಿ",
+  "hotel": "ಹೋಟೆಲ್",
+  "fadoNight": "ಫಾಡೋ ಸಂಜೆ",
+  "sintraTrain": "ಸಿಂಟ್ರಾಗೆ ರೈಲು",
   "appName": "ಭವಿಷ್ಯದ ದುಡ್ಡು",
   "tripChip": "ಪ್ರವಾಸ",
   "flightsToLisbon": "ಲಿಸ್ಬನ್‌ಗೆ ವಿಮಾನ",
@@ -2551,6 +2767,12 @@ window.TRANSLATIONS = {
   "inDays": "{n} ದಿನಗಳಲ್ಲಿ. ಅದರ ನಂತರವೂ ಬ್ಯಾಲೆನ್ಸ್ ಸೊನ್ನೆಗಿಂತ ಮೇಲಿರುತ್ತದೆ."
  },
  "ml": {
+  "fri": "വെള്ളി",
+  "sat": "ശനി",
+  "purchaseChip": "വാങ്ങൽ",
+  "hotel": "ഹോട്ടൽ",
+  "fadoNight": "ഫാഡോ സന്ധ്യ",
+  "sintraTrain": "സിൻട്രയിലേക്കുള്ള ട്രെയിൻ",
   "appName": "ഭാവിയിലെ കാശ്",
   "tripChip": "യാത്ര",
   "flightsToLisbon": "ലിസ്ബണിലേക്കുള്ള ഫ്ലൈറ്റുകൾ",
@@ -2622,6 +2844,12 @@ window.TRANSLATIONS = {
   "inDays": "{n} ദിവസത്തിനുള്ളിൽ. അതിനുശേഷവും ബാലൻസ് പൂജ്യത്തിന് മുകളിൽ തുടരും."
  },
  "mr": {
+  "fri": "शुक्र",
+  "sat": "शनि",
+  "purchaseChip": "खरेदी",
+  "hotel": "हॉटेल",
+  "fadoNight": "फाडोची संध्याकाळ",
+  "sintraTrain": "सिंत्राची ट्रेन",
   "appName": "भविष्याचा पैसा",
   "tripChip": "सहल",
   "flightsToLisbon": "लिस्बनची विमान तिकिटे",
@@ -2693,6 +2921,12 @@ window.TRANSLATIONS = {
   "inDays": "{n} दिवसांत. त्यानंतरही शिल्लक शून्याच्या वर राहते."
  },
  "or": {
+  "fri": "ଶୁକ୍ର",
+  "sat": "ଶନି",
+  "purchaseChip": "କ୍ରୟ",
+  "hotel": "ହୋଟେଲ",
+  "fadoNight": "ଫାଡୋ ସନ୍ଧ୍ୟା",
+  "sintraTrain": "ସିଣ୍ଟ୍ରା ଟ୍ରେନ",
   "appName": "ଭବିଷ୍ୟତର ଟଙ୍କା",
   "tripChip": "ଯାତ୍ରା",
   "flightsToLisbon": "ଲିସବନ୍ ଫ୍ଲାଇଟ୍",
@@ -2764,6 +2998,12 @@ window.TRANSLATIONS = {
   "inDays": "{n} ଦିନରେ। ତା’ପରେ ବାଲାନ୍ସ ଶୂନ୍ୟରୁ ଉପରେ ରହିବ।"
  },
  "pa": {
+  "fri": "ਸ਼ੁੱਕਰ",
+  "sat": "ਸ਼ਨੀ",
+  "purchaseChip": "ਖ਼ਰੀਦ",
+  "hotel": "ਹੋਟਲ",
+  "fadoNight": "ਫਾਡੋ ਸ਼ਾਮ",
+  "sintraTrain": "ਸਿੰਤਰਾ ਦੀ ਰੇਲ",
   "appName": "ਭਵਿੱਖ ਦਾ ਪੈਸਾ",
   "tripChip": "ਯਾਤਰਾ",
   "flightsToLisbon": "ਲਿਸਬਨ ਦੀਆਂ ਫ਼ਲਾਈਟਾਂ",
@@ -2835,6 +3075,12 @@ window.TRANSLATIONS = {
   "inDays": "{n} ਦਿਨਾਂ ਵਿੱਚ। ਉਸ ਤੋਂ ਬਾਅਦ ਬੈਲੇਂਸ ਜ਼ੀਰੋ ਤੋਂ ਉੱਪਰ ਰਹੇਗਾ।"
  },
  "ta": {
+  "fri": "வெ",
+  "sat": "ச",
+  "purchaseChip": "கொள்முதல்",
+  "hotel": "ஹோட்டல்",
+  "fadoNight": "ஃபாடோ இரவு",
+  "sintraTrain": "சின்ட்ரா ரயில்",
   "appName": "எதிர்கால காசு",
   "tripChip": "பயணம்",
   "flightsToLisbon": "லிஸ்பனுக்கு விமானம்",
@@ -2906,6 +3152,12 @@ window.TRANSLATIONS = {
   "inDays": "{n} நாட்களில். அதன் பிறகும் இருப்பு பூஜ்ஜியத்துக்கு மேல் இருக்கும்."
  },
  "te": {
+  "fri": "శుక్ర",
+  "sat": "శని",
+  "purchaseChip": "కొనుగోలు",
+  "hotel": "హోటల్",
+  "fadoNight": "ఫాడో సాయంత్రం",
+  "sintraTrain": "సింట్రా రైలు",
   "appName": "భవిష్యత్ డబ్బు",
   "tripChip": "ట్రిప్",
   "flightsToLisbon": "లిస్బన్‌కు విమాన టికెట్లు",
@@ -2977,6 +3229,12 @@ window.TRANSLATIONS = {
   "inDays": "{n} రోజుల్లో. ఆ తర్వాత బ్యాలెన్స్ సున్నా కంటే ఎక్కువగా ఉంటుంది."
  },
  "ur": {
+  "fri": "جمعہ",
+  "sat": "ہفتہ",
+  "purchaseChip": "خریداری",
+  "hotel": "ہوٹل",
+  "fadoNight": "فاڈو کی شام",
+  "sintraTrain": "سنترا کی ٹرین",
   "appName": "مستقبل کا پیسہ",
   "tripChip": "سفر",
   "flightsToLisbon": "لزبن کی فلائٹس",
@@ -3048,6 +3306,12 @@ window.TRANSLATIONS = {
   "inDays": "{n} دن میں۔ اس کے بعد بیلنس صفر سے اوپر رہتا ہے۔"
  },
  "sl": {
+  "fri": "pet",
+  "sat": "sob",
+  "purchaseChip": "Nakup",
+  "hotel": "Hotel",
+  "fadoNight": "Večer fada",
+  "sintraTrain": "Vlak v Sintro",
   "appName": "Denar prihodnosti",
   "tripChip": "Potovanje",
   "flightsToLisbon": "Letalske karte za Lizbono",

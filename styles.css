@@ -190,6 +190,7 @@ main { position: relative; z-index: 1; }
 .name strong { font-weight: 700; }
 .chip { font-style: normal; font-size: 0.66rem; font-weight: 600; color: var(--accent); background: var(--tint); padding: 2px 7px; border-radius: 99px; }
 .chip.trip { color: #ff9f0a; background: color-mix(in srgb, #ff9f0a 14%, transparent); }
+.chip.purchase { color: #ff453a; background: color-mix(in srgb, #ff453a 14%, transparent); }
 .amt { text-align: right; display: grid; white-space: nowrap; }
 .amt small { font-size: 0.72rem; color: var(--muted); }
 .amt.income { color: var(--accent); font-weight: 800; font-size: 1.1rem; }
