@@ -1,6 +1,10 @@
 // Generated: website translations, keyed by language. English lives in index.html.
 window.TRANSLATIONS = {
  "ar": {
+  "tryMe": "جرّبني!",
+  "oneTime": "شراء لمرة واحدة",
+  "noSubscription": "بلا اشتراك",
+  "noAds": "بلا إعلانات",
   "fri": "جمعة",
   "sat": "سبت",
   "purchaseChip": "مشتريات",
@@ -78,6 +82,10 @@ window.TRANSLATIONS = {
   "inDays": "بعد {n} يوم. يبقى الرصيد فوق الصفر بعد ذلك."
  },
  "ca": {
+  "tryMe": "Prova'm!",
+  "oneTime": "Compra única",
+  "noSubscription": "Sense subscripció",
+  "noAds": "Sense anuncis",
   "fri": "Dv.",
   "sat": "Ds.",
   "purchaseChip": "Compra",
@@ -155,6 +163,10 @@ window.TRANSLATIONS = {
   "inDays": "D’aquí a {n} dies. Després, el saldo es manté per sobre de zero."
  },
  "cs": {
+  "tryMe": "Vyzkoušej mě!",
+  "oneTime": "Jednorázový nákup",
+  "noSubscription": "Bez předplatného",
+  "noAds": "Bez reklam",
   "fri": "Pá",
   "sat": "So",
   "purchaseChip": "Nákup",
@@ -232,6 +244,10 @@ window.TRANSLATIONS = {
   "inDays": "Za {n} dní. Zůstatek pak zůstane nad nulou."
  },
  "da": {
+  "tryMe": "Prøv mig!",
+  "oneTime": "Engangskøb",
+  "noSubscription": "Intet abonnement",
+  "noAds": "Ingen reklamer",
   "fri": "fre",
   "sat": "lør",
   "purchaseChip": "Køb",
@@ -308,6 +324,10 @@ window.TRANSLATIONS = {
   "inDays": "Om {n} dage. Saldoen forbliver over nul bagefter."
  },
  "de": {
+  "tryMe": "Probier mich aus!",
+  "oneTime": "Einmalkauf",
+  "noSubscription": "Kein Abo",
+  "noAds": "Keine Werbung",
   "fri": "Fr",
   "sat": "Sa",
   "purchaseChip": "Kauf",
@@ -385,6 +405,10 @@ window.TRANSLATIONS = {
   "inDays": "In {n} Tagen. Der Kontostand bleibt danach über null."
  },
  "el": {
+  "tryMe": "Δοκίμασέ με!",
+  "oneTime": "Εφάπαξ αγορά",
+  "noSubscription": "Χωρίς συνδρομή",
+  "noAds": "Χωρίς διαφημίσεις",
   "fri": "Παρ",
   "sat": "Σάβ",
   "purchaseChip": "Αγορά",
@@ -462,6 +486,10 @@ window.TRANSLATIONS = {
   "inDays": "Σε {n} ημέρες. Το υπόλοιπο μένει πάνω από το μηδέν στη συνέχεια."
  },
  "es": {
+  "tryMe": "¡Pruébame!",
+  "oneTime": "Pago único",
+  "noSubscription": "Sin suscripción",
+  "noAds": "Sin anuncios",
   "fri": "Vie",
   "sat": "Sáb",
   "purchaseChip": "Compra",
@@ -539,6 +567,10 @@ window.TRANSLATIONS = {
   "inDays": "Dentro de {n} días. Después, el saldo se mantiene por encima de cero."
  },
  "fi": {
+  "tryMe": "Kokeile!",
+  "oneTime": "Kertaosto",
+  "noSubscription": "Ei tilausta",
+  "noAds": "Ei mainoksia",
   "fri": "pe",
   "sat": "la",
   "purchaseChip": "Ostos",
@@ -615,6 +647,10 @@ window.TRANSLATIONS = {
   "inDays": "{n} päivän päästä. Saldo pysyy sen jälkeen nollan yläpuolella."
  },
  "fr": {
+  "tryMe": "Essayez-moi !",
+  "oneTime": "Achat unique",
+  "noSubscription": "Sans abonnement",
+  "noAds": "Sans publicité",
   "fri": "Ven.",
   "sat": "Sam.",
   "purchaseChip": "Achat",
@@ -691,6 +727,10 @@ window.TRANSLATIONS = {
   "inDays": "Dans {n} jours. Le solde reste ensuite au-dessus de zéro."
  },
  "he": {
+  "tryMe": "נסו אותי!",
+  "oneTime": "רכישה חד־פעמית",
+  "noSubscription": "בלי מנוי",
+  "noAds": "בלי פרסומות",
   "fri": "ו׳",
   "sat": "ש׳",
   "purchaseChip": "רכישה",
@@ -768,6 +808,10 @@ window.TRANSLATIONS = {
   "inDays": "בעוד {n} ימים. לאחר מכן היתרה נשארת מעל אפס."
  },
  "hi": {
+  "tryMe": "आज़माइए!",
+  "oneTime": "एक बार की ख़रीद",
+  "noSubscription": "कोई सदस्यता नहीं",
+  "noAds": "कोई विज्ञापन नहीं",
   "fri": "शुक्र",
   "sat": "शनि",
   "purchaseChip": "ख़रीदारी",
@@ -845,6 +889,10 @@ window.TRANSLATIONS = {
   "inDays": "{n} दिनों में। उसके बाद बैलेंस शून्य से ऊपर रहता है।"
  },
  "hr": {
+  "tryMe": "Isprobaj me!",
+  "oneTime": "Jednokratna kupnja",
+  "noSubscription": "Bez pretplate",
+  "noAds": "Bez oglasa",
   "fri": "Pet",
   "sat": "Sub",
   "purchaseChip": "Kupnja",
@@ -922,6 +970,10 @@ window.TRANSLATIONS = {
   "inDays": "Za {n} dana. Stanje nakon toga ostaje iznad nule."
  },
  "hu": {
+  "tryMe": "Próbáld ki!",
+  "oneTime": "Egyszeri vásárlás",
+  "noSubscription": "Nincs előfizetés",
+  "noAds": "Nincs reklám",
   "fri": "P",
   "sat": "Szo",
   "purchaseChip": "Vásárlás",
@@ -999,6 +1051,10 @@ window.TRANSLATIONS = {
   "inDays": "{n} nap múlva. Utána az egyenleg nulla felett marad."
  },
  "id": {
+  "tryMe": "Coba aku!",
+  "oneTime": "Sekali beli",
+  "noSubscription": "Tanpa langganan",
+  "noAds": "Tanpa iklan",
   "fri": "Jum",
   "sat": "Sab",
   "purchaseChip": "Pembelian",
@@ -1076,6 +1132,10 @@ window.TRANSLATIONS = {
   "inDays": "Dalam {n} hari. Saldo tetap di atas nol setelahnya."
  },
  "it": {
+  "tryMe": "Provami!",
+  "oneTime": "Acquisto unico",
+  "noSubscription": "Nessun abbonamento",
+  "noAds": "Nessuna pubblicità",
   "fri": "Ven",
   "sat": "Sab",
   "purchaseChip": "Acquisto",
@@ -1153,6 +1213,10 @@ window.TRANSLATIONS = {
   "inDays": "Tra {n} giorni. Dopo, il saldo resta sopra lo zero."
  },
  "ja": {
+  "tryMe": "試してみて！",
+  "oneTime": "買い切り",
+  "noSubscription": "サブスクなし",
+  "noAds": "広告なし",
   "fri": "金",
   "sat": "土",
   "purchaseChip": "購入予定",
@@ -1230,6 +1294,10 @@ window.TRANSLATIONS = {
   "inDays": "{n}日後。その後も残高はプラスのままです。"
  },
  "ko": {
+  "tryMe": "돌려 보세요!",
+  "oneTime": "한 번 구매",
+  "noSubscription": "구독 없음",
+  "noAds": "광고 없음",
   "fri": "금",
   "sat": "토",
   "purchaseChip": "구매",
@@ -1307,6 +1375,10 @@ window.TRANSLATIONS = {
   "inDays": "{n}일 후. 이후에도 잔액이 0 위로 유지됩니다."
  },
  "ms": {
+  "tryMe": "Cuba saya!",
+  "oneTime": "Beli sekali",
+  "noSubscription": "Tiada langganan",
+  "noAds": "Tiada iklan",
   "fri": "Jum",
   "sat": "Sab",
   "purchaseChip": "Pembelian",
@@ -1384,6 +1456,10 @@ window.TRANSLATIONS = {
   "inDays": "Dalam {n} hari. Baki kekal di atas sifar selepas itu."
  },
  "nb": {
+  "tryMe": "Prøv meg!",
+  "oneTime": "Engangskjøp",
+  "noSubscription": "Ingen abonnement",
+  "noAds": "Ingen reklame",
   "fri": "fre.",
   "sat": "lør.",
   "purchaseChip": "Kjøp",
@@ -1460,6 +1536,10 @@ window.TRANSLATIONS = {
   "inDays": "Om {n} dager. Saldoen holder seg over null etterpå."
  },
  "nl": {
+  "tryMe": "Probeer me!",
+  "oneTime": "Eenmalige aankoop",
+  "noSubscription": "Geen abonnement",
+  "noAds": "Geen advertenties",
   "fri": "vr",
   "sat": "za",
   "purchaseChip": "Aankoop",
@@ -1536,6 +1616,10 @@ window.TRANSLATIONS = {
   "inDays": "Over {n} dagen. Het saldo blijft daarna boven nul."
  },
  "pl": {
+  "tryMe": "Wypróbuj mnie!",
+  "oneTime": "Jednorazowy zakup",
+  "noSubscription": "Bez subskrypcji",
+  "noAds": "Bez reklam",
   "fri": "Pt",
   "sat": "So",
   "purchaseChip": "Zakup",
@@ -1613,6 +1697,10 @@ window.TRANSLATIONS = {
   "inDays": "Za {n} dni. Potem saldo pozostaje powyżej zera."
  },
  "pt-BR": {
+  "tryMe": "Experimente!",
+  "oneTime": "Compra única",
+  "noSubscription": "Sem assinatura",
+  "noAds": "Sem anúncios",
   "fri": "Sex",
   "sat": "Sáb",
   "purchaseChip": "Compra",
@@ -1690,6 +1778,10 @@ window.TRANSLATIONS = {
   "inDays": "Em {n} dias. Depois disso, o saldo continua acima de zero."
  },
  "pt-PT": {
+  "tryMe": "Experimente!",
+  "oneTime": "Compra única",
+  "noSubscription": "Sem subscrição",
+  "noAds": "Sem anúncios",
   "fri": "Sex",
   "sat": "Sáb",
   "purchaseChip": "Compra",
@@ -1767,6 +1859,10 @@ window.TRANSLATIONS = {
   "inDays": "Daqui a {n} dias. Depois disso, o saldo mantém-se acima de zero."
  },
  "ro": {
+  "tryMe": "Încearcă-mă!",
+  "oneTime": "Plată unică",
+  "noSubscription": "Fără abonament",
+  "noAds": "Fără reclame",
   "fri": "Vin",
   "sat": "Sâm",
   "purchaseChip": "Achiziție",
@@ -1844,6 +1940,10 @@ window.TRANSLATIONS = {
   "inDays": "Peste {n} zile. Soldul rămâne apoi peste zero."
  },
  "ru": {
+  "tryMe": "Попробуйте!",
+  "oneTime": "Разовая покупка",
+  "noSubscription": "Без подписки",
+  "noAds": "Без рекламы",
   "fri": "Пт",
   "sat": "Сб",
   "purchaseChip": "Покупка",
@@ -1921,6 +2021,10 @@ window.TRANSLATIONS = {
   "inDays": "Через {n} дн. После этого баланс остаётся выше нуля."
  },
  "sk": {
+  "tryMe": "Vyskúšaj ma!",
+  "oneTime": "Jednorazový nákup",
+  "noSubscription": "Bez predplatného",
+  "noAds": "Bez reklám",
   "fri": "Pi",
   "sat": "So",
   "purchaseChip": "Nákup",
@@ -1998,6 +2102,10 @@ window.TRANSLATIONS = {
   "inDays": "O {n} dní. Zostatok potom zostane nad nulou."
  },
  "sv": {
+  "tryMe": "Testa mig!",
+  "oneTime": "Engångsköp",
+  "noSubscription": "Ingen prenumeration",
+  "noAds": "Ingen reklam",
   "fri": "fre",
   "sat": "lör",
   "purchaseChip": "Köp",
@@ -2074,6 +2182,10 @@ window.TRANSLATIONS = {
   "inDays": "Om {n} dagar. Saldot håller sig över noll efteråt."
  },
  "th": {
+  "tryMe": "ลองเลย!",
+  "oneTime": "ซื้อครั้งเดียว",
+  "noSubscription": "ไม่ต้องสมัครสมาชิก",
+  "noAds": "ไม่มีโฆษณา",
   "fri": "ศ.",
   "sat": "ส.",
   "purchaseChip": "การซื้อ",
@@ -2151,6 +2263,10 @@ window.TRANSLATIONS = {
   "inDays": "ในอีก {n} วัน หลังจากนั้นยอดเงินจะไม่ติดลบ"
  },
  "tr": {
+  "tryMe": "Dene beni!",
+  "oneTime": "Tek seferlik satın alma",
+  "noSubscription": "Abonelik yok",
+  "noAds": "Reklam yok",
   "fri": "Cum",
   "sat": "Cmt",
   "purchaseChip": "Satın Alma",
@@ -2228,6 +2344,10 @@ window.TRANSLATIONS = {
   "inDays": "{n} gün sonra. Bakiye sonrasında sıfırın üzerinde kalır."
  },
  "uk": {
+  "tryMe": "Спробуйте!",
+  "oneTime": "Разова покупка",
+  "noSubscription": "Без підписки",
+  "noAds": "Без реклами",
   "fri": "Пт",
   "sat": "Сб",
   "purchaseChip": "Покупка",
@@ -2305,6 +2425,10 @@ window.TRANSLATIONS = {
   "inDays": "Через {n} дн. Після цього баланс залишається вище нуля."
  },
  "vi": {
+  "tryMe": "Thử đi!",
+  "oneTime": "Mua một lần",
+  "noSubscription": "Không thuê bao",
+  "noAds": "Không quảng cáo",
   "fri": "T6",
   "sat": "T7",
   "purchaseChip": "Khoản mua",
@@ -2382,6 +2506,10 @@ window.TRANSLATIONS = {
   "inDays": "Sau {n} ngày. Sau đó số dư luôn trên 0."
  },
  "zh-Hans": {
+  "tryMe": "试试看！",
+  "oneTime": "一次性购买",
+  "noSubscription": "无需订阅",
+  "noAds": "无广告",
   "fri": "周五",
   "sat": "周六",
   "purchaseChip": "购买",
@@ -2459,6 +2587,10 @@ window.TRANSLATIONS = {
   "inDays": "{n} 天后。之后余额始终高于零。"
  },
  "zh-Hant": {
+  "tryMe": "試試看！",
+  "oneTime": "一次性購買",
+  "noSubscription": "無需訂閱",
+  "noAds": "無廣告",
   "fri": "週五",
   "sat": "週六",
   "purchaseChip": "購買",
@@ -2536,6 +2668,10 @@ window.TRANSLATIONS = {
   "inDays": "{n} 天後。之後餘額始終高於零。"
  },
  "bn": {
+  "tryMe": "চেষ্টা করুন!",
+  "oneTime": "একবারের কেনা",
+  "noSubscription": "কোনো সাবস্ক্রিপশন নেই",
+  "noAds": "কোনো বিজ্ঞাপন নেই",
   "fri": "শুক্র",
   "sat": "শনি",
   "purchaseChip": "কেনাকাটা",
@@ -2613,6 +2749,10 @@ window.TRANSLATIONS = {
   "inDays": "{n} দিন পর। এরপরও ব্যালেন্স শূন্যের ওপরে থাকবে।"
  },
  "gu": {
+  "tryMe": "અજમાવો!",
+  "oneTime": "એક વખતની ખરીદી",
+  "noSubscription": "કોઈ સબ્સ્ક્રિપ્શન નહીં",
+  "noAds": "કોઈ જાહેરાત નહીં",
   "fri": "શુક્ર",
   "sat": "શનિ",
   "purchaseChip": "ખરીદી",
@@ -2690,6 +2830,10 @@ window.TRANSLATIONS = {
   "inDays": "{n} દિવસમાં. એ પછી બૅલેન્સ શૂન્યથી ઉપર રહે છે."
  },
  "kn": {
+  "tryMe": "ಪ್ರಯತ್ನಿಸಿ!",
+  "oneTime": "ಒಮ್ಮೆಯ ಖರೀದಿ",
+  "noSubscription": "ಚಂದಾದಾರಿಕೆ ಇಲ್ಲ",
+  "noAds": "ಜಾಹೀರಾತುಗಳಿಲ್ಲ",
   "fri": "ಶುಕ್ರ",
   "sat": "ಶನಿ",
   "purchaseChip": "ಖರೀದಿ",
@@ -2767,6 +2911,10 @@ window.TRANSLATIONS = {
   "inDays": "{n} ದಿನಗಳಲ್ಲಿ. ಅದರ ನಂತರವೂ ಬ್ಯಾಲೆನ್ಸ್ ಸೊನ್ನೆಗಿಂತ ಮೇಲಿರುತ್ತದೆ."
  },
  "ml": {
+  "tryMe": "പരീക്ഷിക്കൂ!",
+  "oneTime": "ഒറ്റത്തവണ വാങ്ങൽ",
+  "noSubscription": "സബ്സ്ക്രിപ്ഷൻ ഇല്ല",
+  "noAds": "പരസ്യങ്ങളില്ല",
   "fri": "വെള്ളി",
   "sat": "ശനി",
   "purchaseChip": "വാങ്ങൽ",
@@ -2844,6 +2992,10 @@ window.TRANSLATIONS = {
   "inDays": "{n} ദിവസത്തിനുള്ളിൽ. അതിനുശേഷവും ബാലൻസ് പൂജ്യത്തിന് മുകളിൽ തുടരും."
  },
  "mr": {
+  "tryMe": "वापरून पाहा!",
+  "oneTime": "एकदाच खरेदी",
+  "noSubscription": "सदस्यता नाही",
+  "noAds": "जाहिराती नाहीत",
   "fri": "शुक्र",
   "sat": "शनि",
   "purchaseChip": "खरेदी",
@@ -2921,6 +3073,10 @@ window.TRANSLATIONS = {
   "inDays": "{n} दिवसांत. त्यानंतरही शिल्लक शून्याच्या वर राहते."
  },
  "or": {
+  "tryMe": "ଚେଷ୍ଟା କରନ୍ତୁ!",
+  "oneTime": "ଥରେ କିଣିବା",
+  "noSubscription": "କୌଣସି ସଦସ୍ୟତା ନାହିଁ",
+  "noAds": "କୌଣସି ବିଜ୍ଞାପନ ନାହିଁ",
   "fri": "ଶୁକ୍ର",
   "sat": "ଶନି",
   "purchaseChip": "କ୍ରୟ",
@@ -2998,6 +3154,10 @@ window.TRANSLATIONS = {
   "inDays": "{n} ଦିନରେ। ତା’ପରେ ବାଲାନ୍ସ ଶୂନ୍ୟରୁ ଉପରେ ରହିବ।"
  },
  "pa": {
+  "tryMe": "ਅਜ਼ਮਾਓ!",
+  "oneTime": "ਇੱਕ ਵਾਰ ਦੀ ਖ਼ਰੀਦ",
+  "noSubscription": "ਕੋਈ ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਨਹੀਂ",
+  "noAds": "ਕੋਈ ਇਸ਼ਤਿਹਾਰ ਨਹੀਂ",
   "fri": "ਸ਼ੁੱਕਰ",
   "sat": "ਸ਼ਨੀ",
   "purchaseChip": "ਖ਼ਰੀਦ",
@@ -3075,6 +3235,10 @@ window.TRANSLATIONS = {
   "inDays": "{n} ਦਿਨਾਂ ਵਿੱਚ। ਉਸ ਤੋਂ ਬਾਅਦ ਬੈਲੇਂਸ ਜ਼ੀਰੋ ਤੋਂ ਉੱਪਰ ਰਹੇਗਾ।"
  },
  "ta": {
+  "tryMe": "முயற்சி செய்யுங்கள்!",
+  "oneTime": "ஒருமுறை வாங்குதல்",
+  "noSubscription": "சந்தா இல்லை",
+  "noAds": "விளம்பரங்கள் இல்லை",
   "fri": "வெ",
   "sat": "ச",
   "purchaseChip": "கொள்முதல்",
@@ -3152,6 +3316,10 @@ window.TRANSLATIONS = {
   "inDays": "{n} நாட்களில். அதன் பிறகும் இருப்பு பூஜ்ஜியத்துக்கு மேல் இருக்கும்."
  },
  "te": {
+  "tryMe": "ప్రయత్నించండి!",
+  "oneTime": "ఒక్కసారి కొనుగోలు",
+  "noSubscription": "సబ్‌స్క్రిప్షన్ లేదు",
+  "noAds": "ప్రకటనలు లేవు",
   "fri": "శుక్ర",
   "sat": "శని",
   "purchaseChip": "కొనుగోలు",
@@ -3229,6 +3397,10 @@ window.TRANSLATIONS = {
   "inDays": "{n} రోజుల్లో. ఆ తర్వాత బ్యాలెన్స్ సున్నా కంటే ఎక్కువగా ఉంటుంది."
  },
  "ur": {
+  "tryMe": "آزمائیں!",
+  "oneTime": "ایک بار کی خریداری",
+  "noSubscription": "کوئی سبسکرپشن نہیں",
+  "noAds": "کوئی اشتہار نہیں",
   "fri": "جمعہ",
   "sat": "ہفتہ",
   "purchaseChip": "خریداری",
@@ -3306,6 +3478,10 @@ window.TRANSLATIONS = {
   "inDays": "{n} دن میں۔ اس کے بعد بیلنس صفر سے اوپر رہتا ہے۔"
  },
  "sl": {
+  "tryMe": "Preizkusi me!",
+  "oneTime": "Enkratni nakup",
+  "noSubscription": "Brez naročnine",
+  "noAds": "Brez oglasov",
   "fri": "pet",
   "sat": "sob",
   "purchaseChip": "Nakup",

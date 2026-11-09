@@ -213,9 +213,14 @@ body::before { content: ""; position: fixed; inset: 0; z-index: 2; pointer-event
 .side { position: relative; width: min(260px, 100%); background: var(--frame); border: 1px solid var(--rule); border-radius: 16px; padding: 10px; display: grid; gap: 2px; }
 .side .item { position: relative; z-index: 1; display: flex; align-items: center; gap: 10px; padding: 7px 10px; border-radius: 8px; font-weight: 500; font-size: 0.95rem; transition: color .35s; }
 .side .item.active { color: #fff; font-weight: 600; }
-.side .ico { width: 18px; height: 18px; flex: none; background: currentColor; -webkit-mask: var(--icon) center / contain no-repeat; mask: var(--icon) center / contain no-repeat; }
-/* The page you're on shows its icon filled, as in the app. */
-.side .item.active .ico { -webkit-mask-image: var(--icon-fill); mask-image: var(--icon-fill); }
+/* Outline and filled icons are both drawn from the start (filled one hidden), so both load with the page and
+   selecting an item crossfades between them instead of blinking while the filled one loads. */
+.side .ico { position: relative; width: 18px; height: 18px; flex: none; }
+.side .ico::before, .side .ico::after { content: ""; position: absolute; inset: 0; background: currentColor; transition: opacity .2s; }
+.side .ico::before { -webkit-mask: var(--icon) center / contain no-repeat; mask: var(--icon) center / contain no-repeat; }
+.side .ico::after { -webkit-mask: var(--icon-fill, var(--icon)) center / contain no-repeat; mask: var(--icon-fill, var(--icon)) center / contain no-repeat; opacity: 0; }
+.side .item.active .ico::before { opacity: 0; }
+.side .item.active .ico::after { opacity: 1; }
 .side .item em { margin-left: auto; font-style: normal; font-size: 0.72rem; font-weight: 600; color: var(--accent); background: var(--tint); padding: 1px 7px; border-radius: 99px; transition: color .35s, background .35s; }
 .side .item.active em { color: #fff; background: rgb(255 255 255 / .2); }
 .side .plan-label { font-size: 0.72rem; font-weight: 600; color: var(--muted); padding: 14px 10px 4px; }
@@ -258,7 +263,16 @@ body::before { content: ""; position: fixed; inset: 0; z-index: 2; pointer-event
 @media (max-width: 480px) { .feature, .afford { padding: 16px; border-radius: 18px; } }
 .afford h2, .afford > p { text-align: center; }
 .answer { text-align: center; }
-.afford form { display: grid; gap: 18px; margin-top: 4px; justify-items: center; }
+.afford form { position: relative; display: grid; gap: 18px; margin-top: 4px; justify-items: center; }
+/* A tilted sticker on the dial, so it's clear the dial actually works. It leaves once someone uses it. */
+.try-me { position: absolute; top: 6px; left: calc(50% - min(140px, 50%) - 18px); rotate: -8deg; pointer-events: none;
+  font-weight: 700; font-size: 0.9rem; color: #fff; background: var(--accent); padding: 5px 12px; border-radius: 10px;
+  box-shadow: 0 6px 18px rgb(124 128 255 / .35); transition: opacity .4s, scale .4s; }
+.try-me.gone { opacity: 0; scale: .8; }
+[dir="rtl"] .try-me { left: auto; right: calc(50% - min(140px, 50%) - 18px); rotate: 8deg; }
+@media (prefers-reduced-motion: no-preference) { .try-me:not(.gone) { animation: bob 2.4s ease-in-out infinite; } }
+@keyframes bob { 50% { translate: 0 -4px; } }
+
 .dial-ring { position: relative; width: min(280px, 100%); aspect-ratio: 1; max-width: 100%; border-radius: 50%; touch-action: none; }
 .dial-ring:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 .dial-ring svg { width: 100%; height: 100%; display: block; cursor: grab; }
@@ -360,6 +374,13 @@ main, .features, .feature, .afford { grid-template-columns: minmax(0, 1fr); }
 .top .intro h1 { line-height: 1.05; }
 .top .intro .line { margin-top: 6px; }
 .top .intro .downloads { margin-top: 28px; }
+/* Price line under the download buttons: the amount, then what it covers. */
+.price { display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; gap: 2px 8px; margin: 0; font-size: 0.9rem; color: var(--muted); }
+.price .amount { color: var(--ink); font-weight: 700; }
+.price .sep { opacity: .5; }
+.top .intro .price { margin-top: 16px; }
+@media (min-width: 860px) { .top .intro .price { justify-content: flex-start; } }
+@media (max-width: 480px) { .price { font-size: 0.8rem; gap: 2px 6px; } }
 
 /* FAQ: the same column as the sections above, each question opening in place. */
 .faq { display: grid; gap: 0; }

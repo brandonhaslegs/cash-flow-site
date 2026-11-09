@@ -587,3 +587,11 @@
     else { running = false; g.clearRect(0, 0, innerWidth, innerHeight); }
   }
 })();
+
+// "Try me!" sticker on the dial: gone as soon as someone turns the dial or types a price.
+(() => {
+  const tag = document.querySelector(".try-me"), form = document.getElementById("afford-form");
+  if (!tag || !form) return;
+  const hide = () => tag.classList.add("gone");
+  ["pointerdown", "keydown", "input"].forEach(ev => form.addEventListener(ev, hide, { once: true }));
+})();

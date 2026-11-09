@@ -15,6 +15,7 @@
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
   <link rel="stylesheet" href="styles.css">
   <script src="translations.js"></script>
+  <script src="prices.js"></script>
   <script src="i18n.js"></script>
   <script src="script.js" defer></script>
 </head>
@@ -42,8 +43,9 @@
           <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M1 19.5h22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
           <span><small data-i18n="downloadFor">Download for</small>macOS</span>
         </a>
-      
       </div>
+      <!-- The App Store price in the visitor's storefront, filled in by i18n.js -->
+      <p class="price"><span class="amount">$4.99</span><span class="sep" aria-hidden="true">·</span><span data-i18n="oneTime">One-time purchase</span><span class="sep" aria-hidden="true">·</span><span data-i18n="noSubscription">No subscription</span><span class="sep" aria-hidden="true">·</span><span data-i18n="noAds">No ads</span></p>
     </header>
 
     <div class="hero">
@@ -146,6 +148,7 @@
           <label class="dial-price" for="price"><input id="price" inputmode="decimal" autocomplete="off" aria-label="Price in euros" data-i18n-aria="ariaPriceEuros"></label>
           <span class="dial-hint" data-i18n="dialHint">Drag the knob or type</span>
         </div>
+        <span class="try-me" aria-hidden="true" data-i18n="tryMe">Try me!</span>
         <p class="answer" id="answer" aria-live="polite"></p>
       </form>
       <p class="note" data-i18n="note">Runs on an example plan of bills and paydays, starting today.</p>

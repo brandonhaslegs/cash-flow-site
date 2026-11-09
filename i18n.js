@@ -63,6 +63,29 @@
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", apply); else apply();
 })();
 
+// Price: Apple charges a set price per storefront, so show the one for the visitor's country. The time zone says
+// where the device is; failing that, the region in the language setting (de-CH), then the language's main country.
+(() => {
+  const P = window.PRICES; if (!P) return;
+  const MAIN = { ar: "SA", ca: "ES", cs: "CZ", da: "DK", de: "DE", el: "GR", en: "US", es: "ES", fi: "FI", fr: "FR", he: "IL", hi: "IN",
+    hr: "HR", hu: "HU", id: "ID", it: "IT", ja: "JP", ko: "KR", ms: "MY", nb: "NO", nl: "NL", pl: "PL", "pt-BR": "BR", "pt-PT": "PT",
+    ro: "RO", ru: "RU", sk: "SK", sv: "SE", th: "TH", tr: "TR", uk: "UA", vi: "VN", "zh-Hans": "CN", "zh-Hant": "TW", bn: "BD",
+    gu: "IN", kn: "IN", ml: "IN", mr: "IN", or: "IN", pa: "IN", ta: "IN", te: "IN", ur: "PK", sl: "SI" };
+  let cc = null;
+  try { cc = (window.TZ_COUNTRY || {})[Intl.DateTimeFormat().resolvedOptions().timeZone]; } catch (e) {}
+  if (!cc || !P[cc]) for (const l of navigator.languages || [navigator.language]) {
+    try { const r = new Intl.Locale(l).region; if (r && P[r]) { cc = r; break; } } catch (e) {}
+  }
+  if (!cc || !P[cc]) cc = MAIN[window.I18N.lang] || "US";
+  const [amount, currency] = P[cc] || P.US;
+  const whole = Number.isInteger(amount);
+  let text;
+  try { text = new Intl.NumberFormat(window.I18N.locale, { style: "currency", currency, minimumFractionDigits: whole ? 0 : 2, maximumFractionDigits: whole ? 0 : 2 }).format(amount); }
+  catch (e) { text = amount + " " + currency; }
+  const set = () => document.querySelectorAll(".price .amount").forEach(el => el.textContent = text);
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", set); else set();
+})();
+
 // App Store links. Apple's app links open the visitor's own country's store automatically.
 // Set APP_STORE_ID once the app exists in App Store Connect (the number in its App Store URL).
 (() => {
