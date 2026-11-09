@@ -49,7 +49,7 @@
 
   if (lang === "en") return;
   document.documentElement.lang = lang;
-  if (lang === "ar" || lang === "he") document.documentElement.dir = "rtl";
+  if (lang === "ar" || lang === "he" || lang === "ur") document.documentElement.dir = "rtl";
   const apply = () => {
     document.querySelectorAll("[data-i18n]").forEach(el => { const v = table[el.dataset.i18n]; if (v) el.innerHTML = v; });
     document.querySelectorAll("[data-i18n-aria]").forEach(el => { const v = table[el.dataset.i18nAria]; if (v) el.setAttribute("aria-label", v); });
