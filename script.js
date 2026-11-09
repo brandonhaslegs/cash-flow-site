@@ -395,6 +395,79 @@
   addEventListener("resize", () => side && select(sideIndex));
 })();
 
+// ---- Star field: three depths of stars that twinkle, drift very slowly and lag behind the scroll by different amounts ----
+(() => {
+  const sky = document.querySelector(".sky"), cv = sky && sky.querySelector(".stars");
+  if (!cv) return;
+  const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const ctx = cv.getContext("2d");
+  const tints = ["#ffffff", "#ffffff", "#ffffff", "#cfd4ff", "#b9b0ff", "#ffe9c9", "#c9e4ff"];
+  // depth: parallax per scrolled pixel, drift in px/s, size, brightness
+  const layers = [
+    { n: 260, par: .015, drift: 1.2, size: [.4, .9], a: [.15, .45] },
+    { n: 110, par: .04, drift: 2.2, size: [.7, 1.3], a: [.3, .7] },
+    { n: 28, par: .09, drift: 3.5, size: [1.1, 1.9], a: [.55, .95], glow: true },
+  ];
+  let W, H, dpr, stars = [], shoot = null, nextShoot = 6000 + Math.random() * 10000, last = 0, lastDraw = 0;
+  // Pre-drawn glow sprites, one per tint (much cheaper than canvas shadowBlur every frame)
+  const glow = Object.fromEntries([...new Set(tints)].map(c => {
+    const g = document.createElement("canvas"); g.width = g.height = 32; const x = g.getContext("2d");
+    const r = x.createRadialGradient(16, 16, 0, 16, 16, 16); r.addColorStop(0, c); r.addColorStop(.25, c + "88"); r.addColorStop(1, c + "00");
+    x.fillStyle = r; x.fillRect(0, 0, 32, 32); return [c, g];
+  }));
+  const rnd = (a, b) => a + Math.random() * (b - a);
+  function size() {
+    dpr = Math.min(devicePixelRatio || 1, 2);
+    const r = sky.getBoundingClientRect(); W = r.width; H = r.height;
+    cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const k = Math.min(1, (W * H) / (1440 * 1100));
+    stars = layers.flatMap((L, d) => Array.from({ length: Math.round(L.n * Math.max(k, .35)) }, () => ({
+      x: Math.random() * W, y: Math.random() * H, d, r: rnd(...L.size), a: rnd(...L.a),
+      tw: rnd(.4, 1.6), ph: Math.random() * 7, c: tints[Math.floor(Math.random() * tints.length)] })));
+  }
+  function frame(t) {
+    if (!still) { requestAnimationFrame(frame); if (t - lastDraw < 32) return; lastDraw = t; }
+    const dt = last ? Math.min(t - last, 100) : 16; last = t;
+    const sy = scrollY; sky.style.setProperty("--sy", sy);
+    ctx.clearRect(0, 0, W, H);
+    for (const s of stars) {
+      const L = layers[s.d];
+      if (!still) s.x -= L.drift * dt / 1000 * .25;
+      if (s.x < -4) s.x += W + 8;
+      let y = (s.y - sy * L.par) % H; if (y < 0) y += H;
+      const a = still ? s.a : s.a * (.65 + .35 * Math.sin(t / 1000 * s.tw + s.ph));
+      ctx.globalAlpha = a; ctx.fillStyle = s.c;
+      if (L.glow) { const g = s.r * 7; ctx.drawImage(glow[s.c], s.x - g / 2, y - g / 2, g, g); }
+      else { ctx.beginPath(); ctx.arc(s.x, y, s.r, 0, 6.283); ctx.fill(); }
+    }
+    // A rare, faint shooting star, only out in the side margins of wide windows so it never crosses the text
+    if (!still && W > 1000) {
+      nextShoot -= dt;
+      if (!shoot && nextShoot <= 0) {
+        const left = Math.random() < .5, margin = Math.max(0, (W - 980) / 2);
+        if (margin < 160) { nextShoot = 20000; } else
+        shoot = { x: left ? rnd(margin * .25, margin * .7) : W - rnd(margin * .25, margin * .7), y: rnd(H * .15, H * .6),
+          vx: rnd(.12, .2) * (left ? -1 : 1), vy: rnd(.12, .22), life: 0 };
+        nextShoot = 14000 + Math.random() * 16000;
+      }
+      if (shoot) {
+        shoot.life += dt; const p = shoot.life / 900;
+        const x = shoot.x + shoot.vx * shoot.life, y = shoot.y + shoot.vy * shoot.life;
+        const g = ctx.createLinearGradient(x, y, x - shoot.vx * 140, y - shoot.vy * 140);
+        g.addColorStop(0, "rgba(255,255,255,.75)"); g.addColorStop(1, "rgba(180,170,255,0)");
+        ctx.globalAlpha = Math.sin(Math.min(p, 1) * Math.PI); ctx.strokeStyle = g; ctx.lineWidth = 1.2;
+        ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x - shoot.vx * 140, y - shoot.vy * 140); ctx.stroke();
+        if (p >= 1) shoot = null;
+      }
+    }
+    ctx.globalAlpha = 1;
+  }
+  size();
+  addEventListener("resize", () => { size(); if (still) frame(0); });
+  if (still) { frame(0); addEventListener("scroll", () => frame(0), { passive: true }); }
+  else requestAnimationFrame(frame);
+})();
+
 // ---- Dust motes around the edges of the window (fewer on phones, where the column fills the screen) ----
 (() => {
   const sky = document.querySelector(".sky");
