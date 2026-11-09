@@ -1054,7 +1054,7 @@ window.TRANSLATIONS = {
   "inDays": "Tra {n} giorni. Dopo, il saldo resta sopra lo zero."
  },
  "ja": {
-  "appName": "未来のお金",
+  "appName": "ミライマネー",
   "tripChip": "旅行",
   "flightsToLisbon": "リスボン行きの航空券",
   "studioInvoice": "スタジオの請求書",
