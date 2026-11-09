@@ -1,6 +1,7 @@
 // Generated: website translations, keyed by language. English lives in index.html.
 window.TRANSLATIONS = {
  "ar": {
+  "tripChip": "رحلة",
   "flightsToLisbon": "رحلات إلى لشبونة",
   "studioInvoice": "فاتورة الاستوديو",
   "tagline": "شاهد مستقبل حسابك البنكي",
@@ -22,7 +23,6 @@ window.TRANSLATIONS = {
   "wed": "أربعاء",
   "income": "الدخل",
   "salary": "الراتب",
-  "savings": "المدخرات",
   "rent": "الإيجار",
   "phone": "الهاتف",
   "mon": "اثنين",
@@ -71,6 +71,7 @@ window.TRANSLATIONS = {
   "inDays": "بعد {n} يوم. يبقى الرصيد فوق الصفر بعد ذلك."
  },
  "ca": {
+  "tripChip": "Viatge",
   "flightsToLisbon": "Vols a Lisboa",
   "studioInvoice": "Factura de l'estudi",
   "tagline": "Mira el futur del teu compte bancari",
@@ -92,7 +93,6 @@ window.TRANSLATIONS = {
   "wed": "Dc.",
   "income": "Ingressos",
   "salary": "Sou",
-  "savings": "Estalvis",
   "rent": "Lloguer",
   "phone": "Telèfon",
   "mon": "Dl.",
@@ -141,6 +141,7 @@ window.TRANSLATIONS = {
   "inDays": "D’aquí a {n} dies. Després, el saldo es manté per sobre de zero."
  },
  "cs": {
+  "tripChip": "Cesta",
   "flightsToLisbon": "Letenky do Lisabonu",
   "studioInvoice": "Faktura za studio",
   "tagline": "Podívejte se do budoucnosti svého účtu",
@@ -162,7 +163,6 @@ window.TRANSLATIONS = {
   "wed": "St",
   "income": "Příjem",
   "salary": "Výplata",
-  "savings": "Spoření",
   "rent": "Nájem",
   "phone": "Telefon",
   "mon": "Po",
@@ -211,6 +211,7 @@ window.TRANSLATIONS = {
   "inDays": "Za {n} dní. Zůstatek pak zůstane nad nulou."
  },
  "da": {
+  "tripChip": "Rejse",
   "flightsToLisbon": "Fly til Lissabon",
   "studioInvoice": "Studiofaktura",
   "tagline": "Se fremtiden for din bankkonto",
@@ -232,7 +233,6 @@ window.TRANSLATIONS = {
   "wed": "ons",
   "income": "Indkomst",
   "salary": "Løn",
-  "savings": "Opsparing",
   "rent": "Husleje",
   "phone": "Telefon",
   "mon": "man",
@@ -281,6 +281,7 @@ window.TRANSLATIONS = {
   "inDays": "Om {n} dage. Saldoen forbliver over nul bagefter."
  },
  "de": {
+  "tripChip": "Reise",
   "flightsToLisbon": "Flüge nach Lissabon",
   "studioInvoice": "Studio-Rechnung",
   "tagline": "Sieh in die Zukunft deines Kontos",
@@ -302,7 +303,6 @@ window.TRANSLATIONS = {
   "wed": "Mi",
   "income": "Einnahmen",
   "salary": "Gehalt",
-  "savings": "Sparen",
   "rent": "Miete",
   "phone": "Handy",
   "mon": "Mo",
@@ -351,6 +351,7 @@ window.TRANSLATIONS = {
   "inDays": "In {n} Tagen. Der Kontostand bleibt danach über null."
  },
  "el": {
+  "tripChip": "Ταξίδι",
   "flightsToLisbon": "Πτήσεις για Λισαβόνα",
   "studioInvoice": "Τιμολόγιο στούντιο",
   "tagline": "Δείτε το μέλλον του τραπεζικού σας λογαριασμού",
@@ -372,7 +373,6 @@ window.TRANSLATIONS = {
   "wed": "Τετ",
   "income": "Εισόδημα",
   "salary": "Μισθός",
-  "savings": "Αποταμίευση",
   "rent": "Ενοίκιο",
   "phone": "Τηλέφωνο",
   "mon": "Δευ",
@@ -421,6 +421,7 @@ window.TRANSLATIONS = {
   "inDays": "Σε {n} ημέρες. Το υπόλοιπο μένει πάνω από το μηδέν στη συνέχεια."
  },
  "es": {
+  "tripChip": "Viaje",
   "flightsToLisbon": "Vuelos a Lisboa",
   "studioInvoice": "Factura del estudio",
   "tagline": "Mira el futuro de tu cuenta bancaria",
@@ -442,7 +443,6 @@ window.TRANSLATIONS = {
   "wed": "Mié",
   "income": "Ingresos",
   "salary": "Sueldo",
-  "savings": "Ahorros",
   "rent": "Alquiler",
   "phone": "Teléfono",
   "mon": "Lun",
@@ -491,6 +491,7 @@ window.TRANSLATIONS = {
   "inDays": "Dentro de {n} días. Después, el saldo se mantiene por encima de cero."
  },
  "fi": {
+  "tripChip": "Matka",
   "flightsToLisbon": "Lennot Lissaboniin",
   "studioInvoice": "Studion lasku",
   "tagline": "Näe pankkitilisi tulevaisuus",
@@ -512,7 +513,6 @@ window.TRANSLATIONS = {
   "wed": "ke",
   "income": "Tulot",
   "salary": "Palkka",
-  "savings": "Säästöt",
   "rent": "Vuokra",
   "phone": "Puhelin",
   "mon": "ma",
@@ -561,6 +561,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} päivän päästä. Saldo pysyy sen jälkeen nollan yläpuolella."
  },
  "fr": {
+  "tripChip": "Voyage",
   "flightsToLisbon": "Vols pour Lisbonne",
   "studioInvoice": "Facture du studio",
   "tagline": "Voyez l’avenir de votre compte bancaire",
@@ -582,7 +583,6 @@ window.TRANSLATIONS = {
   "wed": "Mer.",
   "income": "Revenus",
   "salary": "Salaire",
-  "savings": "Épargne",
   "rent": "Loyer",
   "phone": "Téléphone",
   "mon": "Lun.",
@@ -631,6 +631,7 @@ window.TRANSLATIONS = {
   "inDays": "Dans {n} jours. Le solde reste ensuite au-dessus de zéro."
  },
  "he": {
+  "tripChip": "נסיעה",
   "flightsToLisbon": "טיסות לליסבון",
   "studioInvoice": "חשבונית סטודיו",
   "tagline": "לראות את העתיד של חשבון הבנק שלך",
@@ -652,7 +653,6 @@ window.TRANSLATIONS = {
   "wed": "ד׳",
   "income": "הכנסה",
   "salary": "משכורת",
-  "savings": "חיסכון",
   "rent": "שכר דירה",
   "phone": "טלפון",
   "mon": "ב׳",
@@ -701,6 +701,7 @@ window.TRANSLATIONS = {
   "inDays": "בעוד {n} ימים. לאחר מכן היתרה נשארת מעל אפס."
  },
  "hi": {
+  "tripChip": "यात्रा",
   "flightsToLisbon": "लिस्बन की उड़ानें",
   "studioInvoice": "स्टूडियो इनवॉइस",
   "tagline": "अपने बैंक खाते का भविष्य देखें",
@@ -722,7 +723,6 @@ window.TRANSLATIONS = {
   "wed": "बुध",
   "income": "आय",
   "salary": "वेतन",
-  "savings": "बचत",
   "rent": "किराया",
   "phone": "फ़ोन",
   "mon": "सोम",
@@ -771,6 +771,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} दिनों में। उसके बाद बैलेंस शून्य से ऊपर रहता है।"
  },
  "hr": {
+  "tripChip": "Putovanje",
   "flightsToLisbon": "Letovi za Lisabon",
   "studioInvoice": "Račun za studio",
   "tagline": "Zavirite u budućnost svog bankovnog računa",
@@ -792,7 +793,6 @@ window.TRANSLATIONS = {
   "wed": "Sri",
   "income": "Prihod",
   "salary": "Plaća",
-  "savings": "Štednja",
   "rent": "Najamnina",
   "phone": "Telefon",
   "mon": "Pon",
@@ -841,6 +841,7 @@ window.TRANSLATIONS = {
   "inDays": "Za {n} dana. Stanje nakon toga ostaje iznad nule."
  },
  "hu": {
+  "tripChip": "Utazás",
   "flightsToLisbon": "Repülőjegy Lisszabonba",
   "studioInvoice": "Stúdiószámla",
   "tagline": "Lássa előre a bankszámlája jövőjét",
@@ -862,7 +863,6 @@ window.TRANSLATIONS = {
   "wed": "Sze",
   "income": "Bevétel",
   "salary": "Fizetés",
-  "savings": "Megtakarítás",
   "rent": "Lakbér",
   "phone": "Telefon",
   "mon": "H",
@@ -911,6 +911,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} nap múlva. Utána az egyenleg nulla felett marad."
  },
  "id": {
+  "tripChip": "Perjalanan",
   "flightsToLisbon": "Tiket pesawat ke Lisbon",
   "studioInvoice": "Tagihan studio",
   "tagline": "Lihat masa depan rekening bank Anda",
@@ -932,7 +933,6 @@ window.TRANSLATIONS = {
   "wed": "Rab",
   "income": "Pemasukan",
   "salary": "Gaji",
-  "savings": "Tabungan",
   "rent": "Sewa",
   "phone": "Telepon",
   "mon": "Sen",
@@ -981,6 +981,7 @@ window.TRANSLATIONS = {
   "inDays": "Dalam {n} hari. Saldo tetap di atas nol setelahnya."
  },
  "it": {
+  "tripChip": "Viaggio",
   "flightsToLisbon": "Voli per Lisbona",
   "studioInvoice": "Fattura dello studio",
   "tagline": "Guarda il futuro del tuo conto in banca",
@@ -1002,7 +1003,6 @@ window.TRANSLATIONS = {
   "wed": "Mer",
   "income": "Entrate",
   "salary": "Stipendio",
-  "savings": "Risparmi",
   "rent": "Affitto",
   "phone": "Telefono",
   "mon": "Lun",
@@ -1051,6 +1051,7 @@ window.TRANSLATIONS = {
   "inDays": "Tra {n} giorni. Dopo, il saldo resta sopra lo zero."
  },
  "ja": {
+  "tripChip": "旅行",
   "flightsToLisbon": "リスボン行きの航空券",
   "studioInvoice": "スタジオの請求書",
   "tagline": "銀行口座の未来が見える",
@@ -1072,7 +1073,6 @@ window.TRANSLATIONS = {
   "wed": "水",
   "income": "収入",
   "salary": "給与",
-  "savings": "貯金",
   "rent": "家賃",
   "phone": "携帯電話",
   "mon": "月",
@@ -1121,6 +1121,7 @@ window.TRANSLATIONS = {
   "inDays": "{n}日後。その後も残高はプラスのままです。"
  },
  "ko": {
+  "tripChip": "여행",
   "flightsToLisbon": "리스본행 항공권",
   "studioInvoice": "스튜디오 청구서",
   "tagline": "내 은행 계좌의 미래를 미리 보세요",
@@ -1142,7 +1143,6 @@ window.TRANSLATIONS = {
   "wed": "수",
   "income": "수입",
   "salary": "급여",
-  "savings": "저축",
   "rent": "월세",
   "phone": "휴대폰",
   "mon": "월",
@@ -1191,6 +1191,7 @@ window.TRANSLATIONS = {
   "inDays": "{n}일 후. 이후에도 잔액이 0 위로 유지됩니다."
  },
  "ms": {
+  "tripChip": "Perjalanan",
   "flightsToLisbon": "Penerbangan ke Lisbon",
   "studioInvoice": "Invois studio",
   "tagline": "Lihat masa depan akaun bank anda",
@@ -1212,7 +1213,6 @@ window.TRANSLATIONS = {
   "wed": "Rab",
   "income": "Pendapatan",
   "salary": "Gaji",
-  "savings": "Simpanan",
   "rent": "Sewa",
   "phone": "Telefon",
   "mon": "Isn",
@@ -1261,6 +1261,7 @@ window.TRANSLATIONS = {
   "inDays": "Dalam {n} hari. Baki kekal di atas sifar selepas itu."
  },
  "nb": {
+  "tripChip": "Reise",
   "flightsToLisbon": "Fly til Lisboa",
   "studioInvoice": "Studiofaktura",
   "tagline": "Se fremtiden for bankkontoen din",
@@ -1282,7 +1283,6 @@ window.TRANSLATIONS = {
   "wed": "ons.",
   "income": "Inntekt",
   "salary": "Lønn",
-  "savings": "Sparing",
   "rent": "Husleie",
   "phone": "Mobil",
   "mon": "man.",
@@ -1331,6 +1331,7 @@ window.TRANSLATIONS = {
   "inDays": "Om {n} dager. Saldoen holder seg over null etterpå."
  },
  "nl": {
+  "tripChip": "Reis",
   "flightsToLisbon": "Vluchten naar Lissabon",
   "studioInvoice": "Studiofactuur",
   "tagline": "Zie de toekomst van je bankrekening",
@@ -1352,7 +1353,6 @@ window.TRANSLATIONS = {
   "wed": "wo",
   "income": "Inkomsten",
   "salary": "Salaris",
-  "savings": "Sparen",
   "rent": "Huur",
   "phone": "Telefoon",
   "mon": "ma",
@@ -1401,6 +1401,7 @@ window.TRANSLATIONS = {
   "inDays": "Over {n} dagen. Het saldo blijft daarna boven nul."
  },
  "pl": {
+  "tripChip": "Podróż",
   "flightsToLisbon": "Loty do Lizbony",
   "studioInvoice": "Faktura za studio",
   "tagline": "Zobacz przyszłość swojego konta",
@@ -1422,7 +1423,6 @@ window.TRANSLATIONS = {
   "wed": "Śr",
   "income": "Dochód",
   "salary": "Pensja",
-  "savings": "Oszczędności",
   "rent": "Czynsz",
   "phone": "Telefon",
   "mon": "Pn",
@@ -1471,6 +1471,7 @@ window.TRANSLATIONS = {
   "inDays": "Za {n} dni. Potem saldo pozostaje powyżej zera."
  },
  "pt-BR": {
+  "tripChip": "Viagem",
   "flightsToLisbon": "Voos para Lisboa",
   "studioInvoice": "Fatura do estúdio",
   "tagline": "Veja o futuro da sua conta bancária",
@@ -1492,7 +1493,6 @@ window.TRANSLATIONS = {
   "wed": "Qua",
   "income": "Renda",
   "salary": "Salário",
-  "savings": "Poupança",
   "rent": "Aluguel",
   "phone": "Celular",
   "mon": "Seg",
@@ -1541,6 +1541,7 @@ window.TRANSLATIONS = {
   "inDays": "Em {n} dias. Depois disso, o saldo continua acima de zero."
  },
  "pt-PT": {
+  "tripChip": "Viagem",
   "flightsToLisbon": "Voos para Lisboa",
   "studioInvoice": "Fatura do estúdio",
   "tagline": "Veja o futuro da sua conta bancária",
@@ -1562,7 +1563,6 @@ window.TRANSLATIONS = {
   "wed": "Qua",
   "income": "Rendimentos",
   "salary": "Ordenado",
-  "savings": "Poupanças",
   "rent": "Renda",
   "phone": "Telemóvel",
   "mon": "Seg",
@@ -1611,6 +1611,7 @@ window.TRANSLATIONS = {
   "inDays": "Daqui a {n} dias. Depois disso, o saldo mantém-se acima de zero."
  },
  "ro": {
+  "tripChip": "Călătorie",
   "flightsToLisbon": "Zboruri spre Lisabona",
   "studioInvoice": "Factură studio",
   "tagline": "Vedeți viitorul contului bancar",
@@ -1632,7 +1633,6 @@ window.TRANSLATIONS = {
   "wed": "Mie",
   "income": "Venit",
   "salary": "Salariu",
-  "savings": "Economii",
   "rent": "Chirie",
   "phone": "Telefon",
   "mon": "Lun",
@@ -1681,6 +1681,7 @@ window.TRANSLATIONS = {
   "inDays": "Peste {n} zile. Soldul rămâne apoi peste zero."
  },
  "ru": {
+  "tripChip": "Поездка",
   "flightsToLisbon": "Билеты в Лиссабон",
   "studioInvoice": "Счёт за студию",
   "tagline": "Загляните в будущее вашего банковского счёта",
@@ -1702,7 +1703,6 @@ window.TRANSLATIONS = {
   "wed": "Ср",
   "income": "Доход",
   "salary": "Зарплата",
-  "savings": "Накопления",
   "rent": "Аренда",
   "phone": "Телефон",
   "mon": "Пн",
@@ -1751,6 +1751,7 @@ window.TRANSLATIONS = {
   "inDays": "Через {n} дн. После этого баланс остаётся выше нуля."
  },
  "sk": {
+  "tripChip": "Cesta",
   "flightsToLisbon": "Letenky do Lisabonu",
   "studioInvoice": "Faktúra za štúdio",
   "tagline": "Pozrite sa do budúcnosti svojho účtu",
@@ -1772,7 +1773,6 @@ window.TRANSLATIONS = {
   "wed": "St",
   "income": "Príjem",
   "salary": "Výplata",
-  "savings": "Sporenie",
   "rent": "Nájom",
   "phone": "Telefón",
   "mon": "Po",
@@ -1821,6 +1821,7 @@ window.TRANSLATIONS = {
   "inDays": "O {n} dní. Zostatok potom zostane nad nulou."
  },
  "sv": {
+  "tripChip": "Resa",
   "flightsToLisbon": "Flyg till Lissabon",
   "studioInvoice": "Studiofaktura",
   "tagline": "Se framtiden för ditt bankkonto",
@@ -1842,7 +1843,6 @@ window.TRANSLATIONS = {
   "wed": "ons",
   "income": "Inkomst",
   "salary": "Lön",
-  "savings": "Sparande",
   "rent": "Hyra",
   "phone": "Telefon",
   "mon": "mån",
@@ -1891,6 +1891,7 @@ window.TRANSLATIONS = {
   "inDays": "Om {n} dagar. Saldot håller sig över noll efteråt."
  },
  "th": {
+  "tripChip": "ทริป",
   "flightsToLisbon": "เที่ยวบินไปลิสบอน",
   "studioInvoice": "ใบแจ้งหนี้สตูดิโอ",
   "tagline": "มองเห็นอนาคตของบัญชีธนาคารคุณ",
@@ -1912,7 +1913,6 @@ window.TRANSLATIONS = {
   "wed": "พ.",
   "income": "รายได้",
   "salary": "เงินเดือน",
-  "savings": "เงินออม",
   "rent": "ค่าเช่า",
   "phone": "โทรศัพท์",
   "mon": "จ.",
@@ -1961,6 +1961,7 @@ window.TRANSLATIONS = {
   "inDays": "ในอีก {n} วัน หลังจากนั้นยอดเงินจะไม่ติดลบ"
  },
  "tr": {
+  "tripChip": "Seyahat",
   "flightsToLisbon": "Lizbon uçak biletleri",
   "studioInvoice": "Stüdyo faturası",
   "tagline": "Banka hesabınızın geleceğini görün",
@@ -1982,7 +1983,6 @@ window.TRANSLATIONS = {
   "wed": "Çar",
   "income": "Gelir",
   "salary": "Maaş",
-  "savings": "Birikim",
   "rent": "Kira",
   "phone": "Telefon",
   "mon": "Pzt",
@@ -2031,6 +2031,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} gün sonra. Bakiye sonrasında sıfırın üzerinde kalır."
  },
  "uk": {
+  "tripChip": "Подорож",
   "flightsToLisbon": "Квитки до Лісабона",
   "studioInvoice": "Рахунок за студію",
   "tagline": "Зазирніть у майбутнє свого банківського рахунку",
@@ -2052,7 +2053,6 @@ window.TRANSLATIONS = {
   "wed": "Ср",
   "income": "Дохід",
   "salary": "Зарплата",
-  "savings": "Заощадження",
   "rent": "Оренда",
   "phone": "Телефон",
   "mon": "Пн",
@@ -2101,6 +2101,7 @@ window.TRANSLATIONS = {
   "inDays": "Через {n} дн. Після цього баланс залишається вище нуля."
  },
  "vi": {
+  "tripChip": "Chuyến đi",
   "flightsToLisbon": "Vé máy bay đi Lisbon",
   "studioInvoice": "Hóa đơn studio",
   "tagline": "Nhìn thấy tương lai của tài khoản ngân hàng",
@@ -2122,7 +2123,6 @@ window.TRANSLATIONS = {
   "wed": "T4",
   "income": "Thu nhập",
   "salary": "Lương",
-  "savings": "Tiết kiệm",
   "rent": "Tiền nhà",
   "phone": "Điện thoại",
   "mon": "T2",
@@ -2171,6 +2171,7 @@ window.TRANSLATIONS = {
   "inDays": "Sau {n} ngày. Sau đó số dư luôn trên 0."
  },
  "zh-Hans": {
+  "tripChip": "旅行",
   "flightsToLisbon": "飞往里斯本的机票",
   "studioInvoice": "工作室账单",
   "tagline": "预见你银行账户的未来",
@@ -2192,7 +2193,6 @@ window.TRANSLATIONS = {
   "wed": "周三",
   "income": "收入",
   "salary": "工资",
-  "savings": "储蓄",
   "rent": "房租",
   "phone": "手机",
   "mon": "周一",
@@ -2241,6 +2241,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} 天后。之后余额始终高于零。"
  },
  "zh-Hant": {
+  "tripChip": "旅行",
   "flightsToLisbon": "飛往里斯本的機票",
   "studioInvoice": "工作室帳單",
   "tagline": "預見你銀行帳戶的未來",
@@ -2262,7 +2263,6 @@ window.TRANSLATIONS = {
   "wed": "週三",
   "income": "收入",
   "salary": "薪資",
-  "savings": "儲蓄",
   "rent": "房租",
   "phone": "手機",
   "mon": "週一",
