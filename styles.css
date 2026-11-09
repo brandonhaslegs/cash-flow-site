@@ -302,13 +302,17 @@ main, .features, .feature, .afford { grid-template-columns: minmax(0, 1fr); }
     grid-template-columns: auto auto;
     align-items: center;
     gap: 40px;
-    padding-top: 12px;
+    /* The opening fills the first screen with its content centred vertically, stopping short so the top of the
+       first card always peeks up from below the fold (main's top padding + the gap + the peek = 72 + 56 + 90). */
+    min-height: calc(100svh - 218px);
+    align-content: center;
   }
   .top .intro { justify-items: start; text-align: left; gap: 16px; }
   .top .intro h1 { font-size: 3.4rem; line-height: 1.02; }
   .top .intro .line { font-size: 1.45rem; white-space: nowrap; }
   .top .downloads { justify-content: flex-start; margin-top: 10px; }
-  .top .phone { width: 340px; }
+  /* The phone scales down on shorter windows so the whole opening still fits above the fold. */
+  .top .phone { width: clamp(240px, calc((100svh - 260px) / 2.22), 340px); }
   /* Phone on the left, name and downloads on the right. */
   .top .hero { order: -1; }
 }
