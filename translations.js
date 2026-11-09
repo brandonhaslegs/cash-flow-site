@@ -1,7 +1,7 @@
 // Generated: website translations, keyed by language. English lives in index.html.
 window.TRANSLATIONS = {
  "ar": {
-  "appName": "مال المستقبل",
+  "appName": "فلوس المستقبل",
   "tripChip": "رحلة",
   "flightsToLisbon": "رحلات إلى لشبونة",
   "studioInvoice": "فاتورة الاستوديو",
@@ -72,6 +72,7 @@ window.TRANSLATIONS = {
   "inDays": "بعد {n} يوم. يبقى الرصيد فوق الصفر بعد ذلك."
  },
  "ca": {
+  "appName": "Diners del futur",
   "tripChip": "Viatge",
   "flightsToLisbon": "Vols a Lisboa",
   "studioInvoice": "Factura de l'estudi",
@@ -142,6 +143,7 @@ window.TRANSLATIONS = {
   "inDays": "D’aquí a {n} dies. Després, el saldo es manté per sobre de zero."
  },
  "cs": {
+  "appName": "Peníze budoucnosti",
   "tripChip": "Cesta",
   "flightsToLisbon": "Letenky do Lisabonu",
   "studioInvoice": "Faktura za studio",
@@ -282,6 +284,7 @@ window.TRANSLATIONS = {
   "inDays": "Om {n} dage. Saldoen forbliver over nul bagefter."
  },
  "de": {
+  "appName": "Zukunftskohle",
   "tripChip": "Reise",
   "flightsToLisbon": "Flüge nach Lissabon",
   "studioInvoice": "Studio-Rechnung",
@@ -352,6 +355,7 @@ window.TRANSLATIONS = {
   "inDays": "In {n} Tagen. Der Kontostand bleibt danach über null."
  },
  "el": {
+  "appName": "Λεφτά του μέλλοντος",
   "tripChip": "Ταξίδι",
   "flightsToLisbon": "Πτήσεις για Λισαβόνα",
   "studioInvoice": "Τιμολόγιο στούντιο",
@@ -422,6 +426,7 @@ window.TRANSLATIONS = {
   "inDays": "Σε {n} ημέρες. Το υπόλοιπο μένει πάνω από το μηδέν στη συνέχεια."
  },
  "es": {
+  "appName": "Pasta del futuro",
   "tripChip": "Viaje",
   "flightsToLisbon": "Vuelos a Lisboa",
   "studioInvoice": "Factura del estudio",
@@ -492,6 +497,7 @@ window.TRANSLATIONS = {
   "inDays": "Dentro de {n} días. Después, el saldo se mantiene por encima de cero."
  },
  "fi": {
+  "appName": "Tulevaisuuden rahat",
   "tripChip": "Matka",
   "flightsToLisbon": "Lennot Lissaboniin",
   "studioInvoice": "Studion lasku",
@@ -562,6 +568,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} päivän päästä. Saldo pysyy sen jälkeen nollan yläpuolella."
  },
  "fr": {
+  "appName": "Futur Money",
   "tripChip": "Voyage",
   "flightsToLisbon": "Vols pour Lisbonne",
   "studioInvoice": "Facture du studio",
@@ -632,7 +639,7 @@ window.TRANSLATIONS = {
   "inDays": "Dans {n} jours. Le solde reste ensuite au-dessus de zéro."
  },
  "he": {
-  "appName": "הכסף של העתיד",
+  "appName": "כסף העתיד",
   "tripChip": "נסיעה",
   "flightsToLisbon": "טיסות לליסבון",
   "studioInvoice": "חשבונית סטודיו",
@@ -774,6 +781,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} दिनों में। उसके बाद बैलेंस शून्य से ऊपर रहता है।"
  },
  "hr": {
+  "appName": "Novac budućnosti",
   "tripChip": "Putovanje",
   "flightsToLisbon": "Letovi za Lisabon",
   "studioInvoice": "Račun za studio",
@@ -844,6 +852,7 @@ window.TRANSLATIONS = {
   "inDays": "Za {n} dana. Stanje nakon toga ostaje iznad nule."
  },
  "hu": {
+  "appName": "Jövőpénz",
   "tripChip": "Utazás",
   "flightsToLisbon": "Repülőjegy Lisszabonba",
   "studioInvoice": "Stúdiószámla",
@@ -914,6 +923,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} nap múlva. Utána az egyenleg nulla felett marad."
  },
  "id": {
+  "appName": "Uang masa depan",
   "tripChip": "Perjalanan",
   "flightsToLisbon": "Tiket pesawat ke Lisbon",
   "studioInvoice": "Tagihan studio",
@@ -984,6 +994,7 @@ window.TRANSLATIONS = {
   "inDays": "Dalam {n} hari. Saldo tetap di atas nol setelahnya."
  },
  "it": {
+  "appName": "Soldi del futuro",
   "tripChip": "Viaggio",
   "flightsToLisbon": "Voli per Lisbona",
   "studioInvoice": "Fattura dello studio",
@@ -1196,6 +1207,7 @@ window.TRANSLATIONS = {
   "inDays": "{n}일 후. 이후에도 잔액이 0 위로 유지됩니다."
  },
  "ms": {
+  "appName": "Duit masa depan",
   "tripChip": "Perjalanan",
   "flightsToLisbon": "Penerbangan ke Lisbon",
   "studioInvoice": "Invois studio",
@@ -1406,6 +1418,7 @@ window.TRANSLATIONS = {
   "inDays": "Over {n} dagen. Het saldo blijft daarna boven nul."
  },
  "pl": {
+  "appName": "Kasa przyszłości",
   "tripChip": "Podróż",
   "flightsToLisbon": "Loty do Lizbony",
   "studioInvoice": "Faktura za studio",
@@ -1476,6 +1489,7 @@ window.TRANSLATIONS = {
   "inDays": "Za {n} dni. Potem saldo pozostaje powyżej zera."
  },
  "pt-BR": {
+  "appName": "Grana do futuro",
   "tripChip": "Viagem",
   "flightsToLisbon": "Voos para Lisboa",
   "studioInvoice": "Fatura do estúdio",
@@ -1546,6 +1560,7 @@ window.TRANSLATIONS = {
   "inDays": "Em {n} dias. Depois disso, o saldo continua acima de zero."
  },
  "pt-PT": {
+  "appName": "Dinheiro do futuro",
   "tripChip": "Viagem",
   "flightsToLisbon": "Voos para Lisboa",
   "studioInvoice": "Fatura do estúdio",
@@ -1616,6 +1631,7 @@ window.TRANSLATIONS = {
   "inDays": "Daqui a {n} dias. Depois disso, o saldo mantém-se acima de zero."
  },
  "ro": {
+  "appName": "Banii viitorului",
   "tripChip": "Călătorie",
   "flightsToLisbon": "Zboruri spre Lisabona",
   "studioInvoice": "Factură studio",
@@ -1686,6 +1702,7 @@ window.TRANSLATIONS = {
   "inDays": "Peste {n} zile. Soldul rămâne apoi peste zero."
  },
  "ru": {
+  "appName": "Кэш будущего",
   "tripChip": "Поездка",
   "flightsToLisbon": "Билеты в Лиссабон",
   "studioInvoice": "Счёт за студию",
@@ -1756,6 +1773,7 @@ window.TRANSLATIONS = {
   "inDays": "Через {n} дн. После этого баланс остаётся выше нуля."
  },
  "sk": {
+  "appName": "Peniaze budúcnosti",
   "tripChip": "Cesta",
   "flightsToLisbon": "Letenky do Lisabonu",
   "studioInvoice": "Faktúra za štúdio",
@@ -1896,7 +1914,7 @@ window.TRANSLATIONS = {
   "inDays": "Om {n} dagar. Saldot håller sig över noll efteråt."
  },
  "th": {
-  "appName": "เงินในอนาคต",
+  "appName": "เงินอนาคต",
   "tripChip": "ทริป",
   "flightsToLisbon": "เที่ยวบินไปลิสบอน",
   "studioInvoice": "ใบแจ้งหนี้สตูดิโอ",
@@ -1967,6 +1985,7 @@ window.TRANSLATIONS = {
   "inDays": "ในอีก {n} วัน หลังจากนั้นยอดเงินจะไม่ติดลบ"
  },
  "tr": {
+  "appName": "Geleceğin parası",
   "tripChip": "Seyahat",
   "flightsToLisbon": "Lizbon uçak biletleri",
   "studioInvoice": "Stüdyo faturası",
@@ -2037,6 +2056,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} gün sonra. Bakiye sonrasında sıfırın üzerinde kalır."
  },
  "uk": {
+  "appName": "Гроші майбутнього",
   "tripChip": "Подорож",
   "flightsToLisbon": "Квитки до Лісабона",
   "studioInvoice": "Рахунок за студію",
@@ -2107,6 +2127,7 @@ window.TRANSLATIONS = {
   "inDays": "Через {n} дн. Після цього баланс залишається вище нуля."
  },
  "vi": {
+  "appName": "Tiền tương lai",
   "tripChip": "Chuyến đi",
   "flightsToLisbon": "Vé máy bay đi Lisbon",
   "studioInvoice": "Hóa đơn studio",
@@ -2177,7 +2198,7 @@ window.TRANSLATIONS = {
   "inDays": "Sau {n} ngày. Sau đó số dư luôn trên 0."
  },
  "zh-Hans": {
-  "appName": "未来的钱",
+  "appName": "未来钱",
   "tripChip": "旅行",
   "flightsToLisbon": "飞往里斯本的机票",
   "studioInvoice": "工作室账单",
@@ -2248,7 +2269,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} 天后。之后余额始终高于零。"
  },
  "zh-Hant": {
-  "appName": "未來的錢",
+  "appName": "未來錢",
   "tripChip": "旅行",
   "flightsToLisbon": "飛往里斯本的機票",
   "studioInvoice": "工作室帳單",
@@ -2461,7 +2482,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} દિવસમાં. એ પછી બૅલેન્સ શૂન્યથી ઉપર રહે છે."
  },
  "kn": {
-  "appName": "ಭವಿಷ್ಯದ ಹಣ",
+  "appName": "ಭವಿಷ್ಯದ ದುಡ್ಡು",
   "tripChip": "ಪ್ರವಾಸ",
   "flightsToLisbon": "ಲಿಸ್ಬನ್‌ಗೆ ವಿಮಾನ",
   "studioInvoice": "ಸ್ಟುಡಿಯೋ ಇನ್‌ವಾಯ್ಸ್",
@@ -2532,7 +2553,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} ದಿನಗಳಲ್ಲಿ. ಅದರ ನಂತರವೂ ಬ್ಯಾಲೆನ್ಸ್ ಸೊನ್ನೆಗಿಂತ ಮೇಲಿರುತ್ತದೆ."
  },
  "ml": {
-  "appName": "ഭാവിയിലെ പണം",
+  "appName": "ഭാവിയിലെ കാശ്",
   "tripChip": "യാത്ര",
   "flightsToLisbon": "ലിസ്ബണിലേക്കുള്ള ഫ്ലൈറ്റുകൾ",
   "studioInvoice": "സ്റ്റുഡിയോ ഇൻവോയ്സ്",
@@ -2603,7 +2624,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} ദിവസത്തിനുള്ളിൽ. അതിനുശേഷവും ബാലൻസ് പൂജ്യത്തിന് മുകളിൽ തുടരും."
  },
  "mr": {
-  "appName": "भविष्यातला पैसा",
+  "appName": "भविष्याचा पैसा",
   "tripChip": "सहल",
   "flightsToLisbon": "लिस्बनची विमान तिकिटे",
   "studioInvoice": "स्टुडिओ इनव्हॉइस",
@@ -3029,6 +3050,7 @@ window.TRANSLATIONS = {
   "inDays": "{n} دن میں۔ اس کے بعد بیلنس صفر سے اوپر رہتا ہے۔"
  },
  "sl": {
+  "appName": "Denar prihodnosti",
   "tripChip": "Potovanje",
   "flightsToLisbon": "Letalske karte za Lizbono",
   "studioInvoice": "Račun za studio",
