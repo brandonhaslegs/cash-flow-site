@@ -268,7 +268,7 @@
     }
     // Trip band behind the line, named at the top.
     s += `<g class="trip"><rect x="${x(TRIP.from)}" y="${T}" width="${x(TRIP.to) - x(TRIP.from)}" height="${H - B - T}"/>` +
-         `<text x="${x(TRIP.from) + 5}" y="${T + 14}">✈ ${TRIP.name}</text></g>`;
+         `<text class="plane" x="${x(TRIP.from) + 5}" y="${T + 14}">✈</text><text class="trip-name" x="${x(TRIP.from) + 19}" y="${T + 14}">${TRIP.name}</text></g>`;
     s += `<path class="area" d="${d}L${P[n - 1][0]},${y(0)}L${P[0][0]},${y(0)}Z"/>`;
     // A dot where income lands or a purchase is made.
     const dots = [];
@@ -303,15 +303,30 @@
     s += `<path class="line" pathLength="1" d="${d}"/>`;
     s += dotMarks;
     svg.innerHTML = s;
-    placePaydayLabels(svg, dots, { left: L, top: T, right: W - R, bottom: H - B }, svg.querySelector(".trip text"));
+    placePaydayLabels(svg, dots, { left: L, top: T, right: W - R, bottom: H - B }, [...svg.querySelectorAll(".trip text")]);
+    // Right-to-left languages read time from right to left: mirror the whole chart (today on the right, the money
+    // scale on the left, the plane flying left), then turn each label back so its words still read normally.
+    if (document.documentElement.dir === "rtl") {
+      const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+      g.setAttribute("transform", `translate(${W},0) scale(-1,1)`);
+      [...svg.childNodes].filter(n => n.nodeName !== "defs").forEach(n => g.appendChild(n));
+      svg.appendChild(g);
+      svg.querySelectorAll("text:not(.plane)").forEach(t => {
+        const bb = t.getBBox(), cx = bb.x + bb.width / 2;
+        // Labels that land on an edge ("١٥ ألف €" on the left, "Today" on the right) are kept inside the chart.
+        const left = W - bb.x - bb.width, right = W - bb.x;
+        const shift = Math.max(0, 6 - left) - Math.max(0, right - (W - 2));
+        t.setAttribute("transform", `translate(${2 * cx - shift},0) scale(-1,1)`);
+      });
+    }
   }
 
   // Name paydays and purchases beside their dots, like the app: the biggest amounts first, three at most, each name
   // once. Each tries right, left, above, below, then the corners, and is left out rather than overlap anything.
-  function placePaydayLabels(svg, dots, b, tripText) {
+  function placePaydayLabels(svg, dots, b, tripTexts) {
     const H = 15, PAD = 3, OFF = 7;
     const placed = [];
-    if (tripText) { const t = tripText.getBBox(); placed.push({ x: t.x, y: t.y, w: t.width, h: t.height }); }
+    for (const tt of tripTexts) { const t = tt.getBBox(); placed.push({ x: t.x, y: t.y, w: t.width, h: t.height }); }
     const hit = (a, c, pad = PAD) => a.x < c.x + c.w + pad && c.x < a.x + a.w + pad && a.y < c.y + c.h + pad && c.y < a.y + a.h + pad;
     const dotBoxes = dots.map(d => ({ x: d.x - 6, y: d.y - 6, w: 12, h: 12, d }));
     const named = new Set();

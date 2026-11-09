@@ -172,6 +172,8 @@ body::before { content: ""; position: fixed; inset: 0; z-index: 2; pointer-event
 .v-chart .payday-label text { font: 600 11px var(--font); fill: var(--accent); }
 /* A touch of the crystal ball's haze and dust in the chart's top-left corner, as in the app. */
 .v-chart { position: relative; isolation: isolate; }
+/* The chart is laid out left to right and mirrored as a whole for right-to-left languages (see script.js). */
+#v-chart { direction: ltr; }
 .v-chart::before { content: ""; position: absolute; inset: -30px auto auto -30px; width: 70%; height: 80%; z-index: -1; pointer-events: none;
   background: radial-gradient(closest-side at 30% 35%, rgb(79 82 242 / .32), transparent),
               radial-gradient(closest-side at 60% 55%, rgb(155 107 255 / .22), transparent 80%),
