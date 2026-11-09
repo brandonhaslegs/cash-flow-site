@@ -1125,7 +1125,7 @@ window.TRANSLATIONS = {
   "inDays": "{n}日後。その後も残高はプラスのままです。"
  },
  "ko": {
-  "appName": "미래의 돈",
+  "appName": "미래머니",
   "tripChip": "여행",
   "flightsToLisbon": "리스본행 항공권",
   "studioInvoice": "스튜디오 청구서",
