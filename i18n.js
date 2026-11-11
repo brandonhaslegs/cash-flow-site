@@ -89,7 +89,7 @@
 // App Store links. Apple's app links open the visitor's own country's store automatically.
 // Set APP_STORE_ID once the app exists in App Store Connect (the number in its App Store URL).
 (() => {
-  const APP_STORE_ID = "";
+  const APP_STORE_ID = "6832368699";
   if (!APP_STORE_ID) return;
   const set = () => {
     document.querySelectorAll(".store.ios").forEach(a => a.href = `https://apps.apple.com/app/id${APP_STORE_ID}`);
