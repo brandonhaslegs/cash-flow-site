@@ -69,9 +69,16 @@ p { margin: 0; }
 .store:hover { transform: scale(1.03); }
 .store:active { transform: scale(0.97); }
 .store:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-.store svg { width: 24px; height: 24px; flex: none; }
-.store span { font-weight: 700; font-size: 1.05rem; text-align: left; }
-.store small { display: block; font-weight: 500; font-size: 0.72rem; opacity: 0.8; }
+.store span { font-weight: 700; font-size: 1.05rem; }
+/* A/B test (experiments.js): B is a white "Download" pill, E a periwinkle "Get Future Cash →" with a glow.
+   B is also what shows if scripts don't run. */
+.store { padding: 12px 26px; border-radius: 999px; }
+.store .v-e { display: none; align-items: center; gap: 8px; }
+.store .arrow { width: 20px; height: 20px; flex: none; }
+[dir="rtl"] .store .arrow { transform: scaleX(-1); }
+html[data-btn="e"] .store .v-b { display: none; }
+html[data-btn="e"] .store .v-e { display: inline-flex; }
+html[data-btn="e"] .store { background: var(--accent); color: #fff; padding: 12px 20px 12px 24px; box-shadow: 0 6px 24px color-mix(in srgb, var(--accent) 45%, transparent); }
 
 .hero { display: flex; justify-content: center; }
 /* The tour video inside a drawn iPhone outline: a slim black bezel, a thin metallic edge and side buttons. */
