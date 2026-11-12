@@ -382,6 +382,14 @@ main, .features, .feature, .afford { grid-template-columns: minmax(0, 1fr); }
 .price { display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; gap: 2px 8px; margin: 0; font-size: 0.9rem; color: var(--muted); }
 .price .amount { color: var(--ink); font-weight: 700; }
 .price .sep { opacity: .5; }
+/* A/B test of the line under the button (experiments.js): everything, nothing, or one item alone.
+   The trial only shows once data-trial is set, i.e. once a version with the free trial is live. */
+html:not([data-trial]) .price .trial, html:not([data-trial]) .price .sep-trial { display: none; }
+html[data-line]:not([data-line="all"]) .price .sep { display: none; }
+html[data-line="none"] .price { visibility: hidden; }
+html[data-line="price"] .price .pi:not(.amount),
+html[data-line="trial"] .price .pi:not(.trial),
+html[data-line="perks"] .price .pi:not(.perks) { display: none; }
 .top .intro .price { margin-top: 16px; }
 @media (min-width: 860px) { .top .intro .price { justify-content: flex-start; } }
 @media (max-width: 480px) { .price { font-size: 0.8rem; gap: 2px 6px; } }

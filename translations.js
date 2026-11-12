@@ -3,6 +3,7 @@ window.TRANSLATIONS = {
  "ar": {
   "tryMe": "جرّبني!",
   "noSubNoAds": "بلا اشتراك، بلا إعلانات",
+  "trialFree": "شهر مجاني",
   "fri": "جمعة",
   "sat": "سبت",
   "purchaseChip": "مشتريات",
@@ -93,6 +94,7 @@ window.TRANSLATIONS = {
  "ca": {
   "tryMe": "Prova'm!",
   "noSubNoAds": "Sense subscripció, sense anuncis",
+  "trialFree": "1 mes gratis",
   "fri": "Dv.",
   "sat": "Ds.",
   "purchaseChip": "Compra",
@@ -183,6 +185,7 @@ window.TRANSLATIONS = {
  "cs": {
   "tryMe": "Vyzkoušej mě!",
   "noSubNoAds": "Bez předplatného, bez reklam",
+  "trialFree": "1 měsíc zdarma",
   "fri": "Pá",
   "sat": "So",
   "purchaseChip": "Nákup",
@@ -273,6 +276,7 @@ window.TRANSLATIONS = {
  "da": {
   "tryMe": "Prøv mig!",
   "noSubNoAds": "Intet abonnement, ingen reklamer",
+  "trialFree": "1 måned gratis",
   "fri": "fre",
   "sat": "lør",
   "purchaseChip": "Køb",
@@ -362,6 +366,7 @@ window.TRANSLATIONS = {
  "de": {
   "tryMe": "Probier mich aus!",
   "noSubNoAds": "Kein Abo, keine Werbung",
+  "trialFree": "1 Monat gratis",
   "fri": "Fr",
   "sat": "Sa",
   "purchaseChip": "Kauf",
@@ -452,6 +457,7 @@ window.TRANSLATIONS = {
  "el": {
   "tryMe": "Δοκίμασέ με!",
   "noSubNoAds": "Χωρίς συνδρομή, χωρίς διαφημίσεις",
+  "trialFree": "1 μήνας δωρεάν",
   "fri": "Παρ",
   "sat": "Σάβ",
   "purchaseChip": "Αγορά",
@@ -542,6 +548,7 @@ window.TRANSLATIONS = {
  "es": {
   "tryMe": "¡Pruébame!",
   "noSubNoAds": "Sin suscripción, sin anuncios",
+  "trialFree": "1 mes gratis",
   "fri": "Vie",
   "sat": "Sáb",
   "purchaseChip": "Compra",
@@ -632,6 +639,7 @@ window.TRANSLATIONS = {
  "fi": {
   "tryMe": "Kokeile!",
   "noSubNoAds": "Ei tilausta, ei mainoksia",
+  "trialFree": "1 kuukausi ilmaiseksi",
   "fri": "pe",
   "sat": "la",
   "purchaseChip": "Ostos",
@@ -721,6 +729,7 @@ window.TRANSLATIONS = {
  "fr": {
   "tryMe": "Essayez-moi !",
   "noSubNoAds": "Sans abonnement, sans publicité",
+  "trialFree": "1 mois gratuit",
   "fri": "Ven.",
   "sat": "Sam.",
   "purchaseChip": "Achat",
@@ -810,6 +819,7 @@ window.TRANSLATIONS = {
  "he": {
   "tryMe": "נסו אותי!",
   "noSubNoAds": "בלי מנוי, בלי פרסומות",
+  "trialFree": "חודש חינם",
   "fri": "ו׳",
   "sat": "ש׳",
   "purchaseChip": "רכישה",
@@ -900,6 +910,7 @@ window.TRANSLATIONS = {
  "hi": {
   "tryMe": "आज़माइए!",
   "noSubNoAds": "कोई सदस्यता नहीं, कोई विज्ञापन नहीं",
+  "trialFree": "1 महीना मुफ़्त",
   "fri": "शुक्र",
   "sat": "शनि",
   "purchaseChip": "ख़रीदारी",
@@ -990,6 +1001,7 @@ window.TRANSLATIONS = {
  "hr": {
   "tryMe": "Isprobaj me!",
   "noSubNoAds": "Bez pretplate, bez oglasa",
+  "trialFree": "1 mjesec besplatno",
   "fri": "Pet",
   "sat": "Sub",
   "purchaseChip": "Kupnja",
@@ -1080,6 +1092,7 @@ window.TRANSLATIONS = {
  "hu": {
   "tryMe": "Próbáld ki!",
   "noSubNoAds": "Nincs előfizetés, nincs reklám",
+  "trialFree": "1 hónap ingyen",
   "fri": "P",
   "sat": "Szo",
   "purchaseChip": "Vásárlás",
@@ -1170,6 +1183,7 @@ window.TRANSLATIONS = {
  "id": {
   "tryMe": "Coba aku!",
   "noSubNoAds": "Tanpa langganan, tanpa iklan",
+  "trialFree": "Gratis 1 bulan",
   "fri": "Jum",
   "sat": "Sab",
   "purchaseChip": "Pembelian",
@@ -1260,6 +1274,7 @@ window.TRANSLATIONS = {
  "it": {
   "tryMe": "Provami!",
   "noSubNoAds": "Nessun abbonamento, nessuna pubblicità",
+  "trialFree": "1 mese gratis",
   "fri": "Ven",
   "sat": "Sab",
   "purchaseChip": "Acquisto",
@@ -1350,6 +1365,7 @@ window.TRANSLATIONS = {
  "ja": {
   "tryMe": "試してみて！",
   "noSubNoAds": "サブスクなし、広告なし",
+  "trialFree": "1か月無料",
   "fri": "金",
   "sat": "土",
   "purchaseChip": "購入予定",
@@ -1440,6 +1456,7 @@ window.TRANSLATIONS = {
  "ko": {
   "tryMe": "돌려 보세요!",
   "noSubNoAds": "구독 없음, 광고 없음",
+  "trialFree": "1개월 무료",
   "fri": "금",
   "sat": "토",
   "purchaseChip": "구매",
@@ -1530,6 +1547,7 @@ window.TRANSLATIONS = {
  "ms": {
   "tryMe": "Cuba saya!",
   "noSubNoAds": "Tiada langganan, tiada iklan",
+  "trialFree": "Percuma 1 bulan",
   "fri": "Jum",
   "sat": "Sab",
   "purchaseChip": "Pembelian",
@@ -1620,6 +1638,7 @@ window.TRANSLATIONS = {
  "nb": {
   "tryMe": "Prøv meg!",
   "noSubNoAds": "Ingen abonnement, ingen reklame",
+  "trialFree": "1 måned gratis",
   "fri": "fre.",
   "sat": "lør.",
   "purchaseChip": "Kjøp",
@@ -1709,6 +1728,7 @@ window.TRANSLATIONS = {
  "nl": {
   "tryMe": "Probeer me!",
   "noSubNoAds": "Geen abonnement, geen advertenties",
+  "trialFree": "1 maand gratis",
   "fri": "vr",
   "sat": "za",
   "purchaseChip": "Aankoop",
@@ -1798,6 +1818,7 @@ window.TRANSLATIONS = {
  "pl": {
   "tryMe": "Wypróbuj mnie!",
   "noSubNoAds": "Bez subskrypcji, bez reklam",
+  "trialFree": "1 miesiąc za darmo",
   "fri": "Pt",
   "sat": "So",
   "purchaseChip": "Zakup",
@@ -1888,6 +1909,7 @@ window.TRANSLATIONS = {
  "pt-BR": {
   "tryMe": "Experimente!",
   "noSubNoAds": "Sem assinatura, sem anúncios",
+  "trialFree": "1 mês grátis",
   "fri": "Sex",
   "sat": "Sáb",
   "purchaseChip": "Compra",
@@ -1978,6 +2000,7 @@ window.TRANSLATIONS = {
  "pt-PT": {
   "tryMe": "Experimente!",
   "noSubNoAds": "Sem subscrição, sem anúncios",
+  "trialFree": "1 mês grátis",
   "fri": "Sex",
   "sat": "Sáb",
   "purchaseChip": "Compra",
@@ -2068,6 +2091,7 @@ window.TRANSLATIONS = {
  "ro": {
   "tryMe": "Încearcă-mă!",
   "noSubNoAds": "Fără abonament, fără reclame",
+  "trialFree": "1 lună gratuit",
   "fri": "Vin",
   "sat": "Sâm",
   "purchaseChip": "Achiziție",
@@ -2158,6 +2182,7 @@ window.TRANSLATIONS = {
  "ru": {
   "tryMe": "Попробуйте!",
   "noSubNoAds": "Без подписки, без рекламы",
+  "trialFree": "1 месяц бесплатно",
   "fri": "Пт",
   "sat": "Сб",
   "purchaseChip": "Покупка",
@@ -2248,6 +2273,7 @@ window.TRANSLATIONS = {
  "sk": {
   "tryMe": "Vyskúšaj ma!",
   "noSubNoAds": "Bez predplatného, bez reklám",
+  "trialFree": "1 mesiac zadarmo",
   "fri": "Pi",
   "sat": "So",
   "purchaseChip": "Nákup",
@@ -2338,6 +2364,7 @@ window.TRANSLATIONS = {
  "sv": {
   "tryMe": "Testa mig!",
   "noSubNoAds": "Ingen prenumeration, ingen reklam",
+  "trialFree": "1 månad gratis",
   "fri": "fre",
   "sat": "lör",
   "purchaseChip": "Köp",
@@ -2427,6 +2454,7 @@ window.TRANSLATIONS = {
  "th": {
   "tryMe": "ลองเลย!",
   "noSubNoAds": "ไม่ต้องสมัครสมาชิก ไม่มีโฆษณา",
+  "trialFree": "ใช้ฟรี 1 เดือน",
   "fri": "ศ.",
   "sat": "ส.",
   "purchaseChip": "การซื้อ",
@@ -2517,6 +2545,7 @@ window.TRANSLATIONS = {
  "tr": {
   "tryMe": "Dene beni!",
   "noSubNoAds": "Abonelik yok, reklam yok",
+  "trialFree": "1 ay ücretsiz",
   "fri": "Cum",
   "sat": "Cmt",
   "purchaseChip": "Satın Alma",
@@ -2607,6 +2636,7 @@ window.TRANSLATIONS = {
  "uk": {
   "tryMe": "Спробуйте!",
   "noSubNoAds": "Без підписки, без реклами",
+  "trialFree": "1 місяць безкоштовно",
   "fri": "Пт",
   "sat": "Сб",
   "purchaseChip": "Покупка",
@@ -2697,6 +2727,7 @@ window.TRANSLATIONS = {
  "vi": {
   "tryMe": "Thử đi!",
   "noSubNoAds": "Không thuê bao, không quảng cáo",
+  "trialFree": "Miễn phí 1 tháng",
   "fri": "T6",
   "sat": "T7",
   "purchaseChip": "Khoản mua",
@@ -2787,6 +2818,7 @@ window.TRANSLATIONS = {
  "zh-Hans": {
   "tryMe": "试试看！",
   "noSubNoAds": "无需订阅，无广告",
+  "trialFree": "免费试用 1 个月",
   "fri": "周五",
   "sat": "周六",
   "purchaseChip": "购买",
@@ -2877,6 +2909,7 @@ window.TRANSLATIONS = {
  "zh-Hant": {
   "tryMe": "試試看！",
   "noSubNoAds": "無需訂閱，無廣告",
+  "trialFree": "免費試用 1 個月",
   "fri": "週五",
   "sat": "週六",
   "purchaseChip": "購買",
@@ -2967,6 +3000,7 @@ window.TRANSLATIONS = {
  "bn": {
   "tryMe": "চেষ্টা করুন!",
   "noSubNoAds": "কোনো সাবস্ক্রিপশন নেই, কোনো বিজ্ঞাপন নেই",
+  "trialFree": "১ মাস বিনামূল্যে",
   "fri": "শুক্র",
   "sat": "শনি",
   "purchaseChip": "কেনাকাটা",
@@ -3057,6 +3091,7 @@ window.TRANSLATIONS = {
  "gu": {
   "tryMe": "અજમાવો!",
   "noSubNoAds": "કોઈ સબ્સ્ક્રિપ્શન નહીં, કોઈ જાહેરાત નહીં",
+  "trialFree": "1 મહિનો મફત",
   "fri": "શુક્ર",
   "sat": "શનિ",
   "purchaseChip": "ખરીદી",
@@ -3147,6 +3182,7 @@ window.TRANSLATIONS = {
  "kn": {
   "tryMe": "ಪ್ರಯತ್ನಿಸಿ!",
   "noSubNoAds": "ಚಂದಾದಾರಿಕೆ ಇಲ್ಲ, ಜಾಹೀರಾತುಗಳಿಲ್ಲ",
+  "trialFree": "1 ತಿಂಗಳು ಉಚಿತ",
   "fri": "ಶುಕ್ರ",
   "sat": "ಶನಿ",
   "purchaseChip": "ಖರೀದಿ",
@@ -3237,6 +3273,7 @@ window.TRANSLATIONS = {
  "ml": {
   "tryMe": "പരീക്ഷിക്കൂ!",
   "noSubNoAds": "സബ്സ്ക്രിപ്ഷൻ ഇല്ല, പരസ്യങ്ങളില്ല",
+  "trialFree": "1 മാസം സൗജന്യം",
   "fri": "വെള്ളി",
   "sat": "ശനി",
   "purchaseChip": "വാങ്ങൽ",
@@ -3327,6 +3364,7 @@ window.TRANSLATIONS = {
  "mr": {
   "tryMe": "वापरून पाहा!",
   "noSubNoAds": "सदस्यता नाही, जाहिराती नाहीत",
+  "trialFree": "1 महिना मोफत",
   "fri": "शुक्र",
   "sat": "शनि",
   "purchaseChip": "खरेदी",
@@ -3417,6 +3455,7 @@ window.TRANSLATIONS = {
  "or": {
   "tryMe": "ଚେଷ୍ଟା କରନ୍ତୁ!",
   "noSubNoAds": "କୌଣସି ସଦସ୍ୟତା ନାହିଁ, କୌଣସି ବିଜ୍ଞାପନ ନାହିଁ",
+  "trialFree": "1 ମାସ ମାଗଣା",
   "fri": "ଶୁକ୍ର",
   "sat": "ଶନି",
   "purchaseChip": "କ୍ରୟ",
@@ -3507,6 +3546,7 @@ window.TRANSLATIONS = {
  "pa": {
   "tryMe": "ਅਜ਼ਮਾਓ!",
   "noSubNoAds": "ਕੋਈ ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਨਹੀਂ, ਕੋਈ ਇਸ਼ਤਿਹਾਰ ਨਹੀਂ",
+  "trialFree": "1 ਮਹੀਨਾ ਮੁਫ਼ਤ",
   "fri": "ਸ਼ੁੱਕਰ",
   "sat": "ਸ਼ਨੀ",
   "purchaseChip": "ਖ਼ਰੀਦ",
@@ -3597,6 +3637,7 @@ window.TRANSLATIONS = {
  "ta": {
   "tryMe": "முயற்சி செய்யுங்கள்!",
   "noSubNoAds": "சந்தா இல்லை, விளம்பரங்கள் இல்லை",
+  "trialFree": "1 மாதம் இலவசம்",
   "fri": "வெ",
   "sat": "ச",
   "purchaseChip": "கொள்முதல்",
@@ -3687,6 +3728,7 @@ window.TRANSLATIONS = {
  "te": {
   "tryMe": "ప్రయత్నించండి!",
   "noSubNoAds": "సబ్‌స్క్రిప్షన్ లేదు, ప్రకటనలు లేవు",
+  "trialFree": "1 నెల ఉచితం",
   "fri": "శుక్ర",
   "sat": "శని",
   "purchaseChip": "కొనుగోలు",
@@ -3777,6 +3819,7 @@ window.TRANSLATIONS = {
  "ur": {
   "tryMe": "آزمائیں!",
   "noSubNoAds": "کوئی سبسکرپشن نہیں، کوئی اشتہار نہیں",
+  "trialFree": "1 مہینہ مفت",
   "fri": "جمعہ",
   "sat": "ہفتہ",
   "purchaseChip": "خریداری",
@@ -3867,6 +3910,7 @@ window.TRANSLATIONS = {
  "sl": {
   "tryMe": "Preizkusi me!",
   "noSubNoAds": "Brez naročnine, brez oglasov",
+  "trialFree": "1 mesec brezplačno",
   "fri": "pet",
   "sat": "sob",
   "purchaseChip": "Nakup",
