@@ -4,11 +4,12 @@
 // To add a test: add it to TESTS, style or swap content on html[data-<test>="…"], and it is counted automatically.
 window.EXPERIMENTS = (() => {
   // Flip to true the day a version with the 1-month free trial is live on the App Store.
-  const TRIAL_LIVE = false;
+  const TRIAL_LIVE = true;
   const TESTS = {
     btn: ["b", "e"], // Store button: B "Download" pill, E "Get Future Cash →" in periwinkle.
-    // Line under the button: all items, none, or just the price, the trial, or "No subscription, no ads".
-    line: ["all", "none", "price", "perks", ...(TRIAL_LIVE ? ["trial"] : [])],
+    // Line under the button: all items, none, or one item alone. Once the app is a free download with a trial,
+    // the price alone would read as the download price, so "price" gives way to "trial".
+    line: ["all", "none", "perks", ...(TRIAL_LIVE ? ["trial"] : ["price"])],
   };
   if (TRIAL_LIVE) document.documentElement.dataset.trial = "";
   const query = new URLSearchParams(location.search);
