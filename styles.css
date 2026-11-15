@@ -409,3 +409,29 @@ html[data-line="perks"] .price .pi:not(.perks) { display: none; }
 
 /* Cursor glitter: drawn over everything, but never in the way of clicks. */
 .glitter { position: fixed; inset: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 50; }
+
+/* Widgets: the app's widgets in their night sky, with things to say to Siri underneath. */
+.v-widgets { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: stretch; }
+.v-widgets .w { position: relative; overflow: hidden; border-radius: 22px; padding: 14px; color: #fff; display: flex; flex-direction: column;
+  background:
+    radial-gradient(1.2px 1.2px at 18% 22%, #fff 60%, transparent), radial-gradient(1px 1px at 34% 12%, #ffc861 60%, transparent),
+    radial-gradient(1px 1px at 52% 30%, #fff 60%, transparent), radial-gradient(1.4px 1.4px at 70% 8%, #fff 60%, transparent),
+    radial-gradient(1px 1px at 84% 26%, #ffc861 60%, transparent), radial-gradient(1px 1px at 92% 82%, #fff 60%, transparent),
+    radial-gradient(1px 1px at 12% 48%, #fff 60%, transparent), radial-gradient(1px 1px at 62% 52%, #ffc861 60%, transparent),
+    radial-gradient(70% 60% at 8% 0%, rgb(79 82 242 / .55), transparent 70%),
+    radial-gradient(45% 35% at 40% 20%, rgb(156 107 255 / .4), transparent 70%),
+    radial-gradient(50% 45% at 100% 100%, rgb(156 107 255 / .28), transparent 70%),
+    linear-gradient(#1c1745, #0a0919); }
+.v-widgets .w-small { width: 150px; aspect-ratio: 1; justify-content: space-between; }
+.v-widgets .w-label { display: block; font-size: 0.72rem; font-weight: 700; color: #c8c3ff; }
+.v-widgets .w-amount { display: block; font-size: 1.45rem; font-weight: 800; letter-spacing: -0.01em; }
+.v-widgets .w-small .w-amount { font-size: 1.6rem; margin-top: auto; }
+.v-widgets small { font-size: 0.7rem; color: rgb(255 255 255 / .62); font-weight: 600; }
+.v-widgets .w-head { display: flex; justify-content: space-between; gap: 10px; }
+.v-widgets .w-right { text-align: right; }
+.v-widgets .w-right b { font-size: 1rem; }
+.v-widgets svg { width: 100%; flex: 1; min-height: 60px; margin-top: 8px; }
+.v-widgets .siri { grid-column: 1 / -1; list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.v-widgets .siri li { font-size: 0.85rem; font-weight: 600; padding: 6px 12px; border-radius: 99px; color: var(--ink);
+  background: linear-gradient(135deg, rgb(79 82 242 / .22), rgb(229 168 255 / .16)); box-shadow: inset 0 0 0 1px rgb(200 195 255 / .22); }
+@media (max-width: 520px) { .v-widgets { grid-template-columns: 1fr; } .v-widgets .w-small { width: auto; aspect-ratio: auto; min-height: 120px; } }

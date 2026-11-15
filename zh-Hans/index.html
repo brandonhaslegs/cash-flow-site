@@ -188,6 +188,32 @@
         </div>
         <p data-i18n="feature3"><strong>随时随地。</strong>iPhone、iPad 和 Mac 通过你自己的 iCloud 保持同步。</p>
       </div>
+      <div class="feature">
+        <div class="vignette v-widgets" id="widgets" data-anim data-i18n-aria="ariaWidgets" aria-label="未来钱小组件：可花金额，以及未来一个月的图表">
+          <div class="w w-small">
+            <span class="w-label" data-i18n="safeToSpend">可花金额</span>
+            <b class="w-amount" data-money="98000">€980.00</b>
+            <small><span data-i18n="balanceWord">余额</span> <span data-money="240000">€2,400.00</span></small>
+          </div>
+          <div class="w w-medium">
+            <div class="w-head">
+              <span><span class="w-label" data-i18n="safeToSpend">可花金额</span><b class="w-amount" data-money="98000">€980.00</b></span>
+              <span class="w-right"><span class="w-label" data-i18n="balanceToday">今日余额</span><b data-money="240000">€2,400.00</b></span>
+            </div>
+            <svg viewBox="0 0 300 70" preserveAspectRatio="none" aria-hidden="true">
+              <defs><linearGradient id="wfill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7c80ff" stop-opacity=".45"/><stop offset="1" stop-color="#7c80ff" stop-opacity="0"/></linearGradient></defs>
+              <path d="M0 34 L45 34 C55 34 55 52 65 52 L105 52 C115 52 115 6 125 6 L165 6 C175 6 175 22 185 22 L235 22 C245 22 245 30 255 30 L300 30 L300 70 L0 70 Z" fill="url(#wfill)"/>
+              <path d="M0 34 L45 34 C55 34 55 52 65 52 L105 52 C115 52 115 6 125 6 L165 6 C175 6 175 22 185 22 L235 22 C245 22 245 30 255 30 L300 30" fill="none" stroke="#7c80ff" stroke-width="2.5" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+            </svg>
+          </div>
+          <ul class="siri" aria-label="Siri" >
+            <li data-i18n="siri1">“我在未来钱里能花多少钱？”</li>
+            <li data-i18n="siri2">“在未来钱中更新我的余额”</li>
+            <li data-i18n="siri3">“用未来钱看看我买得起吗？”</li>
+          </ul>
+        </div>
+        <p data-i18n="feature4"><strong>一目了然，或者直接问。</strong>主屏幕、锁定屏幕和 Mac 桌面小组件，还能让 Siri 更新余额或告诉你可花金额。</p>
+      </div>
     </section>
 
     <section class="afford" aria-labelledby="afford-title">
@@ -226,6 +252,10 @@
       <details name="faq">
         <summary data-i18n="q5">税怎么办？</summary>
         <p data-i18n="a5">为任意收入打开“预留税款”，Future Cash 会预留一部分用于缴税，这部分钱绝不会被算作可花的钱。你可以在“设置”中选择比例。</p>
+      </details>
+      <details name="faq">
+        <summary data-i18n="q6">不打开应用也能更新余额吗？</summary>
+        <p data-i18n="a6">可以。对 Siri 说“在未来钱中更新我的余额”，或者让快捷指令在你每次查看银行时问你：在“快捷指令”App 中，轻点“自动化”，然后轻点“新建自动化”，并选择“App”。选取你的银行 App 和“已打开”，然后添加未来钱的“更新余额”操作。之后每次打开银行时，只需输入它显示的余额，你的预测就会保持最新。</p>
       </details>
     </section>
 
