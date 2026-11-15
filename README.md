@@ -2,7 +2,13 @@
 
 The one-page site for Future Cash, the iPhone, iPad and Mac app that shows your bank balance on every day ahead.
 
-Plain HTML, CSS and JavaScript with no build step.
+Plain HTML, CSS and JavaScript. The only build step writes the language pages:
+
+```bash
+python3 build-languages.py
+```
+
+Run it after changing `index.html` or `translations.js`. It writes `/de/`, `/fr/` … (one static page per language, so search engines index every language), the hreflang links in `index.html`, and `sitemap.xml`. Don't edit the language folders by hand.
 
 ## Preview
 

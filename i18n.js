@@ -27,8 +27,11 @@
     if (base === "no" || base === "nn" || base === "nb") return "nb";
     return TABLES[base] ? base : null;
   }
-  const lang = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || "en"])
-    .map(match).find(Boolean) || "en";
+  // Language pages (/de/ …) are already in their language; the main page follows the browser.
+  const pageLang = document.documentElement.dataset.lang;
+  const lang = (pageLang && TABLES[pageLang]) ? pageLang
+    : (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || "en"])
+      .map(match).find(Boolean) || "en";
   const table = TABLES[lang] || {};
 
   window.I18N = {
@@ -55,10 +58,10 @@
     document.querySelectorAll("[data-i18n-aria]").forEach(el => { const v = table[el.dataset.i18nAria]; if (v) el.setAttribute("aria-label", v); });
     const meta = document.querySelector('meta[name="description"]');
     if (meta && table.metaDescription) meta.content = table.metaDescription;
-    if (table.appName) document.title = table.appName;
+    if (table.appName && !pageLang) document.title = table.appName;
     // The tour video, recorded in this language with local money.
     const tour = document.querySelector(".phone video");
-    if (tour) { tour.poster = "images/tour/" + lang + ".jpg"; tour.src = "images/tour/" + lang + ".mp4"; tour.play().catch(() => {}); }
+    if (tour) { tour.poster = "/images/tour/" + lang + ".jpg"; tour.src = "/images/tour/" + lang + ".mp4"; tour.play().catch(() => {}); }
   };
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", apply); else apply();
 })();
