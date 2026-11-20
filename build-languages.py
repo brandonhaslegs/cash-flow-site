@@ -14,6 +14,7 @@ from html.parser import HTMLParser
 ROOT = pathlib.Path(__file__).parent
 SITE = "https://myfuture.cash"
 RTL = {"ar", "he", "ur"}
+ENGLISH_DESCRIPTION = "See the future of your bank account. Future Cash shows your balance on every day ahead, for iPhone, iPad and Mac."
 VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "source", "track", "wbr"}
 
 
@@ -60,6 +61,34 @@ def hreflang_block(langs):
     return "<!-- hreflang: written by build-languages.py -->\n" + "\n".join(links) + "\n  <!-- /hreflang -->"
 
 
+def app_data(lang, table):
+    """Tells search engines this page is an app: name, platforms, a free download, and where to get it."""
+    url = SITE + ("/%s/" % lang if lang != "en" else "/")
+    data = {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": table.get("appName", "Future Cash"),
+        "alternateName": "Future Cash",
+        "description": table.get("metaDescription", ENGLISH_DESCRIPTION),
+        "url": url,
+        "inLanguage": lang,
+        "image": SITE + "/images/icon.png",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "iOS, iPadOS, macOS",
+        "installUrl": "https://apps.apple.com/app/id6832368699",
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
+    }
+    return ('<!-- app data: written by build-languages.py -->\n  <script type="application/ld+json">'
+            + json.dumps(data, ensure_ascii=False) + '</script>\n  <!-- /app data -->')
+
+
+def set_app_data(page, lang, table):
+    block = app_data(lang, table)
+    if "<!-- app data:" in page:
+        return re.sub(r"<!-- app data:.*?<!-- /app data -->", lambda m: block, page, count=1, flags=re.S)
+    return page.replace('  <link rel="canonical"', "  " + block + '\n  <link rel="canonical"', 1)
+
+
 def set_meta(page, attr, name, value):
     pattern = r'(<meta %s="%s" content=")[^"]*(")' % (attr, re.escape(name))
     return re.sub(pattern, lambda m: m.group(1) + html.escape(value, quote=True) + m.group(2), page, count=1)
@@ -96,6 +125,7 @@ def translate(source, lang, table):
     page = set_meta(page, "property", "og:description", tagline)
     page = set_meta(page, "property", "og:url", "%s/%s/" % (SITE, lang))
     page = page.replace('<link rel="canonical" href="%s/">' % SITE, '<link rel="canonical" href="%s/%s/">' % (SITE, lang), 1)
+    page = set_app_data(page, lang, table)
     # The page lives one folder down: make the site's own links and files absolute.
     page = re.sub(r'((?:src|href|poster)=")(?!https?:|//|#|/|mailto:)', r"\1/", page)
     page = page.replace("/images/tour/en.mp4", "/images/tour/%s.mp4" % lang).replace("/images/tour/en.jpg", "/images/tour/%s.jpg" % lang)
@@ -112,6 +142,7 @@ def main():
         source = re.sub(r"<!-- hreflang:.*?<!-- /hreflang -->", lambda m: block, source, count=1, flags=re.S)
     else:
         source = source.replace('  <link rel="canonical"', "  " + block + '\n  <link rel="canonical"', 1)
+    source = set_app_data(source, "en", {})
     index_path.write_text(source)
 
     for lang in langs:

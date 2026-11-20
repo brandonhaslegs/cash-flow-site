@@ -58,7 +58,7 @@
     document.querySelectorAll("[data-i18n-aria]").forEach(el => { const v = table[el.dataset.i18nAria]; if (v) el.setAttribute("aria-label", v); });
     const meta = document.querySelector('meta[name="description"]');
     if (meta && table.metaDescription) meta.content = table.metaDescription;
-    if (table.appName && !pageLang) document.title = table.appName;
+    if (table.appName && !pageLang) document.title = table.appName + (table.tagline ? " – " + table.tagline : "");
     // The tour video, recorded in this language with local money.
     const tour = document.querySelector(".phone video");
     if (tour) { tour.poster = "/images/tour/" + lang + ".jpg"; tour.src = "/images/tour/" + lang + ".mp4"; tour.play().catch(() => {}); }
