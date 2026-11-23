@@ -124,6 +124,8 @@ def translate(source, lang, table):
     page = set_meta(page, "property", "og:title", name)
     page = set_meta(page, "property", "og:description", tagline)
     page = set_meta(page, "property", "og:url", "%s/%s/" % (SITE, lang))
+    # Share image in the page's language (made from its tour video; see images/og/)
+    page = set_meta(page, "property", "og:image", "%s/images/og/%s.jpg" % (SITE, lang))
     page = page.replace('<link rel="canonical" href="%s/">' % SITE, '<link rel="canonical" href="%s/%s/">' % (SITE, lang), 1)
     page = set_app_data(page, lang, table)
     # The page lives one folder down: make the site's own links and files absolute.
